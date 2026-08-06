@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Head & Neck Oncology Digest — Aug 6, 2026</title>
+<style>
+  :root {
+    --text-primary: #1a1a18;
+    --text-secondary: #5f5e5a;
+    --text-muted: #888780;
+    --border: #e4e2da;
+    --surface-1: #f4f3ee;
+    --success-bg: #eaf3de; --success-fg: #27500a;
+    --warning-bg: #faeeda; --warning-fg: #633806;
+    --link: #185fa5;
+    --bg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #f0efe9; --text-secondary: #c8c6bd; --text-muted: #918f86;
+      --border: #38372f; --surface-1: #232219;
+      --success-bg: #1c2c12; --success-fg: #8fd15f;
+      --warning-bg: #2e230d; --warning-fg: #eabb63;
+      --link: #7fb2e8; --bg: #16150f;
+    }
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    line-height: 1.6;
+    background: var(--bg);
+  }
+  .archive-nav { margin: 0 0 16px; font-size: 12px; }
+  h1 { font-size: 24px; font-weight: 600; margin: 0 0 4px; }
+  h2 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-primary); margin: 0 0 10px; }
+  h3 { font-size: 17px; font-weight: 600; margin: 0; flex: 1; }
+  .section-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px; }
+  .count-pill { flex-shrink: 0; font-size: 11px; color: var(--text-muted); background: var(--surface-1); border-radius: 20px; padding: 2px 9px; white-space: nowrap; }
+  .meta { font-size: 12px; color: var(--text-muted); margin: 0 0 3px; }
+  .attribution { font-size: 12px; color: var(--text-muted); font-style: italic; margin: 16px 0 20px; }
+  .key { font-size: 12px; color: var(--text-secondary); background: var(--surface-1); border-radius: 8px; padding: 10px 14px; margin: 0 0 16px; }
+  .note { font-size: 12px; color: var(--text-muted); margin: 0 0 24px; font-style: italic; }
+  .toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 28px; }
+  .toc button { font: inherit; font-size: 12px; font-weight: 600; color: var(--link); background: var(--surface-1); border: 1px solid var(--border); border-radius: 20px; padding: 6px 12px; cursor: pointer; }
+  .toc button:hover { background: var(--border); }
+  .toc .expand-toggle { margin-left: auto; color: var(--text-muted); font-weight: 400; background: none; border: none; text-decoration: underline; padding: 6px 4px; }
+  .highlights { background: var(--surface-1); border-radius: 12px; padding: 16px 20px; margin: 0 0 32px; }
+  .highlights ul { margin: 0; padding-left: 0; list-style: none; }
+  .highlights li { font-size: 14px; color: var(--text-secondary); margin-bottom: 4px; padding: 6px 8px 6px 20px; border-radius: 6px; position: relative; }
+  .highlights li::before { content: "\2022"; position: absolute; left: 6px; color: var(--text-muted); }
+  .highlights li.linked { cursor: pointer; }
+  .highlights li.linked:hover { background: var(--bg); color: var(--text-primary); }
+  .highlights li.linked .jump { color: var(--link); font-size: 12px; font-weight: 600; white-space: nowrap; margin-left: 4px; }
+  section { border-top: 1px solid var(--border); padding: 28px 0; scroll-margin-top: 16px; }
+  section:first-of-type { border-top: none; padding-top: 0; }
+  .badge-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+  .badge { flex-shrink: 0; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px; white-space: nowrap; margin-top: 2px; }
+  .badge.practice { background: var(--success-bg); color: var(--success-fg); }
+  .badge.hypo { background: var(--warning-bg); color: var(--warning-fg); }
+  .badge.bg { background: var(--surface-1); color: var(--text-secondary); }
+  .bottom-line { font-size: 14px; font-weight: 600; margin: 0; }
+  p, li { font-size: 14px; color: var(--text-secondary); }
+  ul.body-list { padding-left: 0; margin: 0 0 4px; list-style: none; }
+  ul.body-list > li { margin-bottom: 8px; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .callout { border-left: 3px solid var(--border); padding: 4px 0 4px 14px; margin: 14px 0; }
+  .callout .label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-primary); margin: 0 0 3px; }
+  .callout p { margin: 0; }
+  .closing { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 8px; }
+  .closing h2 { margin-bottom: 8px; }
+  footer { margin-top: 32px; font-size: 12px; color: var(--text-muted); font-style: italic; }
+
+  /* --- per-finding expandable reference cards --- */
+  details.ref { border: 1px solid var(--border); border-radius: 8px; }
+  details.ref summary { list-style: none; cursor: pointer; padding: 12px; display: flex; align-items: flex-start; gap: 8px; min-height: 44px; }
+  details.ref summary::-webkit-details-marker { display: none; }
+  details.ref summary::marker { content: ""; }
+  details.ref summary:hover { background: var(--surface-1); }
+  details.ref .ref-text { flex: 1; }
+  details.ref .chevron { flex-shrink: 0; color: var(--text-muted); font-size: 11px; margin-top: 3px; transition: transform 0.15s ease; }
+  details.ref[open] .chevron { transform: rotate(90deg); }
+  details.ref[open] summary { border-bottom: 1px solid var(--border); background: var(--surface-1); }
+  .ref-detail { padding: 10px 12px 12px; }
+  .ref-detail p { margin: 0 0 8px; }
+  .ref-detail p:last-child { margin-bottom: 0; }
+  .ref-detail .tag { font-weight: 600; color: var(--text-primary); }
+  .ref-detail .tag.warn { color: var(--warning-fg); }
+  .ref-detail .ref-link a { font-weight: 600; }
+  .tap-hint { font-size: 11px; color: var(--text-muted); margin: 0 0 20px; }
+
+  /* --- print: expand everything, drop chrome that only makes sense on-screen --- */
+  @media print {
+    .toc, .archive-nav, .tap-hint, .highlights li .jump { display: none; }
+    details.ref .chevron { display: none; }
+    a { color: var(--text-primary); text-decoration: underline; }
+    section { break-inside: avoid-page; }
+  }
+</style>
+</head>
+<body>
+
+<p class="archive-nav"><a href="index.html">&larr; All digests (archive)</a></p>
+
+<h1>Head &amp; Neck Oncology Digest — For the Surgeon</h1>
+<p class="meta">Window covered: last ~3 weeks (July 16 – August 6, 2026)</p>
+<p class="meta">Sources: JCO, NEJM, Lancet, Lancet Oncology, JAMA Oncology, JAMA Otolaryngology, Laryngoscope, Head &amp; Neck, Oral Oncology, IJROBP, Clin Cancer Res, Ann Surg Oncol, Ann Oncol, ClinicalTrials.gov</p>
+<p class="attribution">According to PubMed, all findings below are drawn from indexed literature; DOI links are provided per PubMed's attribution requirements.</p>
+
+<p class="key">Each finding leads with the bottom line, tagged <b>Practice-changing</b> / <b>Hypothesis-generating</b> / <b>Background</b>, plus a section-wide <b>Counterpoint</b> and <b>Go deeper</b> pointer. Tap any individual reference below (▸) to expand it into that specific study's key conclusion and its own counterpoint/caveats.</p>
+
+<p class="tap-hint">Tip: open from the Files app (not a shared Safari tab) so archive/cross-digest links resolve, and use Share &rarr; Print if you want a fully-expanded printout for tumor board.</p>
+
+<p class="note">Note on cadence: the prior digest (Aug 3) was a broad ~12-month baseline sweep. This cycle is a true 3-week incremental scan — several items below are direct follow-ons to stories flagged last time (linked inline), not repeats.</p>
+
+<nav class="toc" aria-label="Jump to section">
+  <button type="button" onclick="openSection('section-1')">1&nbsp;· Med onc consult</button>
+  <button type="button" onclick="openSection('section-2')">2&nbsp;· ctDNA/MRD</button>
+  <button type="button" onclick="openSection('section-3')">3&nbsp;· Neck dissection</button>
+  <button type="button" onclick="openSection('section-4')">4&nbsp;· RT de-escalation</button>
+  <button type="button" onclick="openSection('section-5')">5&nbsp;· Cutaneous SCC</button>
+  <button type="button" onclick="openSection('section-6')">6&nbsp;· Systemic pipeline</button>
+  <button type="button" class="expand-toggle" id="expand-toggle-btn" onclick="toggleAll()">Expand all</button>
+</nav>
+
+<div class="highlights">
+  <h2>Highlights — key takeaways</h2>
+  <ul>
+    <li class="linked" onclick="openSection('section-1')" role="button" tabindex="0" onkeypress="if(event.key==='Enter')openSection('section-1')"><b>Hard numbers now back the CPS&ge;10 cutoff argument:</b> a cost-effectiveness analysis of KEYNOTE-689 published today found perioperative pembrolizumab is cost-effective at CPS&gt;10 (~$134,700/QALY) but wildly not at CPS 1-10 (~$2.18M/QALY) — the strongest quantitative support yet for the CPS&ge;10-only stance flagged last cycle. <span class="jump">Jump to §1 &rarr;</span></li>
+    <li class="linked" onclick="openSection('section-1')" role="button" tabindex="0" onkeypress="if(event.key==='Enter')openSection('section-1')">The <b>"questioning KEYNOTE-689" pile keeps growing</b> — a new JCO commentary from a Medical College of Wisconsin/Moffitt/UT Southwestern group ("Notably Off Key") adds to the chorus pushing back on blanket perioperative IO. <span class="jump">Jump to §1 &rarr;</span></li>
+    <li class="linked" onclick="openSection('section-4')" role="button" tabindex="0" onkeypress="if(event.key==='Enter')openSection('section-4')"><b>De-escalation optimism takes a hit:</b> a 55-study, ~38,900-patient umbrella review found broad de-intensification strategies in HPV+ OPSCC are associated with <i>worse</i> OS, PFS, and locoregional control — a real counterweight to the ORATOR-driven optimism from last cycle. <span class="jump">Jump to §4 &rarr;</span></li>
+    <li class="linked" onclick="openSection('section-3')" role="button" tabindex="0" onkeypress="if(event.key==='Enter')openSection('section-3')">The <b>level IIB omission data got a direct rebuttal</b> — a letter-and-response exchange in Head &amp; Neck specifically challenges the meta-analysis on selective neck dissection cited last cycle. <span class="jump">Jump to §3 &rarr;</span></li>
+    <li class="linked" onclick="openSection('section-2')" role="button" tabindex="0" onkeypress="if(event.key==='Enter')openSection('section-2')"><b>ctDNA-gated de-escalation is now an actual open trial</b>, not just a research endpoint — MUSC's OPERATION trial omits postop RT in patients with negative two-week post-op ctHPVDNA, exactly the mechanism flagged as "coming" last cycle. <span class="jump">Jump to §2 &rarr;</span></li>
+    <li class="linked" onclick="openSection('section-5')" role="button" tabindex="0" onkeypress="if(event.key==='Enter')openSection('section-5')"><b>Cutaneous SCC guidelines got a formal 2026 update</b> (EADO/ESTRO/EORTC, two-part), and new real-world data suggest durable control after as few as 1-2 doses of checkpoint inhibition, without routine surgical consolidation. <span class="jump">Jump to §5 &rarr;</span></li>
+  </ul>
+</div>
+
+<section id="section-1">
+  <div class="section-head"><h3>1. Who gets a medical oncology consult before you book the OR</h3><span class="count-pill">4 studies</span></div>
+  <div class="badge-row">
+    <span class="badge practice">Practice-changing</span>
+    <p class="bottom-line">A same-day cost-effectiveness analysis gives the CPS&ge;10 argument real teeth — perioperative pembrolizumab is a reasonable value proposition only above that cutoff. This builds directly on <a href="HN_Onc_Digest_2026-08-03.html#perioperative-io">last cycle's CPS&ge;10 discussion</a>.</p>
+  </div>
+  <ul class="body-list">
+    <li><details class="ref">
+      <summary><span class="ref-text">University of Michigan modeled the KEYNOTE-689 cohort: for CPS&gt;10, perioperative pembrolizumab produced ~1.35 additional QALYs at an incremental cost of $181,900 (ICER $134,700). For CPS 1-10, the gain was ~0.08 QALYs at an ICER of $2,179,400.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> First formal economic argument translating the CPS-stratified clinical signal into a hard value threshold: it converts "marginal benefit" into "not worth the price" for CPS 1-10, and "reasonable value" for CPS&gt;10.</p>
+        <p><span class="tag warn">Counterpoint —</span> QALY inputs were borrowed from CheckMate 141 health-state utilities, not measured directly in KEYNOTE-689 patients, and even the "good" CPS&gt;10 subgroup only had a 57% probability of being cost-effective at a $150,000 willingness-to-pay threshold (11% for CPS 1-10) — suggestive, not definitive, economics.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1001/jamaoto.2026.2124">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A new JCO commentary, "Notably Off Key," from a multi-institutional radiation oncology/surgery/med onc group, directly questions the clinical benefit of perioperative IO in resectable HNSCC after KEYNOTE-689.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A group spanning rad onc, surgery, and med onc across three institutions (Medical College of Wisconsin, Moffitt, UT Southwestern) argues the EFS benefit may not translate into meaningful clinical benefit once treatment-related delay and toxicity are weighed against it.</p>
+        <p><span class="tag warn">Counterpoint —</span> This is an interpretive commentary, not new trial data — it's an argument about how to read KEYNOTE-689's existing results, and it's part of an active back-and-forth (see the section counterpoint below) rather than a settled critique.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1200/JCO-25-01990">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A companion JAMA Otolaryngology editorial discusses logistics of subcutaneous pembrolizumab and how it changes coordination of neoadjuvant scheduling with surgery.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A purely logistical shift worth knowing about: a subcutaneous formulation changes infusion-chair scheduling and could shorten the runway needed to coordinate neoadjuvant dosing with a surgical date.</p>
+        <p><span class="tag warn">Counterpoint —</span> Perspective piece with no efficacy or safety data of its own — an operations note, not a clinical-benefit claim.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1001/jamaoto.2026.2132">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A multidisciplinary expert consensus roadmap (15 international experts) ranked "personalized chemoradiation following perioperative immunotherapy" and "risk-adapted prognostic evaluation at diagnosis" as the top unmet needs in locally-advanced HNSCC.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> Confirms the specialty itself — not just critics — sees the post-perioperative-IO treatment pathway as unresolved; this was a formal, weighted-ranking survey of international rad onc/med onc leaders, not an offhand opinion.</p>
+        <p><span class="tag warn">Counterpoint —</span> A priority-setting exercise (ranked expert survey), not a data readout — it tells you what trials should be designed next, not what the answer is.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1016/j.radonc.2026.111711">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+  </ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>A systematic review of 25 RCTs in resectable LA-HNSCC (industry-funded, Merck) found EFS improvement with perioperative pembrolizumab, adjuvant nivolumab, and several other regimens was broadly comparable to SoC on OS, with pathologic response used as an early surrogate — a reminder that "no OS signal yet" cuts both ways. <a href="https://doi.org/10.1007/s12325-026-03604-5">DOI</a></p></div>
+  <div class="callout"><p class="label">Go deeper</p><p>For a practical, surgeon-authored framework on when to loop in the surgeon across the disease course, see the OHSU review "When should the medical oncologist call the surgeon?" <a href="https://doi.org/10.1016/j.currproblcancer.2026.101300">DOI</a></p></div>
+</section>
+
+<section id="section-2">
+  <div class="section-head"><h3>2. What's replacing your post-op surveillance imaging</h3><span class="count-pill">4 studies</span></div>
+  <div class="badge-row">
+    <span class="badge practice">Practice-changing within trials</span>
+    <p class="bottom-line">ctDNA-gated de-escalation has moved from "coming" to an actual open protocol, and the specialty society just weighed in formally. See also <a href="HN_Onc_Digest_2026-08-03.html#ctdna-mrd">last cycle's ctDNA/MRD coverage</a>.</p>
+  </div>
+  <ul class="body-list">
+    <li><details class="ref">
+      <summary><span class="ref-text"><b>MUSC's OPERATION trial</b> (NCT07513389, recruiting) omits immediate postoperative radiation in patients with intermediate pathologic risk features and a negative two-week post-op ctHPVDNA (NavDx) result.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> First trial found that actually withholds postop RT based on a negative ctDNA result rather than just proposing to someday — a real test of whether liquid biopsy can safely replace part of the current risk-stratification pathway.</p>
+        <p><span class="tag warn">Counterpoint —</span> Single-institution, phase II, only 36 patients planned — a pilot feasibility signal, not practice-changing evidence yet.</p>
+        <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07513389">View on ClinicalTrials.gov &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">The American Head and Neck Society published its first formal review of ctDNA in JAMA Otolaryngology, addressing test variability and the implications of an inaccurate result.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A sign the technology has crossed from "interesting research tool" to "something the specialty society believes warrants a formal position" — useful as the single best current overview of where the field stands.</p>
+        <p><span class="tag warn">Counterpoint —</span> A review/position paper summarizing existing trials, not new primary data of its own.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1001/jamaoto.2026.2045">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A new customized 11-gene NGS tumor-informed ctDNA assay in HPV-negative locally-advanced HNSCC (n=40) found 74.3% pre-op / 37.1% post-op positivity using tumor-specific variants (vs. 20%/2.5% using pathogenic-variant-only interpretation); pretreatment positivity predicted worse progression-free survival.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> How you define a "positive" result (tumor-specific variants vs. pathogenic-variant-only calling) changes detection rates several-fold — assay design choices, not just the underlying technology, will determine clinical utility.</p>
+        <p><span class="tag warn">Counterpoint —</span> n=40, single-center (Rouen, France); the PFS association was specifically tied to the lower-sensitivity pathogenic-variant definition, not the tumor-specific-variant definition used for the headline detection-rate numbers — the two metrics shouldn't be conflated.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1002/ijc.70478">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text"><b>SCREEN-HPV</b> (NCT06528353, not yet recruiting, n=10,000) will test blood-based HPV16-E6 serology plus ctDNA for population-level screening of HPV-driven OPC.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A fundamentally different use case from the rest of this section — early detection in an asymptomatic population, not post-treatment surveillance — and notable simply for its scale (n=10,000).</p>
+        <p><span class="tag warn">Counterpoint —</span> Not yet recruiting; screening in HPV+ OPC has no current standard-of-care role, so this remains exploratory.</p>
+        <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT06528353">View on ClinicalTrials.gov &rarr;</a></p>
+      </div>
+    </details></li>
+  </ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>A broader liquid-biopsy systematic review flags persistent heterogeneity in isolation protocols and detection platforms (NGS vs. digital PCR) as the main barrier to clinical implementation. <a href="https://doi.org/10.1177/10445498261475085">DOI</a></p></div>
+  <div class="callout"><p class="label">Go deeper</p><p>The AHNS review above is the best single starting point; for methodology depth, the NGS tumor-informed assay paper is the most rigorous primary dataset this cycle.</p></div>
+</section>
+
+<section id="section-3">
+  <div class="section-head"><h3>3. Where dissection extent is actually being questioned</h3><span class="count-pill">4 studies</span></div>
+  <div class="badge-row">
+    <span class="badge hypo">Hypothesis-generating</span>
+    <p class="bottom-line">The <a href="HN_Onc_Digest_2026-08-03.html#neck-dissection">level IIB omission data from last cycle</a> just got directly contested in print, and a new systematic review offers a cleaner answer for a different subsite.</p>
+  </div>
+  <ul class="body-list">
+    <li><details class="ref">
+      <summary><span class="ref-text">A letter, "Omission of Level IIB Dissection in cN0 HNSCC: Some Caveats!," directly challenges the meta-analysis on selective neck dissection cited last cycle; the original authors published a response defending their conclusions.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A direct, published disagreement about whether the pooled occult-metastasis rate in <a href="HN_Onc_Digest_2026-08-03.html#neck-dissection">the meta-analysis we cited last cycle</a> is genuinely low enough to justify omitting level IIB — read both sides before changing practice.</p>
+        <p><span class="tag warn">Counterpoint —</span> This is a letter-and-reply exchange, not new patient data — it's a methodological argument about interpreting the original meta-analysis, not an independent dataset.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1002/hed.70422">Read the letter &rarr;</a> &nbsp;·&nbsp; <a href="https://doi.org/10.1002/hed.70420">Read the response &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A cleaner signal in early-stage (cT1-2N0) <b>supraglottic</b> SCC: a 16-study review found occult nodal metastasis in 13-37.5% of patients, concentrated in level II (especially IIA, 75-85%), with levels I, IIB, IV, V rarely involved (&lt;5%).</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> The cleanest data point this cycle: occult mets are concentrated almost entirely in level II/IIA for supraglottic primaries, so limiting dissection to levels II-III (omitting IV and IIB) preserved regional control in lateralized disease.</p>
+        <p><span class="tag warn">Counterpoint —</span> A systematic review of heterogeneous retrospective/population-based studies spanning 25 years (2000-2025); overall survival benefit from elective dissection itself was inconsistent across studies even though the nodal-yield pattern was consistent.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1016/j.suronc.2026.102484">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A prospective feasibility study of <b>sentinel lymph node biopsy in gingivo-buccal SCC</b> (n=39, India) reported 100% sensitivity/specificity for occult nodal disease.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A genuine less-morbid alternative signal in a population where elective SOND is currently the default despite low nodal positivity rates — if validated at scale, this could meaningfully reduce shoulder/spinal-accessory morbidity.</p>
+        <p><span class="tag warn">Counterpoint —</span> n=39, single-center; the authors themselves caution the small sample size limits how much weight to put on "100%" — a single false negative would meaningfully move that number.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1002/hed.70403">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A large NCDB analysis (n=5,569) used ML risk stratification after transoral surgery in HPV+ OPSCC to identify a low-risk group where adjuvant therapy conferred no measurable OS benefit.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> Identifies a data-driven "truly low-risk" subgroup after transoral surgery — could eventually let more patients skip adjuvant treatment altogether, not just narrow the neck dissection itself.</p>
+        <p><span class="tag warn">Counterpoint —</span> Retrospective NCDB registry data; risk-group assignment and treatment-benefit estimates varied somewhat depending on which ML model (DeepSurv vs. NMTLR vs. RSF) was used — the authors call for prospective validation before withholding treatment based on this.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1016/j.oraloncology.2026.108024">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+  </ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>The SLNB gingivo-buccal series and the ML risk-stratification study (both above) are each individually underpowered or retrospective — encouraging directional signals, not yet grounds to change default management.</p></div>
+  <div class="callout"><p class="label">Go deeper</p><p>A systematic review/meta-analysis of TORS vs. definitive chemoradiation for OPSCC (15 studies, 6,767 patients) found better OS with TORS overall (HR 0.51) but no OS advantage specifically in HPV+ disease, and comparable dysphagia outcomes. <a href="https://doi.org/10.1002/hed.70308">DOI</a></p></div>
+</section>
+
+<section id="section-4">
+  <div class="section-head"><h3>4. Radiation de-escalation — a necessary reality check</h3><span class="count-pill">3 studies</span></div>
+  <div class="badge-row">
+    <span class="badge bg">Background, tempering prior optimism</span>
+    <p class="bottom-line">The umbrella review this cycle is a genuine counterweight to the <a href="HN_Onc_Digest_2026-08-03.html#rt-deescalation">ORATOR-driven enthusiasm from last digest</a>.</p>
+  </div>
+  <ul class="body-list">
+    <li><details class="ref">
+      <summary><span class="ref-text">An umbrella review of systematic reviews/meta-analyses (correcting for study overlap) found that across 55 studies (n=38,929), broad de-intensification strategies in HPV+ OPSCC were associated with <i>worse</i> OS (HR 1.33), PFS (HR 2.11), locoregional control (HR 2.51), and distant control (HR 1.90) vs. SoC.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> The most rigorous synthesis yet on HPV+ de-escalation, and it's a genuine yellow flag: broad de-intensification (not just cetuximab substitution) trends toward worse survival and disease control across the pooled literature, after correcting for double-counting of overlapping meta-analyses. Cetuximab substitution specifically showed inferior OS (HR 2.83) and LRC (HR 2.78) without a significant late-toxicity benefit — reinforcing the RTOG 1016 story from last cycle.</p>
+        <p><span class="tag warn">Counterpoint —</span> "De-intensification" pools together very different strategies (dose reduction, drug substitution, volume reduction, surgery-alone) with different risk profiles — the pooled hazard ratios shouldn't be read as "all de-escalation is bad," just that the blanket approach lacks a selection biomarker.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1002/hed.70340">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">The same review notes trial-status updates: ADEPT (post-TORS adjuvant de-intensification) closed early, ECOG-E3311 long-term follow-up published in 2025, PATHOS phase III enrollment was completing as of 2025.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> The three trials actually designed to answer the post-TORS de-escalation question are all now mature or maturing — real Level 1 evidence on this exact question should start reading out over the next digest cycles.</p>
+        <p><span class="tag warn">Counterpoint —</span> Status note, not a data point yet — worth tracking, not yet actionable.</p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A Lancet letter exchange debates the evidence base for proton beam therapy in oropharyngeal cancer.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A live, published disagreement about whether current comparative evidence justifies proton therapy for oropharyngeal cancer outside of trials — worth knowing both sides before a patient asks about it.</p>
+        <p><span class="tag warn">Counterpoint —</span> Correspondence, not a trial — reflects an ongoing evidence gap rather than new data on either side.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1016/S0140-6736(26)01070-6">Read the letter &rarr;</a> &nbsp;·&nbsp; <a href="https://doi.org/10.1016/S0140-6736(26)01182-7">Read the reply &rarr;</a></p>
+      </div>
+    </details></li>
+  </ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>The umbrella review itself cautions that ctDNA-gated RT omission (Section 2) wasn't powered in this pooled analysis and may behave differently than blanket dose reduction or drug substitution. Read this as "de-escalation needs a selection biomarker," not "de-escalation is dead."</p></div>
+  <div class="callout"><p class="label">Go deeper</p><p>The umbrella review is the single best current synthesis — it explicitly re-analyzes overlap across prior meta-analyses rather than double-counting the same trials. <a href="https://doi.org/10.1002/hed.70340">DOI</a></p></div>
+</section>
+
+<section id="section-5">
+  <div class="section-head"><h3>5. Cutaneous SCC: guidelines catch up, dosing questions open up</h3><span class="count-pill">4 studies</span></div>
+  <div class="badge-row">
+    <span class="badge practice">Practice-changing</span>
+    <p class="bottom-line">The European cSCC guidelines got a formal two-part 2026 update, and new real-world data suggest less immunotherapy may be enough for responders. See also <a href="HN_Onc_Digest_2026-08-03.html#cutaneous-scc">last cycle's cSCC coverage</a>.</p>
+  </div>
+  <ul class="body-list">
+    <li><details class="ref">
+      <summary><span class="ref-text">EADO/ESTRO/EORTC published an updated two-part consensus guideline (diagnostics/prevention, and treatment) for invasive cSCC.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> The first formal guideline refresh since 2023 — codifies a new "difficult-to-treat CSCC" 5-group classification and confirms adjuvant cemiplimab after surgery+RT in high-risk disease now belongs in the tumor-board conversation.</p>
+        <p><span class="tag warn">Counterpoint —</span> Consensus guideline (expert panel), not a new trial — largely formalizes evidence already covered in our prior cycle (C-POST, etc.) into an actual practice document rather than adding new data.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1016/j.ejca.2026.116763">Read Part 1 &rarr;</a> &nbsp;·&nbsp; <a href="https://doi.org/10.1016/j.ejca.2026.116764">Read Part 2 &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A Bayesian causal analysis from Mass Eye and Ear/MGH (the <b>FIRST</b> study, n=189) found nearly half of patients received &le;2 doses of checkpoint inhibition, and among 50 complete responders managed without surgery, only 1 recurrence occurred over a median 25.4-month follow-up.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> Real-world evidence that durable disease control is achievable with far less immunotherapy exposure than typical fixed-duration neoadjuvant protocols, and without routine surgical consolidation. Benefit was concentrated early (2 vs. 1 dose), with uncertain incremental value beyond 2 doses.</p>
+        <p><span class="tag warn">Counterpoint —</span> Retrospective, Bayesian-modeled, single-institution cohort — treatment decisions were response-guided by treating physicians, not randomized, so this describes what happened, not what's proven optimal.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1136/jitc-2026-015029">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A second international case series (n=112) benchmarks craniofacial resection for advanced anterior skull base cSCC: 5-year OS 52.3%, intracranial extension the strongest independent predictor of worse survival (HR 6.54).</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A modern surgical benchmark for the most advanced cSCC — useful for judging whether newer immunotherapy-first sequencing is actually beating historical surgical results in your own patients.</p>
+        <p><span class="tag warn">Counterpoint —</span> Historical cohort (1995-2015) predating routine immunotherapy access — not a fair head-to-head comparator for current IO-based approaches, only a baseline.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1002/hed.70412">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">HLX07, a novel anti-EGFR antibody, showed a 60% ORR at the 1000mg dose level (vs. 19% at the higher 1500mg dose) in a phase II trial of advanced cSCC.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A new anti-EGFR antibody shows a real signal in advanced cSCC — an emerging non-IO option worth knowing about for IO-ineligible or IO-refractory patients.</p>
+        <p><span class="tag warn">Counterpoint —</span> The response rate was paradoxically higher at the lower dose (60% at 1000mg vs. 19% at 1500mg) in small, non-randomized cohorts (21 vs. 10 patients) — this inverse dose-response is unexplained and could easily be a small-sample artifact rather than a true biological effect. A larger trial is needed before drawing conclusions.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1177/17588359261456684">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+  </ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>The FIRST study and HLX07 trial above are both real-world/small-sample signals, not confirmatory trials — treat both as hypothesis-generating rather than protocol-ready.</p></div>
+  <div class="callout"><p class="label">Go deeper</p><p>The EADO/ESTRO/EORTC Part 2 guideline is the most current, broadly-endorsed treatment algorithm; <a href="HN_Onc_Digest_2026-08-03.html#cutaneous-scc">last cycle's Kreft et al. review</a> remains the best discussion of neoadjuvant-vs-surgery-first sequencing.</p></div>
+</section>
+
+<section id="section-6">
+  <div class="section-head"><h3>6. Systemic pipeline for recurrent/metastatic disease</h3><span class="count-pill">5 items</span></div>
+  <div class="badge-row">
+    <span class="badge bg">Background / pipeline</span>
+    <p class="bottom-line">Several new trials are testing next-generation ADCs and bispecifics in combination with checkpoint inhibition, largely in the neoadjuvant/1L R-M space.</p>
+  </div>
+  <ul class="body-list">
+    <li><details class="ref">
+      <summary><span class="ref-text">AbbVie's telisotuzumab adizutecan (a c-Met-directed ADC) + pembrolizumab is entering randomized phase II as first-line therapy for recurrent/metastatic HNSCC (NCT07744126, not yet recruiting, n=150).</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> A new target class (c-Met-directed ADC) entering the HNSCC combination space for the first time in our tracking.</p>
+        <p><span class="tag warn">Counterpoint —</span> Not yet recruiting; phase II with no efficacy data yet.</p>
+        <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07744126">View on ClinicalTrials.gov &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">Becotatug vedotin (MRG003, an EGFR-directed ADC) combined with PD-1 inhibitors (toripalimab or pucotenlimab) is being tested in three separate Chinese trials spanning neoadjuvant PD-L1+ resectable disease, locally recurrent resectable disease, and hypopharyngeal SCC specifically (NCT07677475, NCT07632339, NCT07665190).</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> An EGFR-ADC-plus-IO class worth watching alongside ficerafusp alfa and petosemtamab — a broad, fast-moving development program testing the same drug across three distinct clinical scenarios simultaneously.</p>
+        <p><span class="tag warn">Counterpoint —</span> All early-phase (phase II), Chinese single/limited-site trials; cross-trial comparison to Western EGFR-bispecific programs isn't possible yet.</p>
+        <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07677475">NCT07677475 &rarr;</a> &nbsp;·&nbsp; <a href="https://clinicaltrials.gov/study/NCT07632339">NCT07632339 &rarr;</a> &nbsp;·&nbsp; <a href="https://clinicaltrials.gov/study/NCT07665190">NCT07665190 &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">University of Chicago is testing induction cemiplimab + chemotherapy with or without fianlimab (a LAG-3 inhibitor) in locoregionally advanced HNSCC (NCT07346196).</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> The first LAG-3 inhibitor combination flagged in this space — tests whether dual checkpoint blockade (PD-1 + LAG-3) improves induction responses ahead of definitive local therapy.</p>
+        <p><span class="tag warn">Counterpoint —</span> Not yet recruiting (start date pushed to 2027); LAG-3 combinations have had mixed results in other tumor types (e.g., melanoma), so extrapolation to HNSCC is speculative.</p>
+        <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07346196">View on ClinicalTrials.gov &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A review from an Italian/European group synthesizes current immunotherapeutic strategies across HPV+/HPV- recurrent/metastatic OPSCC, covering PD-1 blockade, EGFR-directed bispecifics, and therapeutic HPV vaccines.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> The best current single-source synthesis of where EGFR-bispecifics (ficerafusp alfa, petosemtamab, amivantamab), PD-1 blockade, and therapeutic HPV vaccines stand for recurrent/metastatic OPSCC, split cleanly by HPV status.</p>
+        <p><span class="tag warn">Counterpoint —</span> Narrative review, not a data source in itself — useful for orientation, not for citing specific efficacy numbers.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1016/j.critrevonc.2026.105378">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+    <li><details class="ref">
+      <summary><span class="ref-text">A systematic review of HPV therapeutic vaccine preclinical data notes there are still no FDA-approved therapeutic vaccines for HPV-associated cancers, despite two decades of prophylactic vaccine availability.</span><span class="chevron">&#9656;</span></summary>
+      <div class="ref-detail">
+        <p><span class="tag">Key conclusion —</span> Useful for setting patient expectations when this comes up in clinic: prophylactic vaccines (which prevent infection) are not the same as therapeutic vaccines (which treat existing disease), and the latter remain entirely investigational.</p>
+        <p><span class="tag warn">Counterpoint —</span> Preclinical models only; no late-phase human efficacy data yet.</p>
+        <p class="ref-link"><a href="https://doi.org/10.1007/s10555-026-10365-8">Read the paper &rarr;</a></p>
+      </div>
+    </details></li>
+  </ul>
+  <div class="callout"><p class="label">Go deeper</p><p>The Di Bello et al. review above is the single best current landscape summary; none of the new trials above have efficacy data yet — this section is "what to watch," not "what changed."</p></div>
+</section>
+
+<div class="closing">
+  <h2>Bottom line for tumor board</h2>
+  <p>The CPS&ge;10 argument that closed out <a href="HN_Onc_Digest_2026-08-03.html">last cycle's digest</a> just picked up hard economic backing — a same-day cost-effectiveness analysis shows perioperative pembrolizumab is a reasonable value proposition above that cutoff and a poor one below it, while yet another commentary questions the whole KEYNOTE-689 premise. At the same time, this cycle is a genuine correction on the de-escalation side: a large umbrella review shows blanket HPV+ de-intensification underperforms standard of care, and the level IIB neck dissection omission data got directly contested in print. The throughline is the same as last time — the field is converging on "de-escalate/intensify by biomarker, not by disease category" — but ctDNA is now closer to doing that job for real, with an actual trial (OPERATION) omitting postop RT based on a negative post-op liquid biopsy rather than just proposing to. Nothing here should change what you do in the OR this month, but the CPS-stratified consult conversation and the "which de-escalation trial is my patient eligible for" conversation both got more concrete.</p>
+</div>
+
+<footer>Digest regenerates automatically every two weeks. Sources: PubMed and ClinicalTrials.gov; DOI links provided per PubMed attribution requirements. Tap any reference (▸) for the deeper conclusion and counterpoint.</footer>
+
+<script>
+  function openSection(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+  function toggleAll() {
+    var refs = document.querySelectorAll('details.ref');
+    var btn = document.getElementById('expand-toggle-btn');
+    var anyClosed = Array.prototype.some.call(refs, function(d) { return !d.open; });
+    refs.forEach(function(d) { d.open = anyClosed; });
+    btn.textContent = anyClosed ? 'Collapse all' : 'Expand all';
+  }
+  // Force every reference open for printing (tumor board handout), then restore prior state.
+  var _preprintState = null;
+  window.addEventListener('beforeprint', function() {
+    var refs = document.querySelectorAll('details.ref');
+    _preprintState = Array.prototype.map.call(refs, function(d) { return d.open; });
+    refs.forEach(function(d) { d.open = true; });
+  });
+  window.addEventListener('afterprint', function() {
+    if (!_preprintState) return;
+    var refs = document.querySelectorAll('details.ref');
+    refs.forEach(function(d, i) { d.open = _preprintState[i]; });
+    _preprintState = null;
+  });
+</script>
+
+</body>
+</html>
