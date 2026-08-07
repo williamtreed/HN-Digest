@@ -269,9 +269,6 @@
   .reader-finding .pane-summary { margin-bottom: 24px; font-size: clamp(20px, 2vw, 25px); line-height: 1.48; }
   .reader-finding .pane-detail { margin-top: 0; padding-top: 24px; font-size: 15px; }
   .reader-finding .pane-detail p { font-size: 15px; }
-  .reader-section-context { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--border); }
-  .reader-section-context > h3 { margin: 0 0 14px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
-  .reader-section-context .callout { margin-block: 12px; }
   .reader-content .highlights li,
   .reader-content .closing p,
   .reader-content details.ref summary,
@@ -323,7 +320,7 @@
   .evidence-figure figcaption { padding: 11px 13px; border-top: 1px solid var(--border); color: var(--text-muted); background: var(--surface-1); font-size: 9px; line-height: 1.45; }
   .evidence-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 16px 0 0; }
   .evidence-links a { font-size: 11px; font-weight: 750; }
-  .desk-finding-button.is-rich .desk-finding-copy::after { content: " · Evidence brief"; color: var(--accent); font-size: 9px; font-weight: 800; letter-spacing: .035em; text-transform: uppercase; }
+  .desk-finding-button.is-rich .desk-finding-copy::after { content: " · Article digest"; color: var(--accent); font-size: 9px; font-weight: 800; letter-spacing: .035em; text-transform: uppercase; }
 
   .reading-preferences { position: fixed; right: 18px; bottom: 18px; z-index: 100; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   .reading-preferences-toggle { display: flex; align-items: baseline; gap: 7px; border: 1px solid var(--border-strong); border-radius: 999px; padding: 8px 12px; color: var(--text-primary); background: color-mix(in srgb, var(--surface-1) 94%, transparent); box-shadow: var(--shadow); backdrop-filter: blur(14px); font: inherit; cursor: pointer; }
@@ -441,7 +438,7 @@
 <p class="meta">Sources: JCO, NEJM, Lancet, Lancet Oncology, JAMA Oncology, JAMA Otolaryngology, Laryngoscope, Head &amp; Neck, Oral Oncology, IJROBP, Clin Cancer Res, Ann Surg Oncol, Ann Oncol, ClinicalTrials.gov</p>
 <p class="attribution">According to PubMed, all findings below are drawn from indexed literature; DOI links are provided per PubMed's attribution requirements.</p>
 
-<p class="key">Each finding leads with the bottom line, tagged <b>Practice-changing</b> / <b>Hypothesis-generating</b> / <b>Background</b>, plus a section-wide <b>Counterpoint</b> and <b>Go deeper</b> pointer. Select any reference to inspect its conclusion, caveat, source, and section context; findings marked <b>Evidence brief</b> add source-grounded tables, charts, protocol maps, or licensed article figures.</p>
+<p class="key">Each finding leads with the bottom line, tagged <b>Practice-changing</b> / <b>Hypothesis-generating</b> / <b>Background</b>, plus a section-wide <b>Counterpoint</b> and <b>Go deeper</b> pointer. Select any reference for an article-specific digest covering scope, methods, results or argument, clinical interpretation, limitations, and source provenance. Section-wide context stays on the section screen so the article view can do one job well.</p>
 
 <p class="tap-hint">Desktop: choose a section or finding in the left navigator and read it in the right pane. Source links open separately so your place is preserved. Mobile keeps native inline expansion. Use the <b>Aa</b> button for theme and text size; use Share &rarr; Print for a fully-expanded tumor-board handout.</p>
 
@@ -519,6 +516,33 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> A group spanning rad onc, surgery, and med onc across three institutions (Medical College of Wisconsin, Moffitt, UT Southwestern) argues the EFS benefit may not translate into meaningful clinical benefit once treatment-related delay and toxicity are weighed against it.</p>
         <p><span class="tag warn">Counterpoint —</span> This is an interpretive commentary, not new trial data — it's an argument about how to read KEYNOTE-689's existing results, and it's part of an active back-and-forth (see the section counterpoint below) rather than a settled critique.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Commentary digest</span><span>JCO Comments &amp; Controversies</span><span>No new patient cohort</span></div>
+          <div class="evidence-brief-body">
+            <h4>The paper is a challenge to interpretation, not a second trial</h4>
+            <p class="evidence-deck"><i>Notably Off Key</i> is a seven-author, three-institution multidisciplinary commentary about what should count as meaningful benefit after KEYNOTE-689. Its value is the decision frame: weigh the reported event-free-survival signal against extra therapy, immune toxicity, possible delay to definitive surgery, and the burden of carrying perioperative treatment through a curative pathway.</p>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">7</span><span class="evidence-metric-label">Commentary authors</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">3</span><span class="evidence-metric-label">Institutions represented</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">0</span><span class="evidence-metric-label">New patients analyzed</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">0</span><span class="evidence-metric-label">New efficacy endpoints</span></div>
+            </div>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>How to use this source</caption>
+                <thead><tr><th>It contributes</th><th>It does not contribute</th></tr></thead>
+                <tbody>
+                  <tr><td>A multidisciplinary critique of whether EFS alone settles the perioperative-IO question</td><td>An independent estimate of response, recurrence, survival, toxicity, or surgical delay</td></tr>
+                  <tr><td>A checklist of competing harms and benefits to surface in a consult</td><td>A validated CPS threshold or evidence that a specific subgroup should not receive pembrolizumab</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Clinical read</strong><p>Use it to sharpen informed consent: the question is not simply whether the regimen moved an endpoint, but whether the likely absolute benefit for this patient justifies added treatment before and after surgery.</p></div>
+              <div class="evidence-insight caution"><strong>Evidence boundary</strong><p>Because the article reinterprets existing KEYNOTE-689 data, it cannot overturn the trial by itself. The original trial, subgroup analyses, toxicity tables, and subsequent randomized evidence remain the evidentiary center.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1200/JCO-25-01990">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -527,6 +551,23 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> A purely logistical shift worth knowing about: a subcutaneous formulation changes infusion-chair scheduling and could shorten the runway needed to coordinate neoadjuvant dosing with a surgical date.</p>
         <p><span class="tag warn">Counterpoint —</span> Perspective piece with no efficacy or safety data of its own — an operations note, not a clinical-benefit claim.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Viewpoint digest</span><span>Structured abstract</span><span>2 authors · no new outcomes</span></div>
+          <div class="evidence-brief-body">
+            <h4>A delivery-system paper disguised as a drug paper</h4>
+            <p class="evidence-deck">Miller and Rocco consider how a subcutaneous formulation changes the surgeon's role in delivering neoadjuvant immunotherapy. The paper's center of gravity is coordination—who owns the preoperative dose, where it is given, how toxicity is communicated, and how the planned operation remains the fixed point of the pathway.</p>
+            <div class="trial-flow" aria-label="Operational pathway raised by the viewpoint">
+              <div class="trial-step"><strong>1 · Select</strong><span>Confirm the patient and planned operation fit the perioperative pathway</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>2 · Schedule</strong><span>Anchor drug administration to the operative date, not an open-ended infusion calendar</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>3 · Monitor</strong><span>Assign ownership for immune toxicity, holds, and escalation</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>4 · Handoff</strong><span>Document dose, reaction, and readiness before surgery</span></div>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>What changes</strong><p>Subcutaneous delivery can move administration out of the conventional infusion-chair workflow. That may reduce scheduling friction, but it also makes explicit protocols and closed-loop communication more—not less—important.</p></div>
+              <div class="evidence-insight caution"><strong>What does not change</strong><p>The Viewpoint does not establish efficacy equivalence in resectable HNSCC, an optimal dose-to-operation interval, or a safe rule for proceeding after immune toxicity. Those remain drug-label, trial-protocol, and multidisciplinary decisions.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1001/jamaoto.2026.2132">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -535,6 +576,27 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> Confirms the specialty itself — not just critics — sees the post-perioperative-IO treatment pathway as unresolved; this was a formal, weighted-ranking survey of international rad onc/med onc leaders, not an offhand opinion.</p>
         <p><span class="tag warn">Counterpoint —</span> A priority-setting exercise (ranked expert survey), not a data readout — it tells you what trials should be designed next, not what the answer is.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Roadmap digest</span><span>Expert ranking exercise</span><span>15 international experts</span></div>
+          <div class="evidence-brief-body">
+            <h4>The unresolved interface is systemic therapy meeting radiation</h4>
+            <p class="evidence-deck">The panel did not vote on a treatment algorithm. It ranked research priorities for integrating radiation with systemic treatment in locally advanced HNSCC. The top items—personalized chemoradiation after perioperative immunotherapy and risk-adapted prognostic assessment at diagnosis—identify the two missing pieces: what biology should determine intensity, and how prior immunotherapy should alter the postoperative plan.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>From ranked need to practical question</caption>
+                <thead><tr><th>Ranked priority</th><th>The clinical uncertainty underneath it</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Personalized CRT after perioperative IO</th><td>Whether postoperative radiation dose, volume, or concurrent systemic therapy should change after response—or nonresponse—to perioperative immunotherapy</td></tr>
+                  <tr><th scope="row">Risk-adapted prognosis at diagnosis</th><td>Which baseline clinical, viral, pathologic, imaging, and molecular features can safely assign treatment intensity before the pathway begins</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Useful now</strong><p>The roadmap is a strong reason to discuss perioperative-IO candidates jointly before treatment starts. Decisions made in sequence can otherwise lock the patient into trimodality care without a prospectively agreed off-ramp.</p></div>
+              <div class="evidence-insight caution"><strong>Not a guideline</strong><p>Expert weighting measures perceived importance, not comparative effectiveness. It neither endorses a de-escalation strategy nor establishes how pathology, response, CPS, or ctDNA should change adjuvant therapy.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1016/j.radonc.2026.111711">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -589,6 +651,29 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> A sign the technology has crossed from "interesting research tool" to "something the specialty society believes warrants a formal position" — useful as the single best current overview of where the field stands.</p>
         <p><span class="tag warn">Counterpoint —</span> A review/position paper summarizing existing trials, not new primary data of its own.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Review digest</span><span>American Head and Neck Society</span><span>Structured abstract · 11 authors</span></div>
+          <div class="evidence-brief-body">
+            <h4>Promising signal, four distinct jobs, no interchangeable assays</h4>
+            <p class="evidence-deck">The AHNS review separates viral ctDNA in HPV-associated OPSCC and EBV-associated nasopharyngeal carcinoma from the broader tumor-informed problem in virus-negative disease. It surveys diagnostic use, treatment-response monitoring, minimal residual disease, and surveillance or treatment adaptation—and makes assay variability and the consequences of an incorrect result part of the clinical question.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>The use cases should not be collapsed into one claim</caption>
+                <thead><tr><th>Use case</th><th>Potential decision</th><th>What still needs definition</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Diagnosis</th><td>Support work-up of an HPV- or EBV-driven cancer</td><td>Who should be tested and how a blood signal localizes disease</td></tr>
+                  <tr><th scope="row">Response</th><td>Identify molecular clearance or persistence during therapy</td><td>Sampling time, kinetic threshold, and action after a discordant scan</td></tr>
+                  <tr><th scope="row">Post-treatment MRD</th><td>Estimate residual-disease risk after surgery or chemoradiation</td><td>False-negative risk and whether withholding standard therapy is safe</td></tr>
+                  <tr><th scope="row">Surveillance / adaptation</th><td>Trigger imaging, biopsy, or a treatment change</td><td>Prospective evidence that acting on the result improves outcomes</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Clinical read</strong><p>Viral ctDNA has the cleanest biological rationale and is furthest along. Even there, the assay, time point, prior probability, and intended action should be named whenever a result is discussed.</p></div>
+              <div class="evidence-insight caution"><strong>Failure modes matter</strong><p>A false negative can falsely reassure or support premature de-escalation; a false positive can create cascades of imaging, procedures, and anxiety. The review argues for trials that validate the whole decision pathway—not analytical detection alone.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1001/jamaoto.2026.2045">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -626,6 +711,29 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> A fundamentally different use case from the rest of this section — early detection in an asymptomatic population, not post-treatment surveillance — and notable simply for its scale (n=10,000).</p>
         <p><span class="tag warn">Counterpoint —</span> Not yet recruiting; screening in HPV+ OPC has no current standard-of-care role, so this remains exploratory.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Protocol digest</span><span>Live ClinicalTrials.gov registry</span><span>No screening outcomes yet</span></div>
+          <div class="evidence-brief-body">
+            <h4>The study is a 10,000-person screening funnel—not a ctDNA accuracy study alone</h4>
+            <p class="evidence-deck">SCREEN-HPV plans to enroll 10,000 men aged 50 years or older in France. HPV16-E6 serology is the first gate; approximately 100 seropositive participants are anticipated. Those men enter five years of focused follow-up with ctDNA, head-and-neck and anogenital examination, and imaging when indicated. The first 500 participants also provide a ctDNA control sample.</p>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">10,000</span><span class="evidence-metric-label">Planned screened men</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">&ge;50</span><span class="evidence-metric-label">Eligible age in years</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">~1%</span><span class="evidence-metric-label">Expected E6-seropositive</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">5 yr</span><span class="evidence-metric-label">Focused follow-up</span></div>
+            </div>
+            <div class="trial-flow" aria-label="SCREEN-HPV protocol funnel">
+              <div class="trial-step"><strong>1 · Screen</strong><span>HPV16-E6 serology in 10,000 selected men</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>2 · Enrich</strong><span>Seropositive participants receive ctDNA and focused examinations</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>3 · Localize</strong><span>Image and investigate a suspicious lesion; manage confirmed cancer conventionally</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>4 · Escalate</strong><span>If no lesion but ctDNA persists, prophylactic tonsil/base-of-tongue surgery may be offered</span></div>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>What success would mean</strong><p>The primary question is whether dual-positive screening can identify an otherwise occult tumor. This is a feasibility and positive-predictive-value pathway, not yet evidence that screening lowers mortality.</p></div>
+              <div class="evidence-insight caution"><strong>The consequential step</strong><p>Persistent molecular positivity without a visible primary can lead to prophylactic oropharyngeal surgery. Yield, false positives, morbidity, and patient-reported burden therefore matter as much as analytical sensitivity.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT06528353">View on ClinicalTrials.gov &rarr;</a></p>
       </div>
     </details></li>
@@ -646,6 +754,28 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> A direct, published disagreement about whether the pooled occult-metastasis rate in <a href="HN_Onc_Digest_2026-08-03.html#neck-dissection">the meta-analysis we cited last cycle</a> is genuinely low enough to justify omitting level IIB — read both sides before changing practice.</p>
         <p><span class="tag warn">Counterpoint —</span> This is a letter-and-reply exchange, not new patient data — it's a methodological argument about interpreting the original meta-analysis, not an independent dataset.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Correspondence digest</span><span>Letter + author reply</span><span>No new cohort</span></div>
+          <div class="evidence-brief-body">
+            <h4>The dispute is about whether a pooled average is safe enough for an individual neck</h4>
+            <p class="evidence-deck">Locatello and Gallo challenge the interpretation of the prior systematic review and meta-analysis; Fermi and colleagues respond in defense of their methods and conclusions. The exchange is most useful as an audit trail: it surfaces the assumptions between a low pooled level-IIB involvement rate and the operative recommendation to omit that level.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>What the exchange adds</caption>
+                <thead><tr><th>Document</th><th>Role in the debate</th><th>What remains unresolved</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Letter: “Some Caveats!”</th><td>Challenges how the pooled evidence is interpreted and generalized to omission</td><td>Whether heterogeneity by subsite, clinical selection, and study design changes the acceptable-risk threshold</td></tr>
+                  <tr><th scope="row">Author response</th><td>Defends the meta-analytic approach and the original conclusion</td><td>Whether the pooled signal is strong enough to change surgery without prospective validation</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Clinical read</strong><p>The practical question is not whether level-IIB disease is uncommon—it is—but whether the remaining risk is acceptably low in the exact subsite and patient being operated on.</p></div>
+              <div class="evidence-insight caution"><strong>Evidence boundary</strong><p>Neither correspondence article adds patients, nodal specimens, or recurrence outcomes. Read the exchange alongside the original meta-analysis rather than counting the reply as confirmatory evidence.</p></div>
+            </div>
+            <div class="evidence-links"><a href="https://doi.org/10.1002/hed.70393">Open the original meta-analysis &rarr;</a></div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1002/hed.70422">Read the letter &rarr;</a> &nbsp;·&nbsp; <a href="https://doi.org/10.1002/hed.70420">Read the response &rarr;</a></p>
       </div>
     </details></li>
@@ -680,6 +810,35 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> A genuine less-morbid alternative signal in a population where elective SOND is currently the default despite low nodal positivity rates — if validated at scale, this could meaningfully reduce shoulder/spinal-accessory morbidity.</p>
         <p><span class="tag warn">Counterpoint —</span> n=39, single-center; the authors themselves caution the small sample size limits how much weight to put on "100%" — a single false negative would meaningfully move that number.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Study digest</span><span>Prospective feasibility cohort</span><span>cT1-3 N0 gingivo-buccal SCC</span></div>
+          <div class="evidence-brief-body">
+            <h4>Sentinel mapping was tested against dissection in every patient</h4>
+            <p class="evidence-deck">After transoral primary resection when feasible, patients received radiocolloid injection and SPECT imaging, intraoperative gamma-probe localization, and frozen-section assessment. All 39 still underwent selective neck dissection, creating a within-patient reference standard rather than relying on follow-up alone.</p>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">39 / 39</span><span class="evidence-metric-label">Sentinel node identified</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">746</span><span class="evidence-metric-label">Nodes examined</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">8</span><span class="evidence-metric-label">Node-positive patients</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">27 mo</span><span class="evidence-metric-label">Median follow-up</span></div>
+            </div>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Diagnostic performance inside this cohort</caption>
+                <thead><tr><th>Observation</th><th>Result</th><th>Interpretation</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Mapping</th><td>36 found on imaging and intraoperatively; 3 found intraoperatively only</td><td>SPECT alone would not have localized every sentinel node</td></tr>
+                  <tr><th scope="row">Positive nodes</th><td>14 total; 12 sentinel nodes across 8 patients</td><td>The two positive non-sentinel nodes occurred in already SLNB-positive necks</td></tr>
+                  <tr><th scope="row">Sensitivity / specificity</th><td>100% / 100%</td><td>No false negative or false positive occurred in 39 patients</td></tr>
+                  <tr><th scope="row">Follow-up status</th><td>36 without evidence of disease; 3 died of disease</td><td>Feasibility cohort, not a noninferiority test of SLNB-only management</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Why this design matters</strong><p>Performing selective dissection in every case let the investigators test the sentinel result against the rest of the neck. That is stronger diagnostic validation than simply observing a negative SLNB cohort.</p></div>
+              <div class="evidence-insight caution"><strong>Precision warning</strong><p>Perfect performance in eight node-positive patients has wide uncertainty. Multicenter validation and an oncologic-outcomes study are needed before replacing elective dissection.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1002/hed.70403">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -688,6 +847,29 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> Identifies a data-driven "truly low-risk" subgroup after transoral surgery — could eventually let more patients skip adjuvant treatment altogether, not just narrow the neck dissection itself.</p>
         <p><span class="tag warn">Counterpoint —</span> Retrospective NCDB registry data; risk-group assignment and treatment-benefit estimates varied somewhat depending on which ML model (DeepSurv vs. NMTLR vs. RSF) was used — the authors call for prospective validation before withholding treatment based on this.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Study digest</span><span>NCDB retrospective cohort</span><span>Structured abstract · n=5,569</span></div>
+          <div class="evidence-brief-body">
+            <h4>The models estimate prognosis first, then ask where adjuvant benefit appears</h4>
+            <p class="evidence-deck">Investigators trained DeepSurv, neural multi-task logistic regression, and random survival forest models on the surgery-alone cohort and assigned low-, intermediate-, and high-risk groups. They then compared overall survival across TOS alone, TOS plus radiation, and TOS plus chemoradiation within those modeled strata.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Cohort and model readout</caption>
+                <thead><tr><th>Element</th><th>Result</th><th>What it suggests</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Treatment distribution</th><td>TOS alone 2,500 (44.9%); +RT 1,807 (32.4%); +CRT 1,262 (22.7%)</td><td>A large observational spectrum, not randomized assignment</td></tr>
+                  <tr><th scope="row">Discrimination</th><td>Concordance indices 0.77-0.80</td><td>Useful prognostic separation inside the dataset</td></tr>
+                  <tr><th scope="row">DeepSurv low risk</th><td>No measurable OS benefit with adjuvant therapy</td><td>Candidate group for prospective omission testing</td></tr>
+                  <tr><th scope="row">Intermediate / high risk</th><td>RT or CRT benefit in intermediate risk; largest CRT benefit in high risk</td><td>The model recapitulates increasing need for treatment with higher modeled risk</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Variables doing work</strong><p>Age, margin status, comorbidity, insurance, and facility volume were influential; the importance of extranodal extension varied by model. That mix shows the prediction is partly clinical and partly health-system dependent.</p></div>
+              <div class="evidence-insight caution"><strong>Why it is not an omission rule</strong><p>NCDB captures overall survival, not recurrence pattern or functional outcome, and treatment selection is confounded. A model can identify who did well without proving that withholding adjuvant therapy caused no harm.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1016/j.oraloncology.2026.108024">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -735,17 +917,69 @@
       </div>
     </details></li>
     <li><details class="ref">
-      <summary><span class="ref-text">The same review notes trial-status updates: ADEPT (post-TORS adjuvant de-intensification) closed early, ECOG-E3311 long-term follow-up published in 2025, PATHOS phase III enrollment was completing as of 2025.</span><span class="chevron">&#9656;</span></summary>
+      <summary><span class="ref-text">The post-TORS trial horizon is now concrete: ADEPT terminated after 42 patients, ECOG-E3311 reported 54-month outcomes, and PATHOS is active but no longer recruiting with a 1,269-patient target and 2028 estimated completion.</span><span class="chevron">&#9656;</span></summary>
       <div class="ref-detail">
-        <p><span class="tag">Key conclusion —</span> The three trials actually designed to answer the post-TORS de-escalation question are all now mature or maturing — real Level 1 evidence on this exact question should start reading out over the next digest cycles.</p>
-        <p><span class="tag warn">Counterpoint —</span> Status note, not a data point yet — worth tracking, not yet actionable.</p>
+        <p><span class="tag">Key conclusion —</span> The post-TORS evidence is no longer one undifferentiated “trials are coming” story: ADEPT stopped with 42 patients, E3311 has mature phase II outcomes, and PATHOS is the large phase III trial still maturing.</p>
+        <p><span class="tag warn">Counterpoint —</span> Only E3311 has mature outcome data here, and it was a risk-stratified phase II study. PATHOS is designed to supply the functional and survival comparison needed for a definitive change.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Trial-horizon digest</span><span>Registry records + E3311 publication</span><span>Three different evidence states</span></div>
+          <div class="evidence-brief-body">
+            <h4>Closed, reported, and maturing are not the same thing</h4>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>The three post-TORS programs at a glance</caption>
+                <thead><tr><th>Trial</th><th>Design / status</th><th>What it asks</th><th>Current read</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">ADEPT · NCT01687413</th><td>Terminated; 42 actual participants</td><td>RT alone versus RT plus weekly cisplatin after TORS in p16+ disease with extranodal extension</td><td>Stopped for slow accrual and funding; cannot supply the planned definitive answer</td></tr>
+                  <tr><th scope="row">E3311 · NCT01898494</th><td>Phase II; 359 evaluable; long-term report published</td><td>Observation or pathology-assigned 50 Gy, 60 Gy, or chemoradiation after TOS</td><td>54-month PFS 90.6% overall; intermediate-risk 50 Gy arm PFS 94.9%</td></tr>
+                  <tr><th scope="row">PATHOS · NCT02215265</th><td>Phase III; active, not recruiting; target 1,269</td><td>Risk-stratified reduction of postoperative RT dose or omission of concurrent cisplatin</td><td>MDADI at 12 months and overall survival are co-primary; completion estimated 2028</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">93.2%</span><span class="evidence-metric-label">E3311 54-mo PFS · observation</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">94.9%</span><span class="evidence-metric-label">E3311 54-mo PFS · 50 Gy</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">90.2%</span><span class="evidence-metric-label">E3311 54-mo PFS · 60 Gy</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">85.5%</span><span class="evidence-metric-label">E3311 54-mo PFS · high risk</span></div>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>The mature signal</strong><p>E3311 supports pathology-selected 50 Gy for intermediate-risk patients, but all four recurrences in the observation arm occurred among patients with N1 disease—an important caution against treating “favorable pathology” as uniformly safe for no radiation.</p></div>
+              <div class="evidence-insight caution"><strong>What remains open</strong><p>PATHOS must show better swallowing with preserved survival. Until those co-primary endpoints mature, excellent single-arm or phase II disease control does not complete the noninferiority argument.</p></div>
+            </div>
+            <div class="evidence-links"><a href="https://doi.org/10.1200/JCO-24-02550">Read E3311 long-term follow-up &rarr;</a><a href="https://clinicaltrials.gov/study/NCT01687413">ADEPT registry &rarr;</a><a href="https://clinicaltrials.gov/study/NCT02215265">PATHOS registry &rarr;</a></div>
+          </div>
+        </div>
       </div>
     </details></li>
     <li><details class="ref">
-      <summary><span class="ref-text">A Lancet letter exchange debates the evidence base for proton beam therapy in oropharyngeal cancer.</span><span class="chevron">&#9656;</span></summary>
+      <summary><span class="ref-text">A Lancet letter exchange debates how to interpret TORPEdO, the randomized phase III comparison of intensity-modulated proton therapy and IMRT for oropharyngeal cancer.</span><span class="chevron">&#9656;</span></summary>
       <div class="ref-detail">
-        <p><span class="tag">Key conclusion —</span> A live, published disagreement about whether current comparative evidence justifies proton therapy for oropharyngeal cancer outside of trials — worth knowing both sides before a patient asks about it.</p>
-        <p><span class="tag warn">Counterpoint —</span> Correspondence, not a trial — reflects an ongoing evidence gap rather than new data on either side.</p>
+        <p><span class="tag">Key conclusion —</span> The correspondence is a useful stress test of a negative comparative trial: TORPEdO found no meaningful proton advantage in one-year physical quality of life, swallowing, gastrostomy dependence, disease control, or survival over modern IMRT.</p>
+        <p><span class="tag warn">Counterpoint —</span> The letter and reply add interpretation, not outcomes. Questions about patient selection, other toxicity domains, late effects, and generalizability can remain even when the trial's prespecified endpoints are negative.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Correspondence digest</span><span>Letter + authors' reply</span><span>Read against TORPEdO phase III</span></div>
+          <div class="evidence-brief-body">
+            <h4>The exchange starts from a trial that did not show the hoped-for functional gain</h4>
+            <p class="evidence-deck">TORPEdO randomized 205 patients across 20 UK hospitals in a 2:1 ratio to IMPT or IMRT, both with 70 Gy in 33 fractions and concurrent high-dose cisplatin. The letter by De Luca and colleagues and the reply by Thomson and colleagues debate how broadly the result should shape the proton conversation.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Underlying TORPEdO outcomes that anchor the correspondence</caption>
+                <thead><tr><th>Endpoint</th><th>IMPT</th><th>IMRT</th><th>Published read</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">12-mo UW-QoL physical score</th><td>78.3</td><td>77.1</td><td>Difference 1.3; p=0.56</td></tr>
+                  <tr><th scope="row">12-mo MDADI composite</th><td>79.5</td><td>79.7</td><td>No swallowing advantage</td></tr>
+                  <tr><th scope="row">24-mo freedom from locoregional recurrence</th><td>94%</td><td>97%</td><td>No significant difference</td></tr>
+                  <tr><th scope="row">24-mo overall survival</th><td>95%</td><td>95%</td><td>No significant difference</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Patient-facing translation</strong><p>Modern protons reduced dose in principle but did not improve the trial's measured one-year function or swallowing. “More conformal” should therefore not be translated automatically into “clinically better.”</p></div>
+              <div class="evidence-insight caution"><strong>Do not overextend</strong><p>The result does not prove that no individual anatomy can benefit, nor does correspondence define a validated selection model. It does mean any claimed advantage should be tied to a specific endpoint and patient—not modality alone.</p></div>
+            </div>
+            <div class="evidence-links"><a href="https://doi.org/10.1016/S0140-6736(26)00314-4">Read TORPEdO &rarr;</a></div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1016/S0140-6736(26)01070-6">Read the letter &rarr;</a> &nbsp;·&nbsp; <a href="https://doi.org/10.1016/S0140-6736(26)01182-7">Read the reply &rarr;</a></p>
       </div>
     </details></li>
@@ -766,6 +1000,36 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> The first formal guideline refresh since 2023 — codifies a new "difficult-to-treat CSCC" 5-group classification and confirms adjuvant cemiplimab after surgery+RT in high-risk disease now belongs in the tumor-board conversation.</p>
         <p><span class="tag warn">Counterpoint —</span> Consensus guideline (expert panel), not a new trial — largely formalizes evidence already covered in our prior cycle (C-POST, etc.) into an actual practice document rather than adding new data.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Guideline digest</span><span>Open access · 2026 European consensus</span><span>Diagnostics/prevention + treatment</span></div>
+          <div class="evidence-brief-body">
+            <h4>A shared vocabulary for the cases that do not fit “common cSCC”</h4>
+            <p class="evidence-deck">The EADO-led panel updates the 2023 guidance across immunocompetent and immunosuppressed patients. Part 1 defines a three-step diagnostic pathway and adopts an operational five-group “difficult-to-treat” classification. Part 2 keeps clear-margin surgery as first-line treatment for common disease, anti-PD-1 therapy as first-line systemic treatment for advanced disease when indicated, and moves adjuvant cemiplimab into multidisciplinary decision-making after surgery and radiation for high-risk disease.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Five difficult-to-treat cSCC groups</caption>
+                <thead><tr><th>Group</th><th>Clinical pattern</th><th>Why the label helps</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">1</th><td>Common cSCC made complex by tumor location/characteristics or patient factors</td><td>Captures technical or host difficulty without calling the tumor locally advanced</td></tr>
+                  <tr><th scope="row">2</th><td>Multiple common cSCCs where lesion number is the dominant problem</td><td>Separates multiplicity from one destructive index lesion</td></tr>
+                  <tr><th scope="row">3</th><td>Locally advanced cSCC</td><td>Aligns nonmetastatic disease not reasonably curable by surgery or RT with an advanced-treatment pathway</td></tr>
+                  <tr><th scope="row">4</th><td>Regional nodal or cutaneous metastases</td><td>Names locoregionally metastatic disease separately</td></tr>
+                  <tr><th scope="row">5</th><td>Distant metastatic cSCC</td><td>Identifies the systemic metastatic group</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="trial-flow" aria-label="Guideline diagnostic pathway">
+              <div class="trial-step"><strong>1 · Confirm</strong><span>Clinical and dermoscopic assessment followed by histopathology</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>2 · Stage</strong><span>Physical examination and imaging when risk or findings warrant it</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>3 · Integrate</strong><span>Combine clinical, histologic, and radiologic findings in AJCC8 / BWH frameworks</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>4 · Decide</strong><span>Use resectability, host factors, and multidisciplinary goals—not stage label alone</span></div>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>What is newly useful</strong><p>The five-group vocabulary makes it easier to explain why two patients with similar TNM stage can need different sequencing: multiplicity, transplant status, anatomic morbidity, and true unresectability are different problems.</p></div>
+              <div class="evidence-insight caution"><strong>Consensus boundary</strong><p>The classification organizes care; it is not a validated prognostic model. Adjuvant cemiplimab should be discussed in tumor board, but patient selection still depends on the underlying trial population, immune status, prior RT, and competing risks.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1016/j.ejca.2026.116763">Read Part 1 &rarr;</a> &nbsp;·&nbsp; <a href="https://doi.org/10.1016/j.ejca.2026.116764">Read Part 2 &rarr;</a></p>
       </div>
     </details></li>
@@ -803,6 +1067,36 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> A modern surgical benchmark for the most advanced cSCC — useful for judging whether newer immunotherapy-first sequencing is actually beating historical surgical results in your own patients.</p>
         <p><span class="tag warn">Counterpoint —</span> Historical cohort (1995-2015) predating routine immunotherapy access — not a fair head-to-head comparator for current IO-based approaches, only a baseline.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Study digest</span><span>International retrospective series</span><span>1995-2015 · n=112</span></div>
+          <div class="evidence-brief-body">
+            <h4>A high-morbidity historical benchmark for anterior skull-base disease</h4>
+            <p class="evidence-deck">The cohort includes cSCC of the anterior face and scalp treated with craniofacial resection across multiple institutions. Most tumors were already T4 or recurrent, making this less a general cSCC surgery series than a benchmark for the most locally destructive, anatomically difficult disease.</p>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">86.6%</span><span class="evidence-metric-label">T4 disease</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">71.4%</span><span class="evidence-metric-label">Recurrent presentation</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">52.3%</span><span class="evidence-metric-label">5-year overall survival</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">4.5%</span><span class="evidence-metric-label">Perioperative mortality</span></div>
+            </div>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Outcomes and prognostic signals</caption>
+                <thead><tr><th>Measure</th><th>Result</th><th>Clinical meaning</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Margins</th><td>Clear 32.1%; involved 40.2%</td><td>Achieving oncologic clearance was difficult even with radical surgery</td></tr>
+                  <tr><th scope="row">5-year survival</th><td>DFS 46.9%; DSS 68.4%; OS 52.3%</td><td>Disease control was possible, with substantial competing and treatment burden</td></tr>
+                  <tr><th scope="row">Intracranial extension</th><td>OS HR 6.54; DSS HR 12.39</td><td>The strongest independent adverse prognostic feature</td></tr>
+                  <tr><th scope="row">Adjuvant treatment</th><td>Mostly postoperative RT; OS HR 0.54</td><td>Associated with better OS, subject to retrospective selection</td></tr>
+                  <tr><th scope="row">Complications</th><td>38.4%</td><td>The price of local salvage was clinically substantial</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>How to use the benchmark</strong><p>For an immunotherapy-first patient, compare resectability, intracranial extension, margin probability, and morbidity—not just survival—to this historical surgery-first pathway.</p></div>
+              <div class="evidence-insight caution"><strong>Era effect</strong><p>Cases span two decades before modern imaging, reconstruction, systemic therapy, and response-adapted surgery. The apparent adjuvant-RT benefit is associative, and this is not a counterfactual comparison with anti-PD-1 treatment.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1002/hed.70412">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -811,6 +1105,30 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> A new anti-EGFR antibody shows a real signal in advanced cSCC — an emerging non-IO option worth knowing about for IO-ineligible or IO-refractory patients.</p>
         <p><span class="tag warn">Counterpoint —</span> The response rate was paradoxically higher at the lower dose (60% at 1000mg vs. 19% at 1500mg) in small, non-randomized cohorts (21 vs. 10 patients) — this inverse dose-response is unexplained and could easily be a small-sample artifact rather than a true biological effect. A larger trial is needed before drawing conclusions.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Trial digest</span><span>Open-label multicenter phase II · Part 1</span><span>Structured abstract · n=31</span></div>
+          <div class="evidence-brief-body">
+            <h4>The striking result is also the reason to be cautious</h4>
+            <p class="evidence-deck">Patients had advanced cSCC that was unresectable or not curable with radiotherapy. Part 1 evaluated two sequential, nonrandomized HLX07 dose cohorts. The 1000 mg cohort had the higher response rate, but only ten patients received that dose; the study was not designed to prove that less drug is more effective.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Independent-review outcomes by dose cohort</caption>
+                <thead><tr><th>Outcome</th><th>1500 mg q3w · n=21</th><th>1000 mg q3w · n=10</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Objective response rate</th><td>19.0% (95% CI 5.5-41.9)</td><td>60.0% (26.2-87.8)</td></tr>
+                  <tr><th scope="row">Median PFS</th><td>4.9 months</td><td>7.9 months</td></tr>
+                  <tr><th scope="row">Median duration of response</th><td>5.0 months</td><td>7.4 months</td></tr>
+                  <tr><th scope="row">Median overall survival</th><td>11.8 months</td><td>Not reached</td></tr>
+                  <tr><th scope="row">Grade &ge;3 treatment-related AEs</th><td>38.1%</td><td>30.0%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Signal worth following</strong><p>An anti-EGFR antibody produced responses in a difficult advanced-disease population without treatment-related death or discontinuation in the reported Part 1 cohorts.</p></div>
+              <div class="evidence-insight caution"><strong>Do not dose-rank from this</strong><p>The cohorts were small and not randomized against one another; patient imbalance can easily create a 19% versus 60% split. The confidence interval around the ten-patient cohort is wide, and efficacy needs confirmation.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1177/17588359261456684">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -867,6 +1185,34 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> An EGFR-ADC-plus-IO class worth watching alongside ficerafusp alfa and petosemtamab — a broad, fast-moving development program testing the same drug across three distinct clinical scenarios simultaneously.</p>
         <p><span class="tag warn">Counterpoint —</span> All early-phase (phase II), Chinese single/limited-site trials; cross-trial comparison to Western EGFR-bispecific programs isn't possible yet.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Program digest</span><span>Three live registry records</span><span>No efficacy results yet</span></div>
+          <div class="evidence-brief-body">
+            <h4>One EGFR-ADC, three different surgical questions</h4>
+            <p class="evidence-deck">Becotatug vedotin couples an EGFR-directed antibody to a cytotoxic payload and is being paired with PD-1 blockade before surgery. The three protocols should not be treated as replicate trials: they differ in disease setting, checkpoint inhibitor, cycle count, comparator, and primary endpoint.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Registered MRG003 / becotatug vedotin studies</caption>
+                <thead><tr><th>Trial</th><th>Population and design</th><th>Perioperative strategy</th><th>Primary endpoint</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">NCT07677475</th><td>PD-L1 CPS &ge;1 resectable LA-HNSCC; randomized 2:1; n=65; not yet recruiting</td><td>Two cycles MRG003 + toripalimab versus toripalimab, then surgery and common risk-adapted adjuvant therapy</td><td>Major pathologic response</td></tr>
+                  <tr><th scope="row">BLOOM-ON · NCT07632339</th><td>Locally recurrent but resectable HNSCC; randomized; n=102; recruiting</td><td>Two cycles MRG003 + pucotenlimab then surgery versus upfront surgery; response-adapted adjuvant pathway</td><td>One-year event-free survival rate</td></tr>
+                  <tr><th scope="row">NCT07665190</th><td>Resectable locally advanced hypopharyngeal SCC; single arm; n=52; recruiting</td><td>Three cycles MRG003 + pucotenlimab before surgery</td><td>Pathologic complete response</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">219</span><span class="evidence-metric-label">Total planned participants</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">2</span><span class="evidence-metric-label">Randomized protocols</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">1</span><span class="evidence-metric-label">Single-arm protocol</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">0</span><span class="evidence-metric-label">Results posted</span></div>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>What to watch first</strong><p>The randomized trials can separate combination activity from PD-1 alone or upfront surgery. Surgical timing, R0 rate, adverse events, and loss of operability will matter alongside pathologic response.</p></div>
+              <div class="evidence-insight caution"><strong>No cross-trial leaderboard</strong><p>MPR, pCR, and one-year EFS are different endpoints in different populations. A high response signal in one protocol cannot rank MRG003 against a bispecific or establish benefit in another subsite.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07677475">NCT07677475 &rarr;</a> &nbsp;·&nbsp; <a href="https://clinicaltrials.gov/study/NCT07632339">NCT07632339 &rarr;</a> &nbsp;·&nbsp; <a href="https://clinicaltrials.gov/study/NCT07665190">NCT07665190 &rarr;</a></p>
       </div>
     </details></li>
@@ -875,6 +1221,29 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> The first LAG-3 inhibitor combination flagged in this space — tests whether dual checkpoint blockade (PD-1 + LAG-3) improves induction responses ahead of definitive local therapy.</p>
         <p><span class="tag warn">Counterpoint —</span> Not yet recruiting (start date pushed to 2027); LAG-3 combinations have had mixed results in other tumor types (e.g., melanoma), so extrapolation to HNSCC is speculative.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Protocol digest</span><span>Live ClinicalTrials.gov registry</span><span>Randomized phase II · n=90</span></div>
+          <div class="evidence-brief-body">
+            <h4>The variable is LAG-3 during induction; the definitive pathway is shared</h4>
+            <p class="evidence-deck">This University of Chicago pick-the-winner study randomizes treatment-naïve, unresected locoregionally advanced HNSCC to cemiplimab, carboplatin, and paclitaxel with or without fianlimab. Both groups then receive seven weeks of cisplatin chemoradiation to 70 Gy and six additional months of cemiplimab.</p>
+            <div class="trial-flow" aria-label="Fianlimab study treatment sequence">
+              <div class="trial-step"><strong>1 · Randomize</strong><span>Cemiplimab + carbo/taxol with or without fianlimab</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>2 · Induct</strong><span>Three cycles over nine weeks; image for response</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>3 · Treat locally</strong><span>Seven weeks of 70 Gy radiation with cisplatin</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>4 · Maintain</strong><span>Cemiplimab for six months in both groups</span></div>
+            </div>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">90</span><span class="evidence-metric-label">Planned enrollment</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">9 wk</span><span class="evidence-metric-label">Primary ORR time point</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">2027</span><span class="evidence-metric-label">Estimated start</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">2031</span><span class="evidence-metric-label">Estimated completion</span></div>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>What the design can show</strong><p>The nine-week response comparison can identify which induction regimen deserves further development; secondary endpoints follow disease control, survival, and acute and late toxicity through chemoradiation.</p></div>
+              <div class="evidence-insight caution"><strong>What it cannot yet show</strong><p>The trial is not recruiting and has no outcomes. A pick-the-winner ORR design does not by itself prove that adding LAG-3 improves long-term survival or justifies the extra immune-toxicity risk.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07346196">View on ClinicalTrials.gov &rarr;</a></p>
       </div>
     </details></li>
@@ -883,6 +1252,28 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> The best current single-source synthesis of where EGFR-bispecifics (ficerafusp alfa, petosemtamab, amivantamab), PD-1 blockade, and therapeutic HPV vaccines stand for recurrent/metastatic OPSCC, split cleanly by HPV status.</p>
         <p><span class="tag warn">Counterpoint —</span> Narrative review, not a data source in itself — useful for orientation, not for citing specific efficacy numbers.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Landscape digest</span><span>Narrative review · 10 authors</span><span>Search window 2000-Feb 2026</span></div>
+          <div class="evidence-brief-body">
+            <h4>HPV status organizes the biology better than it predicts checkpoint benefit</h4>
+            <p class="evidence-deck">The authors searched PubMed/MEDLINE, Embase, Cochrane, ClinicalTrials.gov, and major meeting abstracts. Their central distinction is biological: HPV-positive OPSCC tends to be antigen-rich and immune-inflamed; HPV-negative disease more often shows immune exclusion, EGFR dependence, hypoxia, and MET/HGF or TGF-&beta; pathway activation. Yet HPV status remains prognostic—not a validated predictive biomarker for PD-1 benefit.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>How the review maps the emerging landscape</caption>
+                <thead><tr><th>Disease context</th><th>Biological frame</th><th>Strategies highlighted</th><th>Evidence posture</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">HPV-positive OPSCC</th><td>Viral antigens, more inflamed immune microenvironment</td><td>PD-1 blockade; E6/E7 therapeutic vaccines, often combined with checkpoint inhibition</td><td>Standard checkpoint therapy plus early vaccine signals; HPV is not yet a treatment-selection biomarker</td></tr>
+                  <tr><th scope="row">HPV-negative OPSCC</th><td>Immune exclusion, EGFR dependence, hypoxia, MET/HGF and TGF-&beta; signaling</td><td>Ficerafusp alfa, petosemtamab, amivantamab, and other pathway-directed combinations</td><td>Promising early activity, especially post-immunotherapy or in enriched cohorts</td></tr>
+                  <tr><th scope="row">Both</th><td>Resistance is heterogeneous and dynamic</td><td>Biomarker combinations incorporating viral status, immune contexture, and pathway activation</td><td>A proposed direction, not a validated algorithm</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Best use</strong><p>Use this review as a map before opening the primary trials: it explains why a bispecific, bifunctional protein, vaccine, or ADC is being paired with PD-1 blockade and which resistance problem it is meant to solve.</p></div>
+              <div class="evidence-insight caution"><strong>Do not cite the map as the terrain</strong><p>Agent efficacy should be taken from the underlying trial, with its line of therapy, biomarker criteria, comparator, and maturity. The review spans abstracts and early cohorts alongside established phase III evidence.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1016/j.critrevonc.2026.105378">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -891,6 +1282,29 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> Useful for setting patient expectations when this comes up in clinic: prophylactic vaccines (which prevent infection) are not the same as therapeutic vaccines (which treat existing disease), and the latter remain entirely investigational.</p>
         <p><span class="tag warn">Counterpoint —</span> Preclinical models only; no late-phase human efficacy data yet.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Systematic-review digest</span><span>Preclinical HNSCC models only</span><span>8 authors · 50 cited sources</span></div>
+          <div class="evidence-brief-body">
+            <h4>Therapeutic vaccination targets the tumor's viral machinery, not future infection</h4>
+            <p class="evidence-deck">The review focuses on preclinical head-and-neck cancer models and dissects four design layers: antigen, delivery platform, adjuvant, and combination partner. E6 and E7 are attractive tumor-specific antigens because HPV-driven cancer cells continue to express them, but converting immune recognition into durable tumor control remains an experimental systems problem.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Preventive and therapeutic vaccines answer different questions</caption>
+                <thead><tr><th>Feature</th><th>Prophylactic HPV vaccine</th><th>Therapeutic HPV cancer vaccine</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Primary target</th><td>Viral capsid antigens before infection</td><td>Persistently expressed tumor antigens, commonly E6/E7</td></tr>
+                  <tr><th scope="row">Goal</th><td>Prevent acquisition and oncogenesis</td><td>Generate tumor-directed cellular immunity against established disease</td></tr>
+                  <tr><th scope="row">Clinical status</th><td>Licensed and effective for prevention</td><td>No FDA-approved product for HPV-associated cancer</td></tr>
+                  <tr><th scope="row">Review evidence</th><td>Not the subject of efficacy synthesis</td><td>Animal and other preclinical HNSCC models across DNA, RNA, peptide, viral-vector, and nanoparticle approaches</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Translational signal</strong><p>Across platforms, the recurring aim is to expand E6/E7-specific cytotoxic T cells and overcome local immune suppression; checkpoint blockade, radiation, and immune agonists are common combination strategies.</p></div>
+              <div class="evidence-insight caution"><strong>Largest gap</strong><p>Murine tumor regression and immune readouts do not establish human response, durability, toxicity, manufacturing feasibility, or benefit over PD-1 therapy. This paper explains candidate design—not clinical readiness.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1007/s10555-026-10365-8">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -950,7 +1364,7 @@
 </aside>
 </div>
 
-<footer>Digest regenerates automatically every two weeks. Sources: PubMed and ClinicalTrials.gov; DOI links provided per PubMed attribution requirements. Tap any reference (▸) for the deeper conclusion and counterpoint.</footer>
+<footer>Digest regenerates automatically every two weeks. Sources: PubMed and ClinicalTrials.gov; DOI links provided per PubMed attribution requirements. Tap any reference (▸) for its article-specific digest.</footer>
 
 <script>
   var _wideLayout = window.matchMedia('(min-width: 1320px)');
@@ -1424,7 +1838,7 @@
 
     var wrapper = document.createElement('div');
     wrapper.className = 'reader-section';
-    wrapper.appendChild(createViewHeader('Section ' + sectionNumber(section) + ' of ' + _sections.length, section.querySelector('h3').textContent, 'Choose any finding here or in the navigator to open its full conclusion, counterpoint, and source.'));
+    wrapper.appendChild(createViewHeader('Section ' + sectionNumber(section) + ' of ' + _sections.length, section.querySelector('h3').textContent, 'Choose any finding here or in the navigator to open its article-specific digest.'));
 
     var copy = section.cloneNode(true);
     copy.hidden = false;
@@ -1557,7 +1971,7 @@
     var index = _refs.indexOf(ref);
     var wrapper = document.createElement('div');
     wrapper.className = 'reader-finding';
-    var readerDeck = ref.querySelector('.evidence-brief') ? 'Expanded evidence brief with data, interpretation, limitations, and source.' : 'Full evidence, interpretation, limitations, and source.';
+    var readerDeck = 'Article-specific digest: scope, evidence, interpretation, limitations, and source.';
     wrapper.appendChild(createViewHeader('Section ' + sectionNumber(activeSection) + ' · Finding ' + (index + 1) + ' of ' + _refs.length, activeSection.querySelector('h3').textContent, readerDeck));
 
     var summaryCopy = document.createElement('p');
@@ -1567,22 +1981,6 @@
     detailCopy.className = 'pane-detail';
     wrapper.append(summaryCopy, detailCopy);
 
-    var context = document.createElement('div');
-    context.className = 'reader-section-context';
-    var contextTitle = document.createElement('h3');
-    contextTitle.textContent = 'Section context';
-    context.appendChild(contextTitle);
-    var bottomLine = activeSection.querySelector('.bottom-line');
-    if (bottomLine) {
-      var bottomLineBox = document.createElement('div');
-      bottomLineBox.className = 'pane-context';
-      bottomLineBox.innerHTML = '<p class="pane-context-label">Section bottom line</p><p class="pane-context-copy">' + bottomLine.innerHTML + '</p>';
-      context.appendChild(bottomLineBox);
-    }
-    Array.prototype.forEach.call(activeSection.querySelectorAll('.callout'), function(callout) {
-      context.appendChild(callout.cloneNode(true));
-    });
-    wrapper.appendChild(context);
     prepareOutboundLinks(wrapper);
     readerContent.replaceChildren(wrapper);
     readerActions.hidden = false;
