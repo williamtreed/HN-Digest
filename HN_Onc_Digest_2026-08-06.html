@@ -285,6 +285,50 @@
   .reader-content .bottom-line { font-size: var(--reader-section-size); line-height: 1.55; }
   .reader-finding .pane-summary { font-size: var(--reader-lede-size); line-height: 1.48; }
 
+  .evidence-brief { margin: 20px 0 6px; border: 1px solid var(--border-strong); border-radius: 12px; background: var(--surface-1); overflow: hidden; }
+  .evidence-sourcebar { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 10px; padding: 10px 16px; border-bottom: 1px solid var(--border); color: var(--text-muted); background: var(--surface-2); font-size: 9px; font-weight: 700; letter-spacing: .045em; text-transform: uppercase; }
+  .evidence-source-badge { display: inline-flex; align-items: center; border: 1px solid var(--border-strong); border-radius: 999px; padding: 4px 8px; color: var(--accent); background: var(--bg); }
+  .evidence-brief-body { padding: 18px; }
+  .evidence-brief h4 { margin: 0 0 6px; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: var(--reader-section-size); line-height: 1.3; color: var(--text-primary); }
+  .ref-detail .evidence-brief p { padding-left: 0; border-left: 0; }
+  .evidence-brief .evidence-deck { margin: 0 0 16px; color: var(--text-secondary); font-size: var(--reader-copy-size) !important; line-height: var(--reader-line-height); }
+  .evidence-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(112px, 1fr)); gap: 8px; margin: 14px 0 18px; }
+  .evidence-metric { min-width: 0; border: 1px solid var(--border); border-radius: 8px; padding: 12px; background: var(--bg); }
+  .evidence-metric-value { display: block; margin-bottom: 3px; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 24px; line-height: 1; font-weight: 750; color: var(--text-primary); }
+  .evidence-metric-label { display: block; font-size: 9px; line-height: 1.35; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; color: var(--text-muted); }
+  .evidence-table-wrap { margin: 14px 0 18px; overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); }
+  .evidence-table { width: 100%; min-width: 540px; border-collapse: collapse; color: var(--text-secondary); font-size: clamp(11px, calc(var(--reader-copy-size) * .8), 15px); line-height: 1.45; }
+  .evidence-table caption { padding: 10px 12px; text-align: left; font-size: 9px; font-weight: 800; letter-spacing: .075em; text-transform: uppercase; color: var(--text-muted); }
+  .evidence-table th, .evidence-table td { padding: 10px 12px; border-top: 1px solid var(--border); text-align: left; vertical-align: top; }
+  .evidence-table thead th { color: var(--text-primary); background: var(--surface-2); font-size: 9px; letter-spacing: .04em; text-transform: uppercase; }
+  .evidence-table tbody th { color: var(--text-primary); font-weight: 750; }
+  .evidence-chart { margin: 16px 0 18px; border: 1px solid var(--border); border-radius: 8px; padding: 14px; background: var(--bg); }
+  .evidence-chart-title { margin: 0 0 12px; font-size: 9px; font-weight: 800; letter-spacing: .075em; text-transform: uppercase; color: var(--text-muted); }
+  .evidence-chart-row { display: grid; grid-template-columns: minmax(86px, 1fr) minmax(120px, 3fr) 42px; align-items: center; gap: 10px; margin-top: 9px; }
+  .evidence-chart-label { color: var(--text-secondary); font-size: 11px; font-weight: 700; }
+  .evidence-chart-track { height: 11px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .evidence-chart-fill { display: block; width: var(--value); height: 100%; border-radius: inherit; background: var(--accent); }
+  .evidence-chart-value { color: var(--text-primary); font-size: 11px; text-align: right; }
+  .evidence-chart-note { margin: 11px 0 0 !important; color: var(--text-muted); font-size: 9px !important; line-height: 1.45 !important; }
+  .evidence-insights { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin: 16px 0; }
+  .evidence-insight { border-left: 3px solid var(--deeper-line); border-radius: 0 7px 7px 0; padding: 12px 13px; background: var(--deeper-bg); }
+  .evidence-insight.caution { border-left-color: var(--counterpoint-line); background: var(--counterpoint-bg); }
+  .evidence-insight strong { display: block; margin-bottom: 5px; font-size: 9px; letter-spacing: .07em; text-transform: uppercase; color: var(--text-primary); }
+  .evidence-insight p { margin: 0; color: var(--text-secondary); font-size: var(--reader-copy-size) !important; line-height: var(--reader-line-height); }
+  .trial-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: stretch; gap: 7px; margin: 15px 0 18px; }
+  .trial-step { display: flex; flex-direction: column; justify-content: center; min-height: 76px; border: 1px solid var(--border); border-radius: 8px; padding: 10px; color: var(--text-secondary); background: var(--bg); font-size: clamp(11px, calc(var(--reader-copy-size) * .76), 14px); line-height: 1.4; }
+  .trial-step strong { margin-bottom: 3px; color: var(--text-primary); }
+  .trial-arrow { align-self: center; color: var(--accent); font-weight: 800; }
+  .eligibility-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 18px; padding: 0; list-style: none; }
+  .eligibility-list li { margin: 0; border: 1px solid var(--border); border-radius: 999px; padding: 5px 9px; color: var(--text-secondary); background: var(--bg); font-size: 10px; }
+  .evidence-figure { margin: 18px 0; border: 1px solid var(--border); border-radius: 9px; overflow: hidden; background: #fff; }
+  .evidence-figure a { display: block; }
+  .evidence-figure img { display: block; width: 100%; height: auto; }
+  .evidence-figure figcaption { padding: 11px 13px; border-top: 1px solid var(--border); color: var(--text-muted); background: var(--surface-1); font-size: 9px; line-height: 1.45; }
+  .evidence-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 16px 0 0; }
+  .evidence-links a { font-size: 11px; font-weight: 750; }
+  .desk-finding-button.is-rich .desk-finding-copy::after { content: " · Evidence brief"; color: var(--accent); font-size: 9px; font-weight: 800; letter-spacing: .035em; text-transform: uppercase; }
+
   .reading-preferences { position: fixed; right: 18px; bottom: 18px; z-index: 100; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   .reading-preferences-toggle { display: flex; align-items: baseline; gap: 7px; border: 1px solid var(--border-strong); border-radius: 999px; padding: 8px 12px; color: var(--text-primary); background: color-mix(in srgb, var(--surface-1) 94%, transparent); box-shadow: var(--shadow); backdrop-filter: blur(14px); font: inherit; cursor: pointer; }
   .reading-preferences-toggle:hover { background: var(--surface-2); }
@@ -353,6 +397,11 @@
     .reading-preferences-label { display: none; }
     .reading-preferences-toggle { padding: 7px 11px; }
     .reading-preferences-panel { width: min(278px, calc(100vw - 20px)); }
+    .evidence-brief-body { padding: 15px; }
+    .evidence-insights { grid-template-columns: 1fr; }
+    .trial-flow { grid-template-columns: 1fr; }
+    .trial-arrow { transform: rotate(90deg); justify-self: center; }
+    .evidence-chart-row { grid-template-columns: 78px minmax(90px, 1fr) 38px; gap: 7px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -376,6 +425,7 @@
     .reader-surface { display: none !important; }
     .digest-source { display: block !important; }
     .evidence-pane, .toc, .archive-nav, .tap-hint, .highlights li .jump, .reading-preferences { display: none !important; }
+    .evidence-figure img { display: none !important; }
     details.ref .ref-detail { display: block !important; animation: none !important; opacity: 1 !important; transform: none !important; }
     details.ref .chevron { display: none; }
     details.ref summary[data-reviewed="true"]::after { display: none; }
@@ -395,7 +445,7 @@
 <p class="meta">Sources: JCO, NEJM, Lancet, Lancet Oncology, JAMA Oncology, JAMA Otolaryngology, Laryngoscope, Head &amp; Neck, Oral Oncology, IJROBP, Clin Cancer Res, Ann Surg Oncol, Ann Oncol, ClinicalTrials.gov</p>
 <p class="attribution">According to PubMed, all findings below are drawn from indexed literature; DOI links are provided per PubMed's attribution requirements.</p>
 
-<p class="key">Each finding leads with the bottom line, tagged <b>Practice-changing</b> / <b>Hypothesis-generating</b> / <b>Background</b>, plus a section-wide <b>Counterpoint</b> and <b>Go deeper</b> pointer. Select any reference to inspect that study's conclusion, caveat, source, and section context.</p>
+<p class="key">Each finding leads with the bottom line, tagged <b>Practice-changing</b> / <b>Hypothesis-generating</b> / <b>Background</b>, plus a section-wide <b>Counterpoint</b> and <b>Go deeper</b> pointer. Select any reference to inspect its conclusion, caveat, source, and section context; findings marked <b>Evidence brief</b> add source-grounded tables, charts, protocol maps, or licensed article figures.</p>
 
 <p class="tap-hint">Desktop: choose a section or finding in the left navigator and read it in the right pane (press <b>/</b> to search). Source links open separately so your place is preserved. Mobile keeps native inline expansion. Use the <b>Aa</b> button for theme and text size; use Share &rarr; Print for a fully-expanded tumor-board handout.</p>
 
@@ -438,6 +488,33 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> First formal economic argument translating the CPS-stratified clinical signal into a hard value threshold: it converts "marginal benefit" into "not worth the price" for CPS 1-10, and "reasonable value" for CPS&gt;10.</p>
         <p><span class="tag warn">Counterpoint —</span> QALY inputs were borrowed from CheckMate 141 health-state utilities, not measured directly in KEYNOTE-689 patients, and even the "good" CPS&gt;10 subgroup only had a 57% probability of being cost-effective at a $150,000 willingness-to-pay threshold (11% for CPS 1-10) — suggestive, not definitive, economics.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract</span><span>Economic model · not a clinical outcome study</span></div>
+          <div class="evidence-brief-body">
+            <h4>What the model actually compared</h4>
+            <p class="evidence-deck">The authors built a three-state partitioned-survival model—event-free, progressed disease, and death—using digitized KEYNOTE-689 survival curves. Costs came from US HCUP and Medicare/Medicaid sources; quality-of-life weights came from CheckMate 141 rather than KEYNOTE-689. The CPS 1-10 subgroup was mathematically derived from the published CPS&ge;1 and CPS&ge;10 groups.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>CPS-stratified base-case results</caption>
+                <thead><tr><th>Modeled group</th><th>QALY gain</th><th>Incremental cost</th><th>ICER / QALY</th><th>Cost-effective at $150k</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">CPS &gt;10</th><td>~1.35</td><td>$181,900</td><td>$134,700</td><td>57%</td></tr>
+                  <tr><th scope="row">CPS 1-10</th><td>~0.08</td><td>$166,500</td><td>$2,179,400</td><td>11%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-chart" role="img" aria-label="Probability that perioperative pembrolizumab is cost-effective at a willingness-to-pay threshold of 150,000 dollars per QALY: 57 percent for CPS greater than 10 and 11 percent for CPS 1 to 10.">
+              <p class="evidence-chart-title">Probability cost-effective at $150,000 per QALY</p>
+              <div class="evidence-chart-row"><span class="evidence-chart-label">CPS &gt;10</span><span class="evidence-chart-track"><span class="evidence-chart-fill" style="--value:57%"></span></span><strong class="evidence-chart-value">57%</strong></div>
+              <div class="evidence-chart-row"><span class="evidence-chart-label">CPS 1-10</span><span class="evidence-chart-track"><span class="evidence-chart-fill" style="--value:11%"></span></span><strong class="evidence-chart-value">11%</strong></div>
+              <p class="evidence-chart-note">Digest-generated from the published structured abstract; this is not a publisher figure.</p>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Clinical read</strong><p>The paper strengthens a CPS-stratified value conversation before committing a patient to the full perioperative regimen, especially when the expected absolute benefit is small.</p></div>
+              <div class="evidence-insight caution"><strong>Do not overread</strong><p>This is an economic threshold, not proof that CPS 10 is a biological treatment cutoff. Immature survival, digitized curves, derived subgroup data, and borrowed utility weights all flow directly into the ICER.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1001/jamaoto.2026.2124">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -482,6 +559,32 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> First trial found that actually withholds postop RT based on a negative ctDNA result rather than just proposing to someday — a real test of whether liquid biopsy can safely replace part of the current risk-stratification pathway.</p>
         <p><span class="tag warn">Counterpoint —</span> Single-institution, phase II, only 36 patients planned — a pilot feasibility signal, not practice-changing evidence yet.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Trial brief</span><span>Live registry · verified May 2026</span><span>No outcomes yet</span></div>
+          <div class="evidence-brief-body">
+            <h4>The pathway being tested</h4>
+            <p class="evidence-deck">OPERATION is deliberately narrow: a single-arm MUSC phase II study for favorable HPV16-positive OPSCC treated with TORS. Its primary outcome is 2-year local-regional control after postoperative radiation is omitted in patients whose two-week postoperative NavDx result is negative.</p>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">36</span><span class="evidence-metric-label">Planned enrollment</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">II</span><span class="evidence-metric-label">Single-arm phase</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">2 yr</span><span class="evidence-metric-label">Primary LRC endpoint</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">1</span><span class="evidence-metric-label">Recruiting center</span></div>
+            </div>
+            <ul class="eligibility-list" aria-label="Selected trial eligibility">
+              <li>p16 diffuse &ge;70%</li><li>HPV16 TTMV positive pre-op</li><li>cT0-2 N1 M0</li><li>&le;2 nodes &le;3 cm, or one &gt;3 to &lt;6 cm</li><li>&le;10 pack-years</li><li>ECOG 0-1</li><li>TORS candidate</li>
+            </ul>
+            <div class="trial-flow" aria-label="OPERATION study pathway">
+              <div class="trial-step"><strong>1 · TORS</strong><span>Resection and pathologic risk assessment</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>2 · Two-week blood draw</strong><span>Post-op ctHPVDNA by NavDx</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>3 · If negative</strong><span>Omit immediate postoperative RT</span></div><span class="trial-arrow" aria-hidden="true">&rarr;</span>
+              <div class="trial-step"><strong>4 · Surveillance</strong><span>Standard follow-up plus serial ctHPVDNA; salvage if recurrence emerges</span></div>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Clinical read</strong><p>This is the clearest real-world test yet of a biomarker changing an adjuvant decision, but only in a highly selected favorable-risk population.</p></div>
+              <div class="evidence-insight caution"><strong>What it cannot answer</strong><p>With 36 patients and no randomized comparator, the trial can estimate feasibility and a preliminary control rate—not prove NavDx can replace pathology, imaging, or postoperative RT broadly.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07513389">View on ClinicalTrials.gov &rarr;</a></p>
       </div>
     </details></li>
@@ -498,6 +601,27 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> How you define a "positive" result (tumor-specific variants vs. pathogenic-variant-only calling) changes detection rates several-fold — assay design choices, not just the underlying technology, will determine clinical utility.</p>
         <p><span class="tag warn">Counterpoint —</span> n=40, single-center (Rouen, France); the PFS association was specifically tied to the lower-sensitivity pathogenic-variant definition, not the tumor-specific-variant definition used for the headline detection-rate numbers — the two metrics shouldn't be conflated.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Prospective cohort</span><span>Structured abstract · n=40</span></div>
+          <div class="evidence-brief-body">
+            <h4>The definition of “positive” changed the result</h4>
+            <p class="evidence-deck">The customized assay covered 11 genes and compared two calling strategies: database-classified pathogenic variants versus any tumor-specific variant found by paired tumor/normal analysis. The broader tumor-specific strategy found at least one trackable alteration in every informative tumor (35/35), compared with 30/36 using pathogenic variants alone.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>ctDNA positivity by variant-calling strategy</caption>
+                <thead><tr><th>Calling strategy</th><th>Trackable tumors</th><th>Pre-op ctDNA+</th><th>Post-op ctDNA+</th><th>Prognostic signal reported</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Tumor-specific variants</th><td>35/35 (100%)</td><td>74.3%</td><td>37.1%</td><td>Not the definition tied to the reported PFS association</td></tr>
+                  <tr><th scope="row">Pathogenic variants only</th><td>30/36 (83.3%)</td><td>20%</td><td>2.5%</td><td>Pretreatment positivity associated with lower progression-free survival (p=0.025)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Clinical read</strong><p>Analytic sensitivity can be increased dramatically by following patient-specific tumor variants, which is exactly what a perioperative MRD assay needs.</p></div>
+              <div class="evidence-insight caution"><strong>Do not conflate</strong><p>The most sensitive definition was not the one linked to prognosis in this 40-patient cohort. “More detectable” and “more clinically discriminating” are separate validation problems.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1002/ijc.70478">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -534,6 +658,24 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> The cleanest data point this cycle: occult mets are concentrated almost entirely in level II/IIA for supraglottic primaries, so limiting dissection to levels II-III (omitting IV and IIB) preserved regional control in lateralized disease.</p>
         <p><span class="tag warn">Counterpoint —</span> A systematic review of heterogeneous retrospective/population-based studies spanning 25 years (2000-2025); overall survival benefit from elective dissection itself was inconsistent across studies even though the nodal-yield pattern was consistent.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Open-access systematic review</span><span>16 studies · 2000-2025</span></div>
+          <div class="evidence-brief-body">
+            <h4>Where the occult disease actually clustered</h4>
+            <p class="evidence-deck">The review separates the decision to treat the cN0 neck from the extent of that treatment. Elective treatment improved regional control versus observation, while the anatomical distribution consistently favored a narrower II-III field for lateralized early supraglottic tumors.</p>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">13-37.5%</span><span class="evidence-metric-label">Occult nodal disease</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">75-85%</span><span class="evidence-metric-label">In level II / IIA</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">&lt;5%</span><span class="evidence-metric-label">Levels I, IIB, IV, V</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">II-III</span><span class="evidence-metric-label">Adequate field signal</span></div>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Who trends higher risk</strong><p>T2 classification, poor differentiation, and involvement of epilaryngeal structures—the suprahyoid epiglottis, aryepiglottic fold, or arytenoid—were associated with more occult disease.</p></div>
+              <div class="evidence-insight caution"><strong>Where the answer changes</strong><p>The II-III conclusion applies to lateralized primaries. Midline disease may still require bilateral management, and the review did not establish a consistent adjusted overall-survival benefit for elective dissection.</p></div>
+            </div>
+            <div class="evidence-links"><a href="https://www.sciencedirect.com/science/article/pii/S0960740426001350">Open article and graphical abstract &rarr;</a></div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1016/j.suronc.2026.102484">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -570,6 +712,29 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> The most rigorous synthesis yet on HPV+ de-escalation, and it's a genuine yellow flag: broad de-intensification (not just cetuximab substitution) trends toward worse survival and disease control across the pooled literature, after correcting for double-counting of overlapping meta-analyses. Cetuximab substitution specifically showed inferior OS (HR 2.83) and LRC (HR 2.78) without a significant late-toxicity benefit — reinforcing the RTOG 1016 story from last cycle.</p>
         <p><span class="tag warn">Counterpoint —</span> "De-intensification" pools together very different strategies (dose reduction, drug substitution, volume reduction, surgery-alone) with different risk profiles — the pooled hazard ratios shouldn't be read as "all de-escalation is bad," just that the blanket approach lacks a selection biomarker.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Umbrella review</span><span>55 studies · 38,929 patients</span></div>
+          <div class="evidence-brief-body">
+            <h4>A broad warning signal, not one uniform intervention</h4>
+            <p class="evidence-deck">This review re-analyzed systematic reviews and meta-analyses while accounting for overlap in their underlying studies. Across heterogeneous de-intensification strategies, standard-of-care treatment favored every reported disease-control endpoint.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Pooled de-intensification outcomes versus standard of care</caption>
+                <thead><tr><th>Outcome</th><th>Hazard ratio</th><th>95% confidence interval</th><th>Direction</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Overall survival</th><td>1.33</td><td>1.17-1.52</td><td>Favors standard care</td></tr>
+                  <tr><th scope="row">Progression-free survival</th><td>2.11</td><td>1.65-2.69</td><td>Favors standard care</td></tr>
+                  <tr><th scope="row">Locoregional control</th><td>2.51</td><td>1.75-3.59</td><td>Favors standard care</td></tr>
+                  <tr><th scope="row">Distant control</th><td>1.90</td><td>1.25-2.90</td><td>Favors standard care</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Strongest concrete caution</strong><p>In five randomized trials (n=1,560), replacing cisplatin with cetuximab was associated with worse overall survival (HR 2.83) and locoregional control (HR 2.78).</p></div>
+              <div class="evidence-insight caution"><strong>Do not flatten the category</strong><p>Drug substitution, radiation dose or volume reduction, and post-TORS omission are biologically and clinically different. The pooled estimate argues against blanket de-escalation; it does not answer every biomarker-selected strategy.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1002/hed.70340">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -613,6 +778,27 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> Real-world evidence that durable disease control is achievable with far less immunotherapy exposure than typical fixed-duration neoadjuvant protocols, and without routine surgical consolidation. Benefit was concentrated early (2 vs. 1 dose), with uncertain incremental value beyond 2 doses.</p>
         <p><span class="tag warn">Counterpoint —</span> Retrospective, Bayesian-modeled, single-institution cohort — treatment decisions were response-guided by treating physicians, not randomized, so this describes what happened, not what's proven optimal.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Full-text brief</span><span>Open access · CC BY-NC 4.0</span><span>Retrospective cohort · n=189</span></div>
+          <div class="evidence-brief-body">
+            <h4>Most of the observed benefit accumulated early</h4>
+            <p class="evidence-deck">FIRST used clinician-assessed response and Bayesian dose-response models to examine real-world checkpoint-inhibitor exposure. It was designed to estimate where benefit appeared to plateau—not to randomize patients to a fixed number of doses.</p>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">63%</span><span class="evidence-metric-label">Objective response</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">27.5%</span><span class="evidence-metric-label">Clinical complete response</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">48.7%</span><span class="evidence-metric-label">Received &le;2 doses</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">1 / 50</span><span class="evidence-metric-label">Recurrence after cCR without surgery</span></div>
+            </div>
+            <figure class="evidence-figure">
+              <a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d857/13386037/5d2eee5a53b6/jitc-14-7-g005.jpg" aria-label="Open the full-size source figure in a new tab"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d857/13386037/5d2eee5a53b6/jitc-14-7-g005.jpg" alt="Three dose-response models showing the posterior predicted probability of objective response across cumulative immunotherapy doses in the FIRST study" loading="lazy"></a>
+              <figcaption>Figure 5. Posterior predicted objective-response probability under linear, log-dose, and threshold models. Unmodified source figure from Miller et al., <i>Journal for ImmunoTherapy of Cancer</i> (2026), <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13386037/">full text</a>; licensed <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.</figcaption>
+            </figure>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>Signal worth carrying forward</strong><p>The largest modeled gain was from a second dose versus one dose; the incremental value of further exposure was less certain. That makes response-adapted duration a credible prospective-trial question.</p></div>
+              <div class="evidence-insight caution"><strong>What the figure cannot prove</strong><p>Response was clinician-anchored rather than RECIST-based, surgery was omitted selectively, and dose count was not randomized. The curve is an adjusted observational estimate—not a dosing recommendation.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://doi.org/10.1136/jitc-2026-015029">Read the paper &rarr;</a></p>
       </div>
     </details></li>
@@ -649,6 +835,34 @@
       <div class="ref-detail">
         <p><span class="tag">Key conclusion —</span> A new target class (c-Met-directed ADC) entering the HNSCC combination space for the first time in our tracking.</p>
         <p><span class="tag warn">Counterpoint —</span> Not yet recruiting; phase II with no efficacy data yet.</p>
+        <div class="evidence-brief">
+          <div class="evidence-sourcebar"><span class="evidence-source-badge">Protocol brief</span><span>Live registry</span><span>Randomized phase II · no results</span></div>
+          <div class="evidence-brief-body">
+            <h4>The active question is dose plus combination—not activity yet</h4>
+            <p class="evidence-deck">AbbVie plans to randomize 150 previously untreated recurrent/metastatic HNSCC patients across two telisotuzumab adizutecan dose levels with pembrolizumab and a pembrolizumab-platinum-5-FU active-control arm.</p>
+            <div class="evidence-table-wrap">
+              <table class="evidence-table">
+                <caption>Registered treatment groups</caption>
+                <thead><tr><th>Arm</th><th>Regimen</th><th>What it contributes</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Experimental A</th><td>Telisotuzumab adizutecan dose A + pembrolizumab</td><td>Lower registered ADC dose strategy</td></tr>
+                  <tr><th scope="row">Experimental B</th><td>Telisotuzumab adizutecan dose B + pembrolizumab</td><td>Alternative ADC dose strategy</td></tr>
+                  <tr><th scope="row">Active comparator</th><td>Pembrolizumab + platinum + 5-FU</td><td>First-line chemo-immunotherapy control</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="evidence-metrics">
+              <div class="evidence-metric"><span class="evidence-metric-value">150</span><span class="evidence-metric-label">Planned enrollment</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">3</span><span class="evidence-metric-label">Randomized arms</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">Sep 2026</span><span class="evidence-metric-label">Estimated start</span></div>
+              <div class="evidence-metric"><span class="evidence-metric-value">Oct 2029</span><span class="evidence-metric-label">Estimated completion</span></div>
+            </div>
+            <div class="evidence-insights">
+              <div class="evidence-insight"><strong>What to watch</strong><p>Primary endpoints include safety, blinded-independent-review ORR, and PFS under RECIST 1.1; duration of response and overall survival are secondary.</p></div>
+              <div class="evidence-insight caution"><strong>Current evidence level</strong><p>This is a protocol map only. The registry establishes the comparison and timing but supports no efficacy inference for the ADC or either dose.</p></div>
+            </div>
+          </div>
+        </div>
         <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07744126">View on ClinicalTrials.gov &rarr;</a></p>
       </div>
     </details></li>
@@ -901,7 +1115,7 @@
       section.hidden = !!query && !hasVisible;
     });
 
-    _searchStatus.textContent = query ? matchCount + ' of ' + _refs.length + ' findings match' : 'Search summaries, conclusions, caveats, and sources.';
+    _searchStatus.textContent = query ? matchCount + ' of ' + _refs.length + ' findings match' : 'Search summaries, methods, metrics, caveats, and sources.';
     renderOutline();
   }
 
@@ -1359,6 +1573,7 @@
           var findingButton = document.createElement('button');
           findingButton.type = 'button';
           findingButton.className = 'desk-finding-button';
+          if (ref.querySelector('.evidence-brief')) findingButton.classList.add('is-rich');
           findingButton.setAttribute('aria-current', _activeRef === ref ? 'true' : 'false');
           var findingCopy = document.createElement('span');
           findingCopy.className = 'desk-finding-copy';
@@ -1402,7 +1617,8 @@
     var index = _refs.indexOf(ref);
     var wrapper = document.createElement('div');
     wrapper.className = 'reader-finding';
-    wrapper.appendChild(createViewHeader('Section ' + sectionNumber(activeSection) + ' · Finding ' + (index + 1) + ' of ' + _refs.length, activeSection.querySelector('h3').textContent, 'Full evidence, interpretation, limitations, and source.'));
+    var readerDeck = ref.querySelector('.evidence-brief') ? 'Expanded evidence brief with data, interpretation, limitations, and source.' : 'Full evidence, interpretation, limitations, and source.';
+    wrapper.appendChild(createViewHeader('Section ' + sectionNumber(activeSection) + ' · Finding ' + (index + 1) + ' of ' + _refs.length, activeSection.querySelector('h3').textContent, readerDeck));
 
     var summaryCopy = document.createElement('p');
     summaryCopy.className = 'pane-summary';
