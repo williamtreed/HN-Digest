@@ -199,10 +199,6 @@
   .desk-panel[hidden] { display: none; }
   #desk-evidence-panel:not([hidden]) { display: flex; flex-direction: column; overflow: hidden; }
   .desk-outline-inner { padding: 16px 18px 18px; }
-  .desk-search-label { display: block; margin-bottom: 6px; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
-  .desk-search { width: 100%; border: 1px solid var(--border-strong); border-radius: 8px; padding: 9px 11px; background: var(--surface-1); color: var(--text-primary); font: inherit; font-size: 12px; outline: none; }
-  .desk-search:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
-  .desk-search-status { min-height: 17px; margin: 6px 0 10px; font-size: 10px; color: var(--text-muted); }
   .desk-outline { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--border); }
   .desk-outline-item { border-bottom: 1px solid var(--border); }
   .desk-outline-button { width: 100%; border: 0; padding: 12px 0; text-align: left; background: transparent; color: var(--text-primary); font: inherit; cursor: pointer; }
@@ -446,7 +442,7 @@
 <p class="attribution">According to PubMed, all findings below are drawn from indexed literature; DOI links are provided per PubMed's attribution requirements.</p>
 
 <p class="key">Each item leads with the bottom line, tagged <b>Practice-changing</b> / <b>Hypothesis-generating</b> / <b>Background</b>, followed by supporting data, a <b>Counterpoint</b> where the evidence is genuinely contested, and a <b>Go deeper</b> pointer for the full paper trail.</p>
-<p class="tap-hint">Desktop: choose a section or finding in the left navigator and read it in the right pane (press <b>/</b> to search). Source links open separately so your place is preserved. Mobile keeps native inline expansion. Use the <b>Aa</b> button for theme and text size; use Share &rarr; Print for a fully-expanded tumor-board handout.</p>
+<p class="tap-hint">Desktop: choose a section or finding in the left navigator and read it in the right pane. Source links open separately so your place is preserved. Mobile keeps native inline expansion. Use the <b>Aa</b> button for theme and text size; use Share &rarr; Print for a fully-expanded tumor-board handout.</p>
 <p class="note">Baseline cycle: this first digest is a broad ~12-month sweep through August 2026. Later cycles are shorter incremental scans that link back to these topic anchors.</p>
 </header>
 
@@ -572,9 +568,6 @@
 
     <section class="desk-panel" id="desk-outline-panel" role="tabpanel" aria-labelledby="desk-tab-outline">
       <div class="desk-outline-inner">
-        <label class="desk-search-label" for="desk-search">Search this cycle</label>
-        <input class="desk-search" id="desk-search" type="search" placeholder="Topic, trial, author, DOI…" autocomplete="off">
-        <p class="desk-search-status" id="desk-search-status" aria-live="polite"></p>
         <ol class="desk-outline" id="desk-outline"></ol>
         <div class="desk-foot">
           <span class="desk-foot-note">Review progress is saved on this device.</span>
@@ -617,8 +610,6 @@
   var _outlinePanel = document.getElementById('desk-outline-panel');
   var _evidencePanel = document.getElementById('desk-evidence-panel');
   var _outline = document.getElementById('desk-outline');
-  var _search = document.getElementById('desk-search');
-  var _searchStatus = document.getElementById('desk-search-status');
   var _progressLabel = document.getElementById('desk-progress-label');
   var _progressFill = document.getElementById('desk-progress-fill');
   var _nextUnread = document.getElementById('desk-next-unread');
@@ -670,11 +661,6 @@
     _evidencePanel.hidden = showOutline;
   }
 
-  function isVisibleFinding(ref) {
-    var item = ref.closest('li');
-    return !item || !item.hidden;
-  }
-
   function updateReferenceState(ref) {
     var reviewed = _reviewed.has(ref.dataset.refId);
     ref.classList.toggle('is-reviewed', reviewed);
@@ -703,15 +689,12 @@
 
   function renderOutline() {
     _outline.replaceChildren();
-    var query = _search.value.trim().toLowerCase();
 
     _sections.forEach(function(section) {
       var refs = Array.prototype.slice.call(section.querySelectorAll('details.ref'));
-      var visibleRefs = refs.filter(isVisibleFinding);
       var reviewedCount = refs.filter(function(ref) { return _reviewed.has(ref.dataset.refId); }).length;
       var item = document.createElement('li');
       item.className = 'desk-outline-item' + (reviewedCount === refs.length && refs.length ? ' is-complete' : '');
-      item.hidden = !!query && visibleRefs.length === 0;
 
       var button = document.createElement('button');
       button.type = 'button';
@@ -742,26 +725,6 @@
       item.appendChild(button);
       _outline.appendChild(item);
     });
-  }
-
-  function applySearch() {
-    var query = _search.value.trim().toLowerCase();
-    var matchCount = 0;
-
-    _refs.forEach(function(ref) {
-      var matches = !query || ref.textContent.toLowerCase().indexOf(query) !== -1;
-      var item = ref.closest('li');
-      if (item) item.hidden = !matches;
-      if (matches) matchCount += 1;
-    });
-
-    _sections.forEach(function(section) {
-      var hasVisible = Array.prototype.some.call(section.querySelectorAll('details.ref'), isVisibleFinding);
-      section.hidden = !!query && !hasVisible;
-    });
-
-    _searchStatus.textContent = query ? matchCount + ' of ' + _refs.length + ' findings match' : 'Search summaries, methods, metrics, caveats, and sources.';
-    renderOutline();
   }
 
   function updateEvidenceControls() {
@@ -841,17 +804,16 @@
   }
 
   function goToNextUnread() {
-    var visibleUnread = _refs.filter(function(ref) {
-      return isVisibleFinding(ref) && !_reviewed.has(ref.dataset.refId);
+    var unread = _refs.filter(function(ref) {
+      return !_reviewed.has(ref.dataset.refId);
     });
-    if (!visibleUnread.length) {
-      _searchStatus.textContent = _search.value ? 'All matching findings have been reviewed.' : 'Every finding in this cycle has been reviewed.';
+    if (!unread.length) {
       activateDeskTab('outline');
       return;
     }
 
     var currentIndex = _activeRef ? _refs.indexOf(_activeRef) : -1;
-    var next = visibleUnread.find(function(ref) { return _refs.indexOf(ref) > currentIndex; }) || visibleUnread[0];
+    var next = unread.find(function(ref) { return _refs.indexOf(ref) > currentIndex; }) || unread[0];
     selectReference(next, {scroll: true});
   }
 
@@ -915,7 +877,6 @@
   });
   _copyButton.addEventListener('click', copyActiveFinding);
   _nextUnread.addEventListener('click', goToNextUnread);
-  _search.addEventListener('input', applySearch);
   _resetProgress.addEventListener('click', function() {
     _reviewed.clear();
     _refs.forEach(updateReferenceState);
@@ -923,23 +884,11 @@
     updateProgress();
     renderOutline();
     updateEvidenceControls();
-    _searchStatus.textContent = 'Review progress reset.';
   });
 
   document.addEventListener('keydown', function(event) {
-    var tag = document.activeElement && document.activeElement.tagName;
-    var editing = tag === 'INPUT' || tag === 'TEXTAREA';
-    if (event.key === '/' && !editing && _wideLayout.matches) {
-      event.preventDefault();
-      activateDeskTab('outline');
-      _search.focus();
-    } else if (event.key === 'Escape' && _wideLayout.matches) {
-      if (_search.value) {
-        _search.value = '';
-        applySearch();
-      } else {
-        clearStudyDesk();
-      }
+    if (event.key === 'Escape' && _wideLayout.matches) {
+      clearStudyDesk();
     }
   });
 
@@ -953,19 +902,15 @@
   });
 
   updateProgress();
-  applySearch();
+  renderOutline();
   updateEvidenceControls();
 
-  // Force every reference open for printing, clear filters, then restore prior state.
+  // Force every reference open for printing, then restore prior state.
   var _preprintState = null;
   var _preprintInlineState = false;
-  var _preprintSearch = '';
   window.addEventListener('beforeprint', function() {
     _preprintState = _refs.map(function(ref) { return ref.open; });
     _preprintInlineState = document.body.classList.contains('inline-expanded');
-    _preprintSearch = _search.value;
-    _search.value = '';
-    applySearch();
     document.body.classList.add('inline-expanded');
     _refs.forEach(function(ref) { ref.open = true; });
   });
@@ -973,8 +918,6 @@
     if (!_preprintState) return;
     _refs.forEach(function(ref, index) { ref.open = _preprintState[index]; });
     document.body.classList.toggle('inline-expanded', _preprintInlineState);
-    _search.value = _preprintSearch;
-    applySearch();
     _preprintState = null;
   });
 </script>
@@ -1168,17 +1111,14 @@
 
   renderOutline = function() {
     _outline.replaceChildren();
-    var query = _search.value.trim().toLowerCase();
 
     _sections.forEach(function(section) {
       var refs = Array.prototype.slice.call(section.querySelectorAll('details.ref'));
-      var visibleRefs = refs.filter(isVisibleFinding);
       var reviewedCount = refs.filter(function(ref) { return _reviewed.has(ref.dataset.refId); }).length;
       var sectionActive = activeSection === section;
-      var expanded = !!query || expandedSectionId === section.id;
+      var expanded = expandedSectionId === section.id;
       var item = document.createElement('li');
       item.className = 'desk-outline-item' + (reviewedCount === refs.length && refs.length ? ' is-complete' : '') + (sectionActive ? ' is-active' : '');
-      item.hidden = !!query && visibleRefs.length === 0;
 
       var button = document.createElement('button');
       button.type = 'button';
@@ -1212,7 +1152,7 @@
       if (expanded) {
         var findings = document.createElement('ul');
         findings.className = 'desk-finding-list';
-        visibleRefs.forEach(function(ref) {
+        refs.forEach(function(ref) {
           var findingItem = document.createElement('li');
           findingItem.className = 'desk-finding-item';
           var findingButton = document.createElement('button');
