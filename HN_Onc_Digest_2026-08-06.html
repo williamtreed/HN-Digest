@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 <title>Head & Neck Oncology Digest — Aug 6, 2026</title>
+<script>
+  try {
+    var earlyReaderPreferences = JSON.parse(localStorage.getItem('hn-digest-reader-preferences:v1') || '{}');
+    if (['system', 'light', 'sepia', 'dark'].indexOf(earlyReaderPreferences.theme) !== -1) document.documentElement.dataset.readerTheme = earlyReaderPreferences.theme;
+    if (typeof earlyReaderPreferences.size === 'number' && earlyReaderPreferences.size >= 0 && earlyReaderPreferences.size < 4) document.documentElement.dataset.readerSize = ['small', 'medium', 'large', 'xlarge'][earlyReaderPreferences.size];
+  } catch (error) {}
+</script>
 <style>
   :root {
     --text-primary: #17212b; --text-secondary: #4d5964; --text-muted: #7b858e;
@@ -16,7 +23,48 @@
     --counterpoint-bg: #f8f4ed; --counterpoint-line: #b58a4b;
     --deeper-bg: #eef4f6; --deeper-line: #47758a;
     --shadow: 0 1px 2px rgba(23,33,43,.04), 0 8px 28px rgba(23,33,43,.055);
+    --reader-copy-size: 15px; --reader-lede-size: 25px; --reader-section-size: 18px; --reader-line-height: 1.68;
   }
+  html[data-reader-theme="light"] {
+    color-scheme: light;
+    --text-primary: #17212b; --text-secondary: #4d5964; --text-muted: #7b858e;
+    --border: #dce1e5; --border-strong: #c8d0d7;
+    --surface-1: #f5f7f8; --surface-2: #edf2f5; --bg: #fcfcfb;
+    --accent: #174f78; --accent-soft: #e8f0f5; --link: #155a87;
+    --success-bg: #e4eef4; --success-fg: #124b72;
+    --warning-bg: #f3eee4; --warning-fg: #755a2b;
+    --counterpoint-bg: #f8f4ed; --counterpoint-line: #b58a4b;
+    --deeper-bg: #eef4f6; --deeper-line: #47758a;
+    --shadow: 0 1px 2px rgba(23,33,43,.04), 0 8px 28px rgba(23,33,43,.055);
+  }
+  html[data-reader-theme="sepia"] {
+    color-scheme: light;
+    --text-primary: #382f27; --text-secondary: #625448; --text-muted: #8b7968;
+    --border: #dac9aa; --border-strong: #c7b38f;
+    --surface-1: #f0e6d2; --surface-2: #e8dbc1; --bg: #f8f1e1;
+    --accent: #7a552f; --accent-soft: #ede0c8; --link: #704b27;
+    --success-bg: #e5dcc8; --success-fg: #58482f;
+    --warning-bg: #ead9bd; --warning-fg: #765a2d;
+    --counterpoint-bg: #f0e3ce; --counterpoint-line: #a87d45;
+    --deeper-bg: #e8dfce; --deeper-line: #7b6953;
+    --shadow: 0 1px 2px rgba(67,50,31,.07), 0 10px 30px rgba(67,50,31,.08);
+  }
+  html[data-reader-theme="dark"] {
+    color-scheme: dark;
+    --text-primary: #eef2f4; --text-secondary: #bbc4ca; --text-muted: #87939b;
+    --border: #35414a; --border-strong: #46545e;
+    --surface-1: #202a31; --surface-2: #27343d; --bg: #151c21;
+    --accent: #86b9d8; --accent-soft: #203746; --link: #8bc0df;
+    --success-bg: #203746; --success-fg: #9bc9e4;
+    --warning-bg: #372f22; --warning-fg: #d8bc87;
+    --counterpoint-bg: #2b2924; --counterpoint-line: #a98350;
+    --deeper-bg: #202f37; --deeper-line: #6e9aad;
+    --shadow: 0 1px 2px rgba(0,0,0,.25), 0 12px 32px rgba(0,0,0,.16);
+  }
+  html[data-reader-size="small"] { --reader-copy-size: 13px; --reader-lede-size: 21px; --reader-section-size: 16px; --reader-line-height: 1.62; }
+  html[data-reader-size="medium"] { --reader-copy-size: 15px; --reader-lede-size: 25px; --reader-section-size: 18px; --reader-line-height: 1.68; }
+  html[data-reader-size="large"] { --reader-copy-size: 17px; --reader-lede-size: 28px; --reader-section-size: 20px; --reader-line-height: 1.72; }
+  html[data-reader-size="xlarge"] { --reader-copy-size: 19px; --reader-lede-size: 31px; --reader-section-size: 22px; --reader-line-height: 1.74; }
   @media (prefers-color-scheme: dark) {
     :root {
       --text-primary: #eef2f4; --text-secondary: #bbc4ca; --text-muted: #87939b;
@@ -228,6 +276,39 @@
   .reader-section-context { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--border); }
   .reader-section-context > h3 { margin: 0 0 14px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
   .reader-section-context .callout { margin-block: 12px; }
+  .reader-content .highlights li,
+  .reader-content .closing p,
+  .reader-content details.ref summary,
+  .reader-content .callout p,
+  .reader-content .pane-detail > p,
+  .reader-content .pane-context-copy { font-size: var(--reader-copy-size) !important; line-height: var(--reader-line-height); }
+  .reader-content .bottom-line { font-size: var(--reader-section-size); line-height: 1.55; }
+  .reader-finding .pane-summary { font-size: var(--reader-lede-size); line-height: 1.48; }
+
+  .reading-preferences { position: fixed; right: 18px; bottom: 18px; z-index: 100; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .reading-preferences-toggle { display: flex; align-items: baseline; gap: 7px; border: 1px solid var(--border-strong); border-radius: 999px; padding: 8px 12px; color: var(--text-primary); background: color-mix(in srgb, var(--surface-1) 94%, transparent); box-shadow: var(--shadow); backdrop-filter: blur(14px); font: inherit; cursor: pointer; }
+  .reading-preferences-toggle:hover { background: var(--surface-2); }
+  .reading-preferences-aa { font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 17px; font-weight: 750; letter-spacing: -.04em; }
+  .reading-preferences-label { font-size: 10px; font-weight: 750; }
+  .reading-preferences-panel { position: absolute; right: 0; bottom: calc(100% + 9px); width: 278px; border: 1px solid var(--border-strong); border-radius: 12px; padding: 16px; color: var(--text-primary); background: var(--surface-1); box-shadow: 0 16px 44px rgba(23,33,43,.18); }
+  .reading-preferences-panel[hidden] { display: none; }
+  .reading-preferences-title { margin: 0 0 14px; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 18px; font-weight: 700; }
+  .reading-preferences-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+  .reading-preferences-row-label { font-size: 11px; font-weight: 750; color: var(--text-secondary); }
+  .reading-size-stepper { display: grid; grid-template-columns: 34px 48px 34px; align-items: center; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+  .reading-size-stepper button { height: 30px; border: 0; color: var(--link); background: var(--bg); font: inherit; font-weight: 800; cursor: pointer; }
+  .reading-size-stepper button:disabled { color: var(--text-muted); cursor: default; opacity: .45; }
+  .reading-size-value { text-align: center; font-size: 10px; font-weight: 750; color: var(--text-secondary); }
+  .reading-theme-label { margin: 14px 0 8px; font-size: 9px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: var(--text-muted); }
+  .reading-theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+  .reading-theme-button { display: flex; align-items: center; gap: 8px; border: 1px solid var(--border); border-radius: 8px; padding: 8px; color: var(--text-secondary); background: var(--bg); font: inherit; font-size: 10px; font-weight: 700; cursor: pointer; }
+  .reading-theme-button[aria-pressed="true"] { border-color: var(--accent); color: var(--text-primary); box-shadow: inset 0 0 0 1px var(--accent); }
+  .reading-theme-swatch { width: 17px; height: 17px; flex-shrink: 0; border: 1px solid rgba(23,33,43,.2); border-radius: 50%; }
+  .reading-theme-swatch.system { background: linear-gradient(135deg, #fcfcfb 0 49%, #151c21 51% 100%); }
+  .reading-theme-swatch.light { background: #fcfcfb; }
+  .reading-theme-swatch.sepia { background: #f0e6d2; }
+  .reading-theme-swatch.dark { background: #151c21; }
+  .reading-preferences-reset { width: 100%; border: 0; padding: 13px 0 0; color: var(--text-muted); background: transparent; font: inherit; font-size: 10px; text-decoration: underline; cursor: pointer; }
 
   footer { border-top: 1px solid var(--border); margin-top: 56px; padding-top: 20px; font-size: 11px; letter-spacing: .02em; color: var(--text-muted); }
 
@@ -248,6 +329,12 @@
     .digest-source { display: block !important; }
     .masthead { max-width: none; }
     .toc { margin-inline: -32px; padding-inline: 32px; }
+    .digest-source .highlights li,
+    .digest-source section p,
+    .digest-source section li,
+    .digest-source details.ref summary,
+    .digest-source .closing p { font-size: var(--reader-copy-size); line-height: var(--reader-line-height); }
+    .digest-source .bottom-line { font-size: var(--reader-section-size); }
   }
   @media (max-width: 640px) {
     body { padding: 28px 18px 64px; line-height: 1.62; }
@@ -262,17 +349,33 @@
     .badge { display: inline-block; margin: 0 0 10px; }
     .bottom-line { font-size: 16px; }
     .highlights { padding: 17px; }
+    .reading-preferences { right: 10px; bottom: 10px; }
+    .reading-preferences-label { display: none; }
+    .reading-preferences-toggle { padding: 7px 11px; }
+    .reading-preferences-panel { width: min(278px, calc(100vw - 20px)); }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   }
   @media print {
+    html[data-reader-theme] {
+      color-scheme: light;
+      --text-primary: #17212b; --text-secondary: #4d5964; --text-muted: #7b858e;
+      --border: #dce1e5; --border-strong: #c8d0d7;
+      --surface-1: #f5f7f8; --surface-2: #edf2f5; --bg: #fcfcfb;
+      --accent: #174f78; --accent-soft: #e8f0f5; --link: #155a87;
+      --success-bg: #e4eef4; --success-fg: #124b72;
+      --warning-bg: #f3eee4; --warning-fg: #755a2b;
+      --counterpoint-bg: #f8f4ed; --counterpoint-line: #b58a4b;
+      --deeper-bg: #eef4f6; --deeper-line: #47758a;
+      --shadow: none;
+    }
     body { max-width: none; padding: 0; background: #fff; color: #111; }
     .reading-layout { display: block; }
     .reader-surface { display: none !important; }
     .digest-source { display: block !important; }
-    .evidence-pane, .toc, .archive-nav, .tap-hint, .highlights li .jump { display: none !important; }
+    .evidence-pane, .toc, .archive-nav, .tap-hint, .highlights li .jump, .reading-preferences { display: none !important; }
     details.ref .ref-detail { display: block !important; animation: none !important; opacity: 1 !important; transform: none !important; }
     details.ref .chevron { display: none; }
     details.ref summary[data-reviewed="true"]::after { display: none; }
@@ -294,7 +397,7 @@
 
 <p class="key">Each finding leads with the bottom line, tagged <b>Practice-changing</b> / <b>Hypothesis-generating</b> / <b>Background</b>, plus a section-wide <b>Counterpoint</b> and <b>Go deeper</b> pointer. Select any reference to inspect that study's conclusion, caveat, source, and section context.</p>
 
-<p class="tap-hint">Desktop: choose a section or finding in the left navigator and read it in the right pane (press <b>/</b> to search). Source links open separately so your place is preserved. Mobile keeps native inline expansion. Use Share &rarr; Print for a fully-expanded tumor-board handout.</p>
+<p class="tap-hint">Desktop: choose a section or finding in the left navigator and read it in the right pane (press <b>/</b> to search). Source links open separately so your place is preserved. Mobile keeps native inline expansion. Use the <b>Aa</b> button for theme and text size; use Share &rarr; Print for a fully-expanded tumor-board handout.</p>
 
 <p class="note">Note on cadence: the prior digest (Aug 3) was a broad ~12-month baseline sweep. This cycle is a true 3-week incremental scan — several items below are direct follow-ons to stories flagged last time (linked inline), not repeats.</p>
 </header>
@@ -1373,6 +1476,121 @@
   } else {
     renderOverview({reveal: false});
   }
+})();
+</script>
+
+<script>
+(function() {
+  if (document.getElementById('reading-preferences')) return;
+
+  var storageKey = 'hn-digest-reader-preferences:v1';
+  var sizes = ['small', 'medium', 'large', 'xlarge'];
+  var sizeLabels = ['87%', '100%', '113%', '127%'];
+  var validThemes = ['system', 'light', 'sepia', 'dark'];
+  var preferences = {theme: 'system', size: 1};
+
+  try {
+    var saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    if (validThemes.indexOf(saved.theme) !== -1) preferences.theme = saved.theme;
+    if (typeof saved.size === 'number' && saved.size >= 0 && saved.size < sizes.length) preferences.size = saved.size;
+  } catch (error) {}
+
+  var control = document.createElement('div');
+  control.className = 'reading-preferences';
+  control.id = 'reading-preferences';
+  control.innerHTML =
+    '<button class="reading-preferences-toggle" id="reading-preferences-toggle" type="button" aria-expanded="false" aria-controls="reading-preferences-panel">' +
+      '<span class="reading-preferences-aa" aria-hidden="true">Aa</span>' +
+      '<span class="reading-preferences-label">Appearance</span>' +
+    '</button>' +
+    '<div class="reading-preferences-panel" id="reading-preferences-panel" hidden>' +
+      '<h2 class="reading-preferences-title">Reading appearance</h2>' +
+      '<div class="reading-preferences-row">' +
+        '<span class="reading-preferences-row-label">Text size</span>' +
+        '<div class="reading-size-stepper">' +
+          '<button id="reading-size-down" type="button" aria-label="Decrease text size">A−</button>' +
+          '<span class="reading-size-value" id="reading-size-value" aria-live="polite">100%</span>' +
+          '<button id="reading-size-up" type="button" aria-label="Increase text size">A+</button>' +
+        '</div>' +
+      '</div>' +
+      '<p class="reading-theme-label">Theme</p>' +
+      '<div class="reading-theme-grid" role="group" aria-label="Reading theme">' +
+        '<button class="reading-theme-button" type="button" data-reader-theme-choice="system" aria-pressed="false"><span class="reading-theme-swatch system" aria-hidden="true"></span><span>System</span></button>' +
+        '<button class="reading-theme-button" type="button" data-reader-theme-choice="light" aria-pressed="false"><span class="reading-theme-swatch light" aria-hidden="true"></span><span>Light</span></button>' +
+        '<button class="reading-theme-button" type="button" data-reader-theme-choice="sepia" aria-pressed="false"><span class="reading-theme-swatch sepia" aria-hidden="true"></span><span>Sepia</span></button>' +
+        '<button class="reading-theme-button" type="button" data-reader-theme-choice="dark" aria-pressed="false"><span class="reading-theme-swatch dark" aria-hidden="true"></span><span>Dark</span></button>' +
+      '</div>' +
+      '<button class="reading-preferences-reset" id="reading-preferences-reset" type="button">Use system defaults</button>' +
+    '</div>';
+  document.body.appendChild(control);
+
+  var toggle = document.getElementById('reading-preferences-toggle');
+  var panel = document.getElementById('reading-preferences-panel');
+  var sizeDown = document.getElementById('reading-size-down');
+  var sizeUp = document.getElementById('reading-size-up');
+  var sizeValue = document.getElementById('reading-size-value');
+  var reset = document.getElementById('reading-preferences-reset');
+  var themeButtons = Array.prototype.slice.call(control.querySelectorAll('[data-reader-theme-choice]'));
+
+  function savePreferences() {
+    try { localStorage.setItem(storageKey, JSON.stringify(preferences)); } catch (error) {}
+  }
+
+  function applyPreferences(shouldSave) {
+    document.documentElement.dataset.readerTheme = preferences.theme;
+    document.documentElement.dataset.readerSize = sizes[preferences.size];
+    sizeValue.textContent = sizeLabels[preferences.size];
+    sizeDown.disabled = preferences.size === 0;
+    sizeUp.disabled = preferences.size === sizes.length - 1;
+    themeButtons.forEach(function(button) {
+      button.setAttribute('aria-pressed', button.dataset.readerThemeChoice === preferences.theme ? 'true' : 'false');
+    });
+    toggle.setAttribute('aria-label', 'Reading appearance: ' + preferences.theme + ' theme, ' + sizeLabels[preferences.size] + ' text');
+    if (shouldSave) savePreferences();
+  }
+
+  function setPanelOpen(open) {
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  toggle.addEventListener('click', function() {
+    setPanelOpen(panel.hidden);
+  });
+  sizeDown.addEventListener('click', function() {
+    if (preferences.size > 0) {
+      preferences.size -= 1;
+      applyPreferences(true);
+    }
+  });
+  sizeUp.addEventListener('click', function() {
+    if (preferences.size < sizes.length - 1) {
+      preferences.size += 1;
+      applyPreferences(true);
+    }
+  });
+  themeButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      preferences.theme = button.dataset.readerThemeChoice;
+      applyPreferences(true);
+    });
+  });
+  reset.addEventListener('click', function() {
+    preferences = {theme: 'system', size: 1};
+    applyPreferences(true);
+  });
+  document.addEventListener('click', function(event) {
+    if (!panel.hidden && !control.contains(event.target)) setPanelOpen(false);
+  });
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && !panel.hidden) {
+      event.stopImmediatePropagation();
+      setPanelOpen(false);
+      toggle.focus();
+    }
+  }, true);
+
+  applyPreferences(false);
 })();
 </script>
 
