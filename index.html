@@ -10,7 +10,7 @@
     --text-primary: #17212b; --text-secondary: #4d5964; --text-muted: #7b858e;
     --border: #dce1e5; --border-strong: #c8d0d7;
     --surface-1: #f5f7f8; --surface-2: #edf2f5; --bg: #fcfcfb;
-    --accent: #174f78; --link: #155a87;
+    --accent: #174f78; --link: #075f9a;
     --shadow: 0 1px 2px rgba(23,33,43,.04), 0 8px 28px rgba(23,33,43,.055);
   }
   @media (prefers-color-scheme: dark) {
@@ -18,7 +18,7 @@
       --text-primary: #eef2f4; --text-secondary: #bbc4ca; --text-muted: #87939b;
       --border: #35414a; --border-strong: #46545e;
       --surface-1: #202a31; --surface-2: #27343d; --bg: #151c21;
-      --accent: #86b9d8; --link: #8bc0df;
+      --accent: #86b9d8; --link: #72c7f2;
       --shadow: 0 1px 2px rgba(0,0,0,.25), 0 12px 32px rgba(0,0,0,.16);
     }
   }
@@ -36,8 +36,8 @@
   .entry-date { grid-row: span 2; font-size: 10px; line-height: 1.55; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin: 3px 0 0; }
   .entry-summary { font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 17px; line-height: 1.58; color: var(--text-secondary); margin: 0 0 10px; }
   .entry-links { font-size: 12px; }
-  .entry-links a { display: inline-block; color: var(--link); text-decoration: none; font-weight: 700; margin: 0 18px 6px 0; }
-  .entry-links a:hover { text-decoration: underline; }
+  .entry-links a { display: inline-block; color: var(--link); font-weight: 700; margin: 0 18px 6px 0; text-decoration-line: underline; text-decoration-color: color-mix(in srgb, currentColor 72%, transparent); text-decoration-thickness: 1.5px; text-underline-offset: .19em; }
+  .entry-links a:hover { text-decoration-color: currentColor; text-decoration-thickness: 2px; }
   .entry-links .disabled { color: var(--text-muted); font-weight: 400; }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   footer { border-top: 1px solid var(--border); margin-top: 30px; padding-top: 20px; font-size: 11px; letter-spacing: .02em; color: var(--text-muted); }
