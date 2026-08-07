@@ -4,9 +4,9 @@ A recurring literature digest for a head & neck surgical oncologist, generated e
 
 ## What's in here
 
-- `HN_Onc_Digest_2026-08-06.html` — the current/live digest cycle. Each cited study is a native `<details>` card with its own "Key conclusion" and "Counterpoint." Wide screens add a full Study desk with cycle search, section progress, persistent reviewed state, next-unread navigation, focused evidence reading, and copy controls. Dark mode, mobile inline expansion, and a fully-expanded tumor-board printout remain built in.
+- `HN_Onc_Digest_2026-08-06.html` — the current/live digest cycle. Each cited study is a native `<details>` card with its own "Key conclusion" and "Counterpoint." Wide screens turn that source into a master-detail workspace: an interactive Digest navigator on the left and a generous reader on the right, with cycle search, section/finding navigation, persistent reviewed state, next-unread navigation, and copy controls. Dark mode, mobile inline expansion, and a fully-expanded tumor-board printout remain built in.
 - `HN_Onc_Digest_2026-08-06.md` — the same content in plain markdown (no interactivity needed — this is the portable/fallback format).
-- `HN_Onc_Digest_2026-08-03.html` — the first/baseline cycle (a ~12-month sweep), upgraded to the same interactive study-card and linked evidence-desk system as later cycles while preserving its original medical content and stable topic anchors.
+- `HN_Onc_Digest_2026-08-03.html` — the first/baseline cycle (a ~12-month sweep), upgraded to the same interactive navigator/reader system as later cycles while preserving its original medical content and stable topic anchors.
 - `index.html` — the archive hub. Lists every cycle newest-first with a short summary and links out. New cycles get prepended here.
 
 Everything is self-contained: no build step, no external JS/CSS dependencies (safe to open directly in a browser or serve as-is from any static host).
@@ -19,7 +19,7 @@ These are already baked into every digest's HTML/CSS and should be copied forwar
 - "Last cycle" references in the prose are hyperlinked directly to the specific prior digest file + anchor (e.g. `HN_Onc_Digest_2026-08-03.html#neck-dissection`), not just re-cited by DOI — this lets the reader jump straight to what was said before.
 - Every digest's `<body>` starts with a nav link back to `index.html`.
 - CSS custom properties in `:root` (plus a `prefers-color-scheme: dark` override block) drive all theming — badge colors, links, callout borders, etc.
-- At 1320px and above, every cycle uses the same two-pane reading workspace. The wider left-side Study desk is derived from the native reference cards, while the digest remains visible on the right for context. It stores only reviewed reference IDs in local browser storage and never duplicates or alters medical content.
+- At 1320px and above, every cycle uses the same master-detail workspace: a roughly one-third-width Digest navigator on the left and a two-thirds reader on the right. Both are generated at runtime from the hidden native digest source; mobile and print expose that original source directly. Only reviewed reference IDs are stored in local browser storage.
 
 ## What's done vs. what's still needed
 
