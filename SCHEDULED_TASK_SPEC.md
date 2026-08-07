@@ -63,16 +63,23 @@ The reader is a **head & neck surgical oncologist**, not a medical oncologist or
   - `<span class="tag warn">Counterpoint —</span>` a caveat specific to that study (sample size, retrospective design, single-center, funding source, methodological limitation) — omit only if the reference is a trial-registry note with nothing to critique yet.
   - A `<p class="ref-link">` with the DOI link (or ClinicalTrials.gov link for trials without a DOI).
 - The section-level badge/bottom-line and section-level Counterpoint/Go-deeper callouts stay always-visible — only individual references collapse/expand.
-- The Highlights bullets at the top are clickable (`onclick="openSection('section-N')"`) and scroll to the relevant section.
+- The Highlights bullets at the top are clickable (`onclick="openSection('topic-slug')"`) and scroll to the relevant stable topic-slug section id.
 - A top-of-page pill nav (`.toc`) lists all sections for quick jumping, plus an "Expand all / Collapse all" toggle.
+- On wide screens (1120px and above), the page progressively enhances into a two-pane reading workspace: the digest remains in a 780px left column and a 300-380px sticky **Study desk** appears on the right. Selecting a reference summary copies that reference's summary, key conclusion, counterpoint, and source links into the Study desk and visually marks the source card as active. Do not maintain a second copy of any study content in the HTML; the desk must always clone from the existing `<details class="ref">` node so the inline reference remains the single source of truth.
+- Native `<details>` remains the required foundation and fallback. Below 1120px, references expand inline normally. On wide screens, "Expand all" switches to inline-expanded mode so all details remain readable in the left column. The Study desk is hidden on mobile and in print. Escape or the desk's Clear control resets the selected reference.
 
 ## Design boilerplate — copy forward exactly, don't reinvent each cycle
 
 Read the most recent prior `HN_Onc_Digest_*.html` file first and copy its exact `<style>` block and structure, including:
-- The `:root` CSS custom properties and badge colors (`.badge.practice` green, `.badge.hypo` amber, `.badge.bg` gray).
+- **Editorial/clinical-journal visual system**: dependency-free Charter/Bitstream Charter/Sitka Text/Cambria/Georgia fallback stack for the page title, section headings, bottom lines, and Study desk prose; system sans-serif for body text and UI chrome. Use the six-step type hierarchy already defined in the current file rather than inventing per-element sizes.
+- **Layout**: page max-width 1440px with 48px desktop gutters; a 780px primary reading column and a fluid 300-380px evidence column separated by a 48-88px gap. At 1119px and below, collapse to one column with an 880px maximum reading width. At 640px and below, use 18px gutters and the compact mobile rhythm.
+- **Palette/tokens**: copy all current `:root` variables exactly. Light mode uses ink `#17212b`, deep editorial blue `#174f78`, link blue `#155a87`, off-white canvas `#fcfcfb`, and cool gray surfaces/borders. Practice-changing uses the blue-tinted `--success-*` pair; hypothesis-generating uses muted amber `--warning-*`; background stays neutral. Section counterpoints use a restrained warm tint; Go deeper uses a cool blue tint.
+- **Spacing and hierarchy**: base spacing is drawn from 4/8/12/16/24/32/48px. Sections use 48px vertical padding and a stronger divider; the bottom line is 17px semibold serif; badges and count pills are compact uppercase UI labels. Highlights and the Study desk use the shared restrained shadow token.
+- **Reference cards**: 9px radius, quiet border/shadow, one-pixel lift on hover, blue active state, 15-16px internal padding, rotating chevron, and a short reveal animation. Key conclusion and Counterpoint paragraphs use distinct blue and amber left rules. Preserve `prefers-reduced-motion` handling.
+- **Wide-screen Study desk**: include the `.reading-layout`, `.digest-content`, and `.evidence-pane` structure plus the current desk shell/empty state. Copy the selection/clear JavaScript exactly and keep it content-derived from the native details cards.
 - **Dark mode**: `<meta name="color-scheme" content="light dark">` plus a `@media (prefers-color-scheme: dark)` block redefining the `:root` variables.
 - **Print support**: `beforeprint`/`afterprint` JS listeners that force all `details.ref` open before printing and restore state after, plus an `@media print` block hiding on-screen-only chrome.
-- **Section-jump pill nav** with expand-all/collapse-all.
+- **Section-jump pill nav**: sticky and full-width on desktop, inline/non-sticky on mobile, with expand-all/collapse-all.
 - **Reference-count pill** per section heading.
 - The `openSection()` scroll helper.
 
