@@ -1,12 +1,12 @@
 # HN Onc Digest — Head & Neck Oncology Literature Digest
 
-A recurring literature digest for a head & neck surgical oncologist, generated every ~2 weeks from PubMed and ClinicalTrials.gov. This repo contains the current state of the site — a small set of static, dependency-free HTML files.
+A recurring literature digest for a head & neck surgical oncologist, generated monthly from PubMed and ClinicalTrials.gov, with an off-cycle update reserved for a genuinely practice-changing phase III result, safety signal, regulatory action, or major guideline change. This repo contains the current state of the site — a small set of static, dependency-free HTML files.
 
 ## What's in here
 
 - `HN_Onc_Digest_2026-08-06.html` — the current/live digest cycle. Each of its 24 cited findings is a native `<details>` card with its own "Key conclusion," "Counterpoint," and article-specific digest covering scope, methods or argument, results, interpretation, limitations, and provenance. The digests use source-grounded tables, small charts, protocol maps, deeper analysis, and—where the license permits—an attributed article figure. Wide screens turn that source into a master-detail workspace: an interactive Digest navigator on the left and a generous reader on the right, with section/finding navigation, persistent reviewed state, next-unread navigation, and copy controls. Finding view is devoted to the selected source; section-wide context remains on the section screen and is one click away. A persistent `Aa` palette adds System, Light, Sepia, and Dark reading themes plus four text-size steps. Mobile inline expansion and a fully-expanded tumor-board printout remain built in.
 - `HN_Onc_Digest_2026-08-06.md` — the same content in plain markdown (no interactivity needed — this is the portable/fallback format).
-- `HN_Onc_Digest_2026-08-03.html` — the first/baseline cycle (a ~12-month sweep), upgraded to the same interactive navigator/reader system as later cycles while preserving its original medical content and stable topic anchors.
+- `HN_Onc_Digest_2026-08-03.html` / `.md` — the first/baseline cycle (a ~12-month sweep), upgraded to the same article-specific evidence depth and interactive navigator/reader system as later cycles while preserving its stable topic anchors.
 - `index.html` — the archive hub. Lists every cycle newest-first with a short summary and links out. New cycles get prepended here.
 
 There is no build step and no external JavaScript or CSS dependency. The pages can be opened directly or served from any static host. A licensed article figure may load from its official source repository; the surrounding analysis and all interaction logic remain in the HTML.
@@ -26,8 +26,10 @@ These are already baked into every digest's HTML/CSS and should be copied forwar
 
 **Done:** the interactive digest format, archive index, cross-cycle linking, GitHub repository, and public GitHub Pages deployment at `https://williamtreed.github.io/HN-Digest/`.
 
-**Still optional:** recreate the recurring generation task so each new cycle is researched, generated, committed, and published automatically. The exact prior task specification is preserved below.
+**Cadence:** monthly is the recommended default. It is frequent enough to preserve continuity while giving most cycles enough material for a substantive reading session instead of a thin news feed. Search from the prior cycle's cutoff through the current run date; publish an off-cycle update only when waiting would delay a meaningful tumor-board or clinical decision.
+
+**Still optional:** recreate the recurring generation task so each new cycle is researched, generated, committed, and published automatically. The current monthly task specification is preserved below.
 
 ## Recreating the automation (optional, reference only)
 
-The digest was generated on a recurring schedule by an agent with PubMed and ClinicalTrials.gov MCP tools. The exact task specification (search strategy, topic areas, voice/tone rules, required HTML structure, and a self-grading rubric) is included in `SCHEDULED_TASK_SPEC.md` in this folder, in case you want to reproduce equivalent automation (e.g. a GitHub Action, a cron job calling an LLM with search tools, etc.) in this new environment. It is not runnable code — it's a natural-language task prompt written for an LLM agent — but it documents every content/format requirement precisely.
+The digest was generated on a recurring schedule by an agent with PubMed and ClinicalTrials.gov MCP tools. The current task specification (monthly search strategy, off-cycle threshold, topic areas, voice/tone rules, required HTML structure, and a self-grading rubric) is included in `SCHEDULED_TASK_SPEC.md` in this folder, in case you want to reproduce equivalent automation (e.g. a GitHub Action, a cron job calling an LLM with search tools, etc.) in this new environment. It is not runnable code — it's a natural-language task prompt written for an LLM agent — but it documents every content/format requirement precisely.

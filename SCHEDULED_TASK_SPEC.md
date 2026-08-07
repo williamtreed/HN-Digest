@@ -1,6 +1,6 @@
-# Original recurring-task specification (reference only)
+# Current recurring-task specification (reference only)
 
-This is the exact natural-language task prompt that was run on a recurring schedule (every 14 days) by an LLM agent with PubMed and ClinicalTrials.gov MCP tools plus file read/write access to this folder. It's included verbatim as a reference for reproducing equivalent automation elsewhere — it is not executable code.
+This is the natural-language task prompt for a recurring monthly run by an LLM agent with PubMed and ClinicalTrials.gov MCP tools plus file read/write access to this folder. Monthly is the recommended default; run off-cycle only for a genuinely practice-changing phase III result, important safety signal, regulatory action, or major guideline update that should not wait. It is included as a reference for reproducing equivalent automation elsewhere — it is not executable code.
 
 ---
 
@@ -25,7 +25,7 @@ Write output files into a folder shared across the user's devices (originally: a
 
 ## What to do
 
-1. Search for literature published in roughly the last 14-21 days. Prioritize major journals: J Clin Oncol, JAMA Oncology, JAMA Otolaryngology-Head & Neck Surgery, Laryngoscope, Lancet, Lancet Oncology, NEJM, Int J Radiat Oncol Biol Phys, Head & Neck, Oral Oncology, Ann Surg Oncol, Clin Cancer Res, Annals of Oncology.
+1. Search from the prior digest's cutoff through the current run date (normally about 28-35 days). Use the saved cutoff rather than an arbitrary lookback so publication delays and a late run do not create gaps. Prioritize major journals: J Clin Oncol, JAMA Oncology, JAMA Otolaryngology-Head & Neck Surgery, Laryngoscope, Lancet, Lancet Oncology, NEJM, Int J Radiat Oncol Biol Phys, Head & Neck, Oral Oncology, Ann Surg Oncol, Clin Cancer Res, Annals of Oncology.
 
 2. Cover these topic areas, running separate targeted searches for each:
    - Perioperative/adjuvant/neoadjuvant immunotherapy in resectable HNSCC (follow-on data, commentary, and rebuttals related to KEYNOTE-689 and NIVOPOST-OP/GORTEC 2018-01 specifically — these are the two landmark trials the user follows closely)
