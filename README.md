@@ -19,7 +19,7 @@ These are already baked into every digest's HTML/CSS and should be copied forwar
 - "Last cycle" references in the prose are hyperlinked directly to the specific prior digest file + anchor (e.g. `HN_Onc_Digest_2026-08-03.html#neck-dissection`), not just re-cited by DOI — this lets the reader jump straight to what was said before.
 - Every digest's `<body>` starts with a nav link back to `index.html`.
 - CSS custom properties in `:root` (plus a `prefers-color-scheme: dark` override block) drive all theming — badge colors, links, callout borders, etc.
-- At 1320px and above, every cycle uses the same two-pane reading workspace. The right-side Study desk is derived from the native reference cards, stores only reviewed reference IDs in local browser storage, and never duplicates or alters medical content.
+- At 1320px and above, every cycle uses the same two-pane reading workspace. The wider left-side Study desk is derived from the native reference cards, while the digest remains visible on the right for context. It stores only reviewed reference IDs in local browser storage and never duplicates or alters medical content.
 
 ## What's done vs. what's still needed
 
