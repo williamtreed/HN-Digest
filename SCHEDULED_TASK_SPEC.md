@@ -17,6 +17,8 @@ This is not a newsletter for its own sake. Its job is to let a busy surgeon spen
 5. **Durability under repetition** — the format, CSS, and interaction pattern are copied forward unchanged cycle to cycle (see "Design boilerplate" below) so the reader never has to re-learn how to use it, and so it doesn't require manual re-polishing every run.
 6. **Portable fallback** — the .md file stands alone and is fully readable with zero interactivity, for anyone who can't/won't open the HTML.
 
+Every HTML digest in the archive uses the same interactive standard, including the baseline cycle. Do not create or retain a simplified non-interactive HTML variant for an archived cycle.
+
 ## Output location — IMPORTANT
 
 Write output files into a folder shared across the user's devices (originally: an `HN Onc Digest` subfolder inside the user's iCloud Drive, so it synced automatically to their iPhone's Files app). Also check that same folder for prior digest files (`HN_Onc_Digest_*.md` / `.html`) and `index.html` to avoid duplicating content already covered — read the most recent `.html` file first to copy its CSS/markup patterns exactly, and read `index.html` to see the full archive history.

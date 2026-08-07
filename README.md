@@ -6,14 +6,14 @@ A recurring literature digest for a head & neck surgical oncologist, generated e
 
 - `HN_Onc_Digest_2026-08-06.html` — the current/live digest cycle. Interactive: each cited study is a collapsible `<details>` card with its own "Key conclusion" and "Counterpoint," section badges (Practice-changing / Hypothesis-generating / Background) are always visible, dark mode via `prefers-color-scheme`, and a print handler that force-expands everything for a clean tumor-board printout.
 - `HN_Onc_Digest_2026-08-06.md` — the same content in plain markdown (no interactivity needed — this is the portable/fallback format).
-- `HN_Onc_Digest_2026-08-03.html` — the first/archived cycle (a ~12-month baseline sweep). Deliberately left in its original, simpler format — archived cycles are historical snapshots and are not retrofitted with newer UI patterns.
+- `HN_Onc_Digest_2026-08-03.html` — the first/baseline cycle (a ~12-month sweep), upgraded to the same interactive study-card and linked evidence-desk system as later cycles while preserving its original medical content and stable topic anchors.
 - `index.html` — the archive hub. Lists every cycle newest-first with a short summary and links out. New cycles get prepended here.
 
 Everything is self-contained: no build step, no external JS/CSS dependencies (safe to open directly in a browser or serve as-is from any static host).
 
 ## Design conventions to preserve
 
-These are already baked into the HTML/CSS and should be copied forward exactly for any new cycle, not reinvented:
+These are already baked into every digest's HTML/CSS and should be copied forward exactly for any new cycle, not reinvented:
 
 - Each section (`<section id="...">`) uses a **stable topic-slug id** so links survive reordering across cycles: `perioperative-io`, `ctdna-mrd`, `neck-dissection`, `rt-deescalation`, `cutaneous-scc`, `systemic-pipeline`.
 - "Last cycle" references in the prose are hyperlinked directly to the specific prior digest file + anchor (e.g. `HN_Onc_Digest_2026-08-03.html#neck-dissection`), not just re-cited by DOI — this lets the reader jump straight to what was said before.
