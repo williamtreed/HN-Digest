@@ -4,7 +4,7 @@ A recurring literature digest for a head & neck surgical oncologist, generated e
 
 ## What's in here
 
-- `HN_Onc_Digest_2026-08-06.html` — the current/live digest cycle. Interactive: each cited study is a collapsible `<details>` card with its own "Key conclusion" and "Counterpoint," section badges (Practice-changing / Hypothesis-generating / Background) are always visible, dark mode via `prefers-color-scheme`, and a print handler that force-expands everything for a clean tumor-board printout.
+- `HN_Onc_Digest_2026-08-06.html` — the current/live digest cycle. Each cited study is a native `<details>` card with its own "Key conclusion" and "Counterpoint." Wide screens add a full Study desk with cycle search, section progress, persistent reviewed state, next-unread navigation, focused evidence reading, and copy controls. Dark mode, mobile inline expansion, and a fully-expanded tumor-board printout remain built in.
 - `HN_Onc_Digest_2026-08-06.md` — the same content in plain markdown (no interactivity needed — this is the portable/fallback format).
 - `HN_Onc_Digest_2026-08-03.html` — the first/baseline cycle (a ~12-month sweep), upgraded to the same interactive study-card and linked evidence-desk system as later cycles while preserving its original medical content and stable topic anchors.
 - `index.html` — the archive hub. Lists every cycle newest-first with a short summary and links out. New cycles get prepended here.
@@ -19,19 +19,13 @@ These are already baked into every digest's HTML/CSS and should be copied forwar
 - "Last cycle" references in the prose are hyperlinked directly to the specific prior digest file + anchor (e.g. `HN_Onc_Digest_2026-08-03.html#neck-dissection`), not just re-cited by DOI — this lets the reader jump straight to what was said before.
 - Every digest's `<body>` starts with a nav link back to `index.html`.
 - CSS custom properties in `:root` (plus a `prefers-color-scheme: dark` override block) drive all theming — badge colors, links, callout borders, etc.
+- At 1320px and above, every cycle uses the same two-pane reading workspace. The right-side Study desk is derived from the native reference cards, stores only reviewed reference IDs in local browser storage, and never duplicates or alters medical content.
 
 ## What's done vs. what's still needed
 
-**Done:** the digest content/format itself, the archive index, cross-cycle linking, and a recurring generation task (previously automated via a scheduled-task runner outside this repo — see "Recreating the automation" below).
+**Done:** the interactive digest format, archive index, cross-cycle linking, GitHub repository, and public GitHub Pages deployment at `https://williamtreed.github.io/HN-Digest/`.
 
-**Not yet done — this is the reason for this export:** turning this into a real publicly-hosted website with a permanent URL (e.g. GitHub Pages). The original plan was:
-
-1. Create a GitHub repo for this content.
-2. Enable GitHub Pages (serve from the repo root or `/docs`, plain static HTML — no Jekyll processing needed, but Jekyll won't break anything either since none of these files use Liquid syntax).
-3. Push these files.
-4. Ideally, wire up the recurring digest generation (see below) to push new cycles to this repo automatically each time.
-
-If you're picking this up in Codex: setting up the repo + Pages + pushing these files is the immediate task. A `git init` has already been done in this folder with one commit containing these files, so it's ready for `git remote add origin ...` and `git push`.
+**Still optional:** recreate the recurring generation task so each new cycle is researched, generated, committed, and published automatically. The exact prior task specification is preserved below.
 
 ## Recreating the automation (optional, reference only)
 
