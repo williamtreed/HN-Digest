@@ -1,6 +1,6 @@
 # HN Onc Digest — Head & Neck Oncology Literature Digest
 
-A recurring literature digest for a head & neck surgical oncologist, generated monthly from PubMed and ClinicalTrials.gov, with an off-cycle update reserved for a genuinely practice-changing phase III result, safety signal, regulatory action, or major guideline change. This repo contains the current state of the site — a small set of static, dependency-free HTML files.
+A recurring literature digest for a head & neck surgical oncologist, generated every two weeks from PubMed and ClinicalTrials.gov, with an off-cycle update reserved for a genuinely practice-changing phase III result, safety signal, regulatory action, or major guideline change. This repo contains the current state of the site — a small set of static, dependency-free HTML files.
 
 ## What's in here
 
@@ -26,10 +26,10 @@ These are already baked into every digest's HTML/CSS and should be copied forwar
 
 **Done:** the interactive digest format, archive index, cross-cycle linking, GitHub repository, and public GitHub Pages deployment at `https://williamtreed.github.io/HN-Digest/`.
 
-**Cadence:** monthly is the recommended default. It is frequent enough to preserve continuity while giving most cycles enough material for a substantive reading session instead of a thin news feed. Search from the prior cycle's cutoff through the current run date; publish an off-cycle update only when waiting would delay a meaningful tumor-board or clinical decision.
+**Cadence:** every two weeks is the active default. This is frequent enough to catch time-sensitive papers and trial changes without becoming a general news feed, provided quiet cycles stay short instead of being padded. Search from the prior cycle's cutoff through the current run date; publish an off-cycle update only when waiting would delay a meaningful tumor-board or clinical decision.
 
-**Still optional:** recreate the recurring generation task so each new cycle is researched, generated, committed, and published automatically. The current monthly task specification is preserved below.
+**Automation:** an active local Codex scheduler runs every other Monday at 7:00 AM Eastern, researches the interval, creates both digest formats, updates the archive, validates the result, and publishes it to GitHub Pages. The current biweekly task specification is preserved below.
 
 ## Recreating the automation (optional, reference only)
 
-The digest was generated on a recurring schedule by an agent with PubMed and ClinicalTrials.gov MCP tools. The current task specification (monthly search strategy, off-cycle threshold, topic areas, voice/tone rules, required HTML structure, and a self-grading rubric) is included in `SCHEDULED_TASK_SPEC.md` in this folder, in case you want to reproduce equivalent automation (e.g. a GitHub Action, a cron job calling an LLM with search tools, etc.) in this new environment. It is not runnable code — it's a natural-language task prompt written for an LLM agent — but it documents every content/format requirement precisely.
+The digest is generated on a recurring schedule by an agent with PubMed and ClinicalTrials.gov search access. The current task specification (biweekly search strategy, off-cycle threshold, topic areas, voice/tone rules, required HTML structure, and a self-grading rubric) is included in `SCHEDULED_TASK_SPEC.md` in this folder, in case you want to reproduce equivalent automation elsewhere. It is not runnable code — it's a natural-language task prompt written for an LLM agent — but it documents every content/format requirement precisely.

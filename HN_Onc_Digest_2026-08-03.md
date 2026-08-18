@@ -314,4 +314,4 @@ One hypopharynx case responded after prior pembrolizumab-directed therapy and ce
 
 The baseline evidence shifts the resectable-HNSCC discussion from “add immunotherapy or not” to patient selection, timing, and what the entire treatment package costs in toxicity and delay. Surgery remains the fixed point in the perioperative pathway. ctDNA is the most plausible near-term mechanism for personalizing postoperative therapy and surveillance, but current trials should not be mistaken for validated utility. De-escalation signals in the neck and radiation dose are clinically meaningful research questions; neither supports casual off-protocol omission.
 
-New digests are generated monthly, with off-cycle updates reserved for genuinely practice-changing developments.
+New digests are generated every two weeks, with off-cycle updates reserved for genuinely practice-changing developments.
