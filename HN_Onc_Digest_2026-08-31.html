@@ -169,7 +169,7 @@
   .closing { border-top: 1px solid var(--border-strong); padding-top: 28px; margin-top: 8px; }
   .closing h2 { margin-bottom: 10px; }
 
-  .evidence-pane { grid-column: 1; grid-row: 1; position: sticky; top: 24px; }
+  .evidence-pane { grid-column: 1; grid-row: 1; position: sticky; top: 24px; overflow-anchor: none; }
   .pane-shell { display: flex; flex-direction: column; max-height: calc(100vh - 48px); border: 1px solid var(--border); border-radius: 12px; background: var(--surface-1); box-shadow: var(--shadow); overflow: hidden; }
   .pane-kicker { margin: 0; padding: 14px 18px 0; font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
   .pane-title { margin: 0; padding: 5px 18px 14px; font-size: 22px; line-height: 1.24; letter-spacing: -.012em; text-transform: none; color: var(--text-primary); }
@@ -258,7 +258,7 @@
   .desk-finding-state { padding-top: 1px; color: var(--deeper-line); font-size: 10px; font-weight: 800; }
 
   .digest-source { display: block; }
-  .reader-surface { display: none; min-width: 0; min-height: 620px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); box-shadow: var(--shadow); overflow: clip; }
+  .reader-surface { display: none; min-width: 0; min-height: 620px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); box-shadow: var(--shadow); overflow: clip; overflow-anchor: none; }
   .reader-actions { position: sticky; top: 0; z-index: 8; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 9px 12px; border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--surface-1) 94%, transparent); backdrop-filter: blur(14px); }
   .reader-actions[hidden] { display: none; }
   .reader-status { margin-right: auto; font-size: 10px; font-weight: 700; color: var(--text-muted); }
@@ -276,7 +276,8 @@
   .reader-section-copy .section-head h3 { font-size: clamp(27px, 2.6vw, 35px); }
   .reader-section-copy details.ref { cursor: pointer; }
   .reader-section-copy details.ref summary { min-height: 54px; }
-  .reader-finding .pane-summary { margin-bottom: 24px; font-size: clamp(20px, 2vw, 25px); line-height: 1.48; }
+  .reader-finding .reader-title { max-width: 800px; font-size: clamp(24px, 2.3vw, 32px); line-height: 1.22; }
+  .reader-finding .reader-deck { margin-top: 12px; }
   .reader-finding .pane-detail { margin-top: 0; padding-top: 24px; font-size: 15px; }
   .reader-finding .pane-detail p { font-size: 15px; }
   .reader-content .highlights li,
@@ -286,7 +287,6 @@
   .reader-content .pane-detail > p,
   .reader-content .pane-context-copy { font-size: var(--reader-copy-size) !important; line-height: var(--reader-line-height); }
   .reader-content .bottom-line { font-size: var(--reader-section-size); line-height: 1.55; }
-  .reader-finding .pane-summary { font-size: var(--reader-lede-size); line-height: 1.48; }
 
   .evidence-brief { margin: 20px 0 6px; border: 1px solid var(--border-strong); border-radius: 12px; background: var(--surface-1); overflow: hidden; }
   .evidence-sourcebar { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 10px; padding: 10px 16px; border-bottom: 1px solid var(--border); color: var(--text-muted); background: var(--surface-2); font-size: 9px; font-weight: 700; letter-spacing: .045em; text-transform: uppercase; }
@@ -362,7 +362,9 @@
   @media (min-width: 1320px) {
     .toc { display: none; }
     .reading-layout { margin-top: 48px; }
-    .reader-surface { display: block; }
+    .pane-shell { height: calc(100vh - 48px); max-height: none; }
+    .reader-surface { position: sticky; top: 24px; display: flex; flex-direction: column; height: calc(100vh - 48px); min-height: 0; }
+    .reader-content { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; }
     .digest-source { display: none; }
     body:not(.inline-expanded) details.ref .ref-detail { display: none; }
     body:not(.inline-expanded) details.ref[open] summary { border-bottom: 0; }
@@ -1098,10 +1100,14 @@
 
   function revealReader() {
     if (!_wideLayout.matches) return;
-    var top = reader.getBoundingClientRect().top;
-    if (top < 12 || top > window.innerHeight * 0.42) {
+    var bounds = reader.getBoundingClientRect();
+    if (bounds.bottom < 80 || bounds.top > window.innerHeight * 0.72) {
       reader.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
+  }
+
+  function resetReaderScroll() {
+    readerContent.scrollTop = 0;
   }
 
   function clearSourceSelection() {
@@ -1133,6 +1139,7 @@
     if (closing) wrapper.appendChild(closing.cloneNode(true));
     prepareOutboundLinks(wrapper);
     readerContent.replaceChildren(wrapper);
+    resetReaderScroll();
     navigatorHome.classList.add('is-active');
     renderOutline();
     updateEvidenceControls();
@@ -1180,6 +1187,7 @@
     prepareOutboundLinks(copy);
     wrapper.appendChild(copy);
     readerContent.replaceChildren(wrapper);
+    resetReaderScroll();
     navigatorHome.classList.remove('is-active');
     renderOutline();
     updateEvidenceControls();
@@ -1293,18 +1301,18 @@
     var index = _refs.indexOf(ref);
     var wrapper = document.createElement('div');
     wrapper.className = 'reader-finding';
-    var readerDeck = 'Article-specific digest: scope, evidence, interpretation, limitations, and source.';
-    wrapper.appendChild(createViewHeader('Section ' + sectionNumber(activeSection) + ' · Finding ' + (index + 1) + ' of ' + _refs.length, activeSection.querySelector('h3').textContent, readerDeck));
+    var sectionTitle = activeSection.querySelector('h3').textContent;
+    var findingTitle = ref.querySelector('.ref-text').innerText;
+    var readerDeck = 'Finding ' + (index + 1) + ' of ' + _refs.length + ' · Scope, evidence, interpretation, limitations, and source.';
+    wrapper.appendChild(createViewHeader('Section ' + sectionNumber(activeSection) + ' · ' + sectionTitle, findingTitle, readerDeck));
 
-    var summaryCopy = document.createElement('p');
-    summaryCopy.className = 'pane-summary';
-    summaryCopy.innerHTML = ref.querySelector('.ref-text').innerHTML;
     var detailCopy = ref.querySelector('.ref-detail').cloneNode(true);
     detailCopy.className = 'pane-detail';
-    wrapper.append(summaryCopy, detailCopy);
+    wrapper.appendChild(detailCopy);
 
     prepareOutboundLinks(wrapper);
     readerContent.replaceChildren(wrapper);
+    resetReaderScroll();
     readerActions.hidden = false;
     readerStatus.textContent = 'Finding ' + (index + 1) + ' of ' + _refs.length;
     navigatorHome.classList.remove('is-active');
