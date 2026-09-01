@@ -4,8 +4,9 @@ A recurring literature digest for a head & neck surgical oncologist, generated e
 
 ## What's in here
 
-- `HN_Onc_Digest_2026-08-06.html` — the current/live digest cycle. Each of its 24 cited findings is a native `<details>` card with its own "Key conclusion," "Counterpoint," and article-specific digest covering scope, methods or argument, results, interpretation, limitations, and provenance. The digests use source-grounded tables, small charts, protocol maps, deeper analysis, and—where the license permits—an attributed article figure. Wide screens turn that source into a master-detail workspace: an interactive Digest navigator on the left and a generous reader on the right, with section/finding navigation, persistent reviewed state, next-unread navigation, and copy controls. Finding view is devoted to the selected source; section-wide context remains on the section screen and is one click away. A persistent `Aa` palette adds System, Light, Sepia, and Dark reading themes plus four text-size steps. Mobile inline expansion and a fully-expanded tumor-board printout remain built in.
-- `HN_Onc_Digest_2026-08-06.md` — the same content in plain markdown (no interactivity needed — this is the portable/fallback format).
+- `HN_Onc_Digest_2026-08-31.html` — the current/live digest cycle. Its 17 findings are all new DOI/NCT records relative to the August 6 cycle. Each is a native `<details>` card with its own "Key conclusion," "Counterpoint," and article-specific digest covering scope, methods or argument, results, interpretation, limitations, and provenance. Wide screens turn that source into a dated evidence map and reader, with section/finding navigation, persistent reviewed state, next-unread navigation, and copy controls. A persistent `Aa` palette adds System, Light, Sepia, and Dark reading themes plus four text-size steps. Mobile inline expansion and a fully-expanded tumor-board printout remain built in.
+- `HN_Onc_Digest_2026-08-31.md` — the same content in plain markdown (no interactivity needed — this is the portable/fallback format).
+- `HN_Onc_Digest_2026-08-06.html` / `.md` — the prior incremental cycle, retained unchanged in the archive.
 - `HN_Onc_Digest_2026-08-03.html` / `.md` — the first/baseline cycle (a ~12-month sweep), upgraded to the same article-specific evidence depth and interactive navigator/reader system as later cycles while preserving its stable topic anchors.
 - `index.html` — the archive hub. Lists every cycle newest-first with a short summary and links out. New cycles get prepended here.
 
@@ -15,7 +16,7 @@ There is no build step and no external JavaScript or CSS dependency. The pages c
 
 These are already baked into every digest's HTML/CSS and should be copied forward exactly for any new cycle, not reinvented:
 
-- Each section (`<section id="...">`) uses a **stable topic-slug id** so links survive reordering across cycles: `perioperative-io`, `ctdna-mrd`, `neck-dissection`, `rt-deescalation`, `cutaneous-scc`, `systemic-pipeline`.
+- Each section (`<section id="...">`) uses a **stable topic-slug id** so links survive reordering across cycles: `perioperative-io`, `ctdna-mrd`, `neck-dissection`, `rt-deescalation`, `cutaneous-scc`, `systemic-pipeline`. These IDs are infrastructure only; visible section and navigator titles must describe that cycle's actual new evidence rather than repeat generic category names.
 - "Last cycle" references in the prose are hyperlinked directly to the specific prior digest file + anchor (e.g. `HN_Onc_Digest_2026-08-03.html#neck-dissection`), not just re-cited by DOI — this lets the reader jump straight to what was said before.
 - Every digest's `<body>` starts with a nav link back to `index.html`.
 - CSS custom properties in `:root` drive all theming — badge colors, links, callout borders, reader type size, etc. The `Aa` palette sets the same variables for System, Light, Sepia, and Dark modes, with four text-size levels. Hyperlinks use a distinctly chromatic theme-specific color, medium weight, and a persistent 1.5px underline that strengthens on hover; do not revert to color-only link identification.
@@ -26,7 +27,7 @@ These are already baked into every digest's HTML/CSS and should be copied forwar
 
 **Done:** the interactive digest format, archive index, cross-cycle linking, GitHub repository, and public GitHub Pages deployment at `https://williamtreed.github.io/HN-Digest/`.
 
-**Cadence:** every two weeks is the active default. This is frequent enough to catch time-sensitive papers and trial changes without becoming a general news feed, provided quiet cycles stay short instead of being padded. Search from the prior cycle's cutoff through the current run date; publish an off-cycle update only when waiting would delay a meaningful tumor-board or clinical decision.
+**Cadence:** every two weeks is the active default. This is frequent enough to catch time-sensitive papers and trial changes without becoming a general news feed, provided quiet cycles stay short instead of being padded. Search from the prior cycle's cutoff through the current run date; publish an off-cycle update only when waiting would delay a meaningful tumor-board or clinical decision. A rolling three-cycle coverage audit broadens the search across surgical oncology, reconstruction/function, surveillance, radiation, and systemic therapy without imposing artificial topic quotas.
 
 **Automation:** an active local Codex scheduler runs every other Monday at 7:00 AM Eastern, researches the interval, creates both digest formats, updates the archive, validates the result, and publishes it to GitHub Pages. The current biweekly task specification is preserved below.
 

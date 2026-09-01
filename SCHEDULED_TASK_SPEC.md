@@ -16,6 +16,7 @@ This is not a newsletter for its own sake. Its job is to let a busy surgeon spen
 4. **Continuity** — references to "last cycle's X" are live links to the exact prior digest section, not vague callbacks the reader has to hunt for.
 5. **Durability under repetition** — the format, CSS, and interaction pattern are copied forward unchanged cycle to cycle (see "Design boilerplate" below) so the reader never has to re-learn how to use it, and so it doesn't require manual re-polishing every run.
 6. **Portable fallback** — the .md file stands alone and is fully readable with zero interactivity, for anyone who can't/won't open the HTML.
+7. **Current and varied, not artificially novel** — the clinical domain will recur, but the evidence and reader-facing framing must not look recycled. Search every standing decision area every cycle, publish only genuine new signals or material updates, and use cycle-specific titles that say what changed. Never create variety by padding a quiet lane.
 
 Every HTML digest in the archive uses the same interactive standard, including the baseline cycle. Do not create or retain a simplified non-interactive HTML variant for an archived cycle.
 
@@ -44,15 +45,31 @@ Write output files into a folder shared across the user's devices (originally: a
 
 6. For the most decision-relevant findings, inspect the richest legally accessible source available and record the evidence depth accurately: full text, structured abstract, or live trial registry. A paywalled abstract supports an abstract-grounded brief only; never imply that the full article, tables, or supplements were reviewed when they were not.
 
+## Novelty, variation, and coverage discipline
+
+The subject matter is necessarily recurrent; the content must still demonstrate that the surveillance is current, broad within head & neck oncology, and not re-hashed.
+
+1. Before drafting, build a candidate ledger and compare every DOI, PMID, NCT number, guideline version, regulatory action, and registry update against **all prior cycles**, not only the immediately preceding digest. Classify each candidate as:
+   - **New source** — not previously covered.
+   - **Material update** — a prior trial/story with genuinely new results, follow-up, status, protocol, safety, regulatory, or guideline information.
+   - **Already covered** — no material new information; exclude it and link back only if needed for context.
+2. Never republish the same paper or unchanged registry record as a new finding. A material update must be visibly labeled **Update since [prior cycle date]**, state exactly what changed, and link to the prior section anchor. A newly published paper from a previously followed trial is a new source, but the text must distinguish its new endpoint/follow-up from the earlier report.
+3. Maintain a rolling three-cycle coverage audit in automation memory. Track topic/decision area, journal/source, evidence type, disease subsite, and whether the finding concerns oncologic extent, sequencing, reconstruction/function, surveillance, radiation, systemic therapy, or survivorship. Use gaps in this audit to broaden the **search**, never to lower the publication threshold.
+4. Run dedicated searches for surgical technique and reconstruction/function each cycle—not just systemic-treatment stories that affect surgery. Include neck management, margins/ENE, TORS and endoscopic approaches, sentinel-node strategies, salvage surgery, free-flap/osseous/nerve reconstruction, speech/swallow outcomes, donor-site morbidity, and perioperative functional recovery when relevant H&N evidence exists.
+5. Do not force equal representation or all six topic lanes into every published cycle. Quiet areas may be omitted or compressed into one honest sentence. If the strongest evidence clusters in one area, say so plainly.
+6. Variation must come from the evidence signal: different surgical decisions, subsites, methods, and evidence types where the interval supports them. Do not manufacture novelty by stretching tangential papers, promoting secondary commentary over primary data, or turning minor registry edits into findings.
+7. Reader-facing titles are **cycle-specific claims**, not recurring category names. The page headline and navigator identify the cycle date; visible section titles state the actual delta (for example, “Weekly cisplatin clears phase III; RT omission remains investigational”). Stable canonical topic-slug IDs remain underneath solely for links and continuity.
+8. The header and archive card state the cycle identity: number of new sources, number of material updates, and whether any previously covered sources reappear. Highlights answer “what changed since the last digest?” before summarizing the field.
+
 ## Voice and audience
 
 The reader is a **head & neck surgical oncologist**, not a medical oncologist or general researcher. Write every entry from that vantage point: does this change who you operate on, how much tissue/nodal basin you take, when you operate relative to systemic therapy, what you tell a patient in clinic, or what replaces a scan in surveillance. Data and stats support that bottom line — they don't lead it. Minimize medical-oncology-only minutiae unless directly relevant to a surgical decision. Organize sections around surgical decision points where possible.
 
 ## Required content structure
 
-1. **Header block**: window covered, sources, PubMed attribution line, a one-line "how to read this" key, a tap-hint, and a note on cadence relative to the prior cycle.
+1. **Header block**: dated cycle title, window covered, sources, PubMed attribution line, a one-line "how to read this" key, a tap-hint, and a cycle-identity note reporting new sources/material updates and cadence relative to the prior cycle.
 2. **"Highlights — key takeaways"**: a short bulleted TL;DR (3-6 bullets) of the biggest things that happened this cycle, at the very top, each clickable to jump to its section. If nothing significant happened this cycle, say so plainly rather than padding it.
-3. **Numbered topic sections**, each organized around a surgical decision point. Each section has:
+3. **Numbered topic sections**, each organized around a surgical decision point and titled with the cycle-specific finding rather than the standing topic category. Include only lanes with evidence that earns publication. Each section has:
    - A reference-count pill next to the heading (e.g. "4 studies").
    - A section-level badge (**Practice-changing**, **Hypothesis-generating**, or **Background**) plus one bolded **Bottom line** sentence written from the surgeon's vantage point, always visible.
    - A list of individual supporting references (1-3 sentences of data each, with DOI/NCT link) — see "Interactivity" below.
@@ -72,7 +89,7 @@ The reader is a **head & neck surgical oncologist**, not a medical oncologist or
 - The section-level badge/bottom-line and section-level Counterpoint/Go-deeper callouts stay always-visible — only individual references collapse/expand.
 - The Highlights bullets at the top are clickable (`onclick="openSection('topic-slug')"`). On wide screens they fill the reader with that section; on smaller screens they scroll to the native stable topic-slug section.
 - A top-of-page pill nav (`.toc`) lists all sections for quick jumping, plus an "Expand all / Collapse all" toggle. Hide this redundant nav at the wide master-detail breakpoint; keep it for the native single-column layout.
-- At 1320px and above, the page progressively enhances into a master-detail workspace: a sticky **Digest navigator** on the left in a 2fr track and a **Digest reader** on the right in a 4fr track. The navigator remains at least 380px wide. Below 1320px, hide both generated surfaces and use native inline `<details>` expansion with no horizontal squeeze.
+- At 1320px and above, the page progressively enhances into a master-detail workspace: a sticky dated evidence map on the left in a 2fr track and a **Digest reader** on the right in a 4fr track. The navigator remains at least 380px wide. Below 1320px, hide both generated surfaces and use native inline `<details>` expansion with no horizontal squeeze.
 - The Digest navigator opens on **Cycle overview & tumor-board bottom line**, not an empty state. It must provide: collapsible section headings; nested finding summaries for the active section; per-section reviewed/total counts and mini progress bars; an overall progress bar; Next unread; and Reset progress. Do not add a navigator search bar or keyboard search shortcut.
 - Navigator findings containing `.evidence-brief` display an **Article digest** marker, and the reader header identifies the article-specific data view without changing the underlying single-source-of-truth reference markup.
 - The right reader opens on a generated overview containing Highlights and the tumor-board synthesis. Selecting a section replaces it with that section's bottom line, findings, counterpoint, and deeper-reading context. Selecting a finding replaces it with the full reference summary and `.ref-detail` only, and exposes Previous, Next, Back to section, Mark unread/reviewed, and Copy finding controls. Do not duplicate the section bottom line or section callouts below every finding; they consume the reading pane with identical material and remain available through Back to section. Next unread advances through all unreviewed findings in cycle order.
