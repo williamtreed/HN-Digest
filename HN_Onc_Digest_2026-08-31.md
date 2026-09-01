@@ -1,9 +1,9 @@
-# Head & Neck Oncology Digest — For the Surgeon
+# Head & Neck Oncology Digest — August 31, 2026
 
-**Window covered:** August 7–31, 2026
+**For the surgeon · Literature window:** August 7–31, 2026
 **Sources:** PubMed-indexed primary literature, official journal pages, open full text where available, and official ClinicalTrials.gov records.
 
-All paper identifiers and numeric claims were checked against PubMed or the journal record. Registry protocols were checked against ClinicalTrials.gov on August 31, 2026. Registry-only findings are explicitly labeled and have no results. This overdue cycle closes the full gap after August 6; older online-first papers merely assigned to an August issue were excluded as not new.
+All paper identifiers and numeric claims were checked against PubMed or the journal record. Registry protocols were checked against ClinicalTrials.gov on August 31, 2026. Registry-only findings are explicitly labeled and have no results. All 17 DOI/NCT records are new to this cycle; none appeared in the August 6 digest. This overdue cycle closes that full 25-day gap.
 
 ## Highlights
 
@@ -14,7 +14,7 @@ All paper identifiers and numeric claims were checked against PubMed or the jour
 - In neoadjuvant cSCC cohorts, pathology outperformed imaging as a response readout; surgery omission was not tested.
 - Danvatirsen added essentially no response signal to pembrolizumab in randomized phase II testing.
 
-## 1. Who gets a medical oncology consult before you book the OR
+## 1. Can treatment response safely change the planned operation?
 
 **Bottom line:** New data strengthen the case for prospectively testing response-adapted surgery after neoadjuvant therapy; they do not establish a safe off-trial resection-omission rule. This extends [the prior cycle's perioperative-IO debate](HN_Onc_Digest_2026-08-06.html#perioperative-io).
 
@@ -60,7 +60,7 @@ All paper identifiers and numeric claims were checked against PubMed or the jour
 
 **Section counterpoint:** Better response signals are not a validated response-to-resection algorithm. Preserve baseline surgical planning unless a protocol prospectively defines how response changes the operation.
 
-## 2. ctDNA/MRD as a surgical decision tool
+## 2. HPV ctDNA: strong accuracy, no omission rule
 
 **Bottom line:** HPV ctDNA shows strong reported analytic performance, but this cycle adds no completed trial proving that acting on it improves outcomes. That boundary matters alongside [the prior registry signals](HN_Onc_Digest_2026-08-06.html#ctdna-mrd).
 
@@ -90,7 +90,7 @@ All paper identifiers and numeric claims were checked against PubMed or the jour
 
 **Source:** [BMJ Open; DOI 10.1136/bmjopen-2026-118532](https://doi.org/10.1136/bmjopen-2026-118532)
 
-## 3. Neck dissection and reconstructive decision points
+## 3. Neck decisions: thresholds, ENE depth, and neural ALT
 
 **Bottom line:** This cycle adds preference data, ENE granularity, and a small randomized reconstruction trial—not evidence to expand elective levels or de-intensify adjuvant therapy.
 
@@ -130,7 +130,7 @@ All paper identifiers and numeric claims were checked against PubMed or the jour
 
 **Source:** [Annals of Surgical Oncology; DOI 10.1245/s10434-026-20302-2](https://doi.org/10.1245/s10434-026-20302-2)
 
-## 4. Radiation and concurrent-therapy de-escalation
+## 4. Weekly cisplatin clears phase III; RT omission remains investigational
 
 **Bottom line:** ConCERT supports weekly cisplatin as a less toxic concurrent schedule within its trial context. The remaining additions are a heterogeneous review and two protocols with no results; none establishes reduced postoperative volume or response-adapted dose as standard.
 
@@ -184,7 +184,7 @@ All paper identifiers and numeric claims were checked against PubMed or the jour
 
 **Source:** [ClinicalTrials.gov NCT07791602](https://clinicaltrials.gov/study/NCT07791602)
 
-## 5. Cutaneous SCC: pathology after neoadjuvant PD-1
+## 5. After neoadjuvant PD-1 in cSCC, pathology outruns imaging
 
 **Bottom line:** Post-treatment pathology may stratify risk better than imaging, but these retrospective cohorts do not validate surgery omission or a gene-expression-directed adjuvant plan.
 
@@ -224,7 +224,7 @@ All paper identifiers and numeric claims were checked against PubMed or the jour
 
 **Source:** [Journal of the American Academy of Dermatology; DOI 10.1016/j.jaad.2026.08.075](https://doi.org/10.1016/j.jaad.2026.08.075)
 
-## 6. Systemic pipeline for recurrent/metastatic disease
+## 6. Negative STAT3 trial; a post-checkpoint ADC enters phase III
 
 **Bottom line:** STAT3 antisense did not improve response with pembrolizumab; a newly posted randomized phase III ADC study has no outcomes.
 
