@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Head & Neck Oncology Digest — Sep 14, 2026</title>
+<script>
+  try {
+    var earlyReaderPreferences = JSON.parse(localStorage.getItem('hn-digest-reader-preferences:v1') || '{}');
+    if (['system', 'light', 'sepia', 'dark'].indexOf(earlyReaderPreferences.theme) !== -1) document.documentElement.dataset.readerTheme = earlyReaderPreferences.theme;
+    if (typeof earlyReaderPreferences.size === 'number' && earlyReaderPreferences.size >= 0 && earlyReaderPreferences.size < 4) document.documentElement.dataset.readerSize = ['small', 'medium', 'large', 'xlarge'][earlyReaderPreferences.size];
+  } catch (error) {}
+</script>
+<style>
+  :root {
+    --text-primary: #17212b; --text-secondary: #4d5964; --text-muted: #7b858e;
+    --border: #dce1e5; --border-strong: #c8d0d7;
+    --surface-1: #f5f7f8; --surface-2: #edf2f5; --bg: #fcfcfb;
+    --accent: #174f78; --accent-soft: #e8f0f5; --link: #075f9a;
+    --success-bg: #e4eef4; --success-fg: #124b72;
+    --warning-bg: #f3eee4; --warning-fg: #755a2b;
+    --counterpoint-bg: #f8f4ed; --counterpoint-line: #b58a4b;
+    --deeper-bg: #eef4f6; --deeper-line: #47758a;
+    --shadow: 0 1px 2px rgba(23,33,43,.04), 0 8px 28px rgba(23,33,43,.055);
+    --reader-copy-size: 15px; --reader-lede-size: 25px; --reader-section-size: 18px; --reader-line-height: 1.68;
+  }
+  html[data-reader-theme="light"] {
+    color-scheme: light;
+    --text-primary: #17212b; --text-secondary: #4d5964; --text-muted: #7b858e;
+    --border: #dce1e5; --border-strong: #c8d0d7;
+    --surface-1: #f5f7f8; --surface-2: #edf2f5; --bg: #fcfcfb;
+    --accent: #174f78; --accent-soft: #e8f0f5; --link: #075f9a;
+    --success-bg: #e4eef4; --success-fg: #124b72;
+    --warning-bg: #f3eee4; --warning-fg: #755a2b;
+    --counterpoint-bg: #f8f4ed; --counterpoint-line: #b58a4b;
+    --deeper-bg: #eef4f6; --deeper-line: #47758a;
+    --shadow: 0 1px 2px rgba(23,33,43,.04), 0 8px 28px rgba(23,33,43,.055);
+  }
+  html[data-reader-theme="sepia"] {
+    color-scheme: light;
+    --text-primary: #382f27; --text-secondary: #625448; --text-muted: #8b7968;
+    --border: #dac9aa; --border-strong: #c7b38f;
+    --surface-1: #f0e6d2; --surface-2: #e8dbc1; --bg: #f8f1e1;
+    --accent: #7a552f; --accent-soft: #ede0c8; --link: #8a430f;
+    --success-bg: #e5dcc8; --success-fg: #58482f;
+    --warning-bg: #ead9bd; --warning-fg: #765a2d;
+    --counterpoint-bg: #f0e3ce; --counterpoint-line: #a87d45;
+    --deeper-bg: #e8dfce; --deeper-line: #7b6953;
+    --shadow: 0 1px 2px rgba(67,50,31,.07), 0 10px 30px rgba(67,50,31,.08);
+  }
+  html[data-reader-theme="dark"] {
+    color-scheme: dark;
+    --text-primary: #eef2f4; --text-secondary: #bbc4ca; --text-muted: #87939b;
+    --border: #35414a; --border-strong: #46545e;
+    --surface-1: #202a31; --surface-2: #27343d; --bg: #151c21;
+    --accent: #86b9d8; --accent-soft: #203746; --link: #72c7f2;
+    --success-bg: #203746; --success-fg: #9bc9e4;
+    --warning-bg: #372f22; --warning-fg: #d8bc87;
+    --counterpoint-bg: #2b2924; --counterpoint-line: #a98350;
+    --deeper-bg: #202f37; --deeper-line: #6e9aad;
+    --shadow: 0 1px 2px rgba(0,0,0,.25), 0 12px 32px rgba(0,0,0,.16);
+  }
+  html[data-reader-size="small"] { --reader-copy-size: 13px; --reader-lede-size: 21px; --reader-section-size: 16px; --reader-line-height: 1.62; }
+  html[data-reader-size="medium"] { --reader-copy-size: 15px; --reader-lede-size: 25px; --reader-section-size: 18px; --reader-line-height: 1.68; }
+  html[data-reader-size="large"] { --reader-copy-size: 17px; --reader-lede-size: 28px; --reader-section-size: 20px; --reader-line-height: 1.72; }
+  html[data-reader-size="xlarge"] { --reader-copy-size: 19px; --reader-lede-size: 31px; --reader-section-size: 22px; --reader-line-height: 1.74; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #eef2f4; --text-secondary: #bbc4ca; --text-muted: #87939b;
+      --border: #35414a; --border-strong: #46545e;
+      --surface-1: #202a31; --surface-2: #27343d; --bg: #151c21;
+      --accent: #86b9d8; --accent-soft: #203746; --link: #72c7f2;
+      --success-bg: #203746; --success-fg: #9bc9e4;
+      --warning-bg: #372f22; --warning-fg: #d8bc87;
+      --counterpoint-bg: #2b2924; --counterpoint-line: #a98350;
+      --deeper-bg: #202f37; --deeper-line: #6e9aad;
+      --shadow: 0 1px 2px rgba(0,0,0,.25), 0 12px 32px rgba(0,0,0,.16);
+    }
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text-primary); max-width: 1500px; margin: 0 auto;
+    padding: 48px 40px 96px; line-height: 1.68; background: var(--bg);
+  }
+  .masthead { max-width: 940px; margin-inline: auto; text-align: center; }
+  .masthead h1 { margin-inline: auto; }
+  .masthead .meta { margin-inline: auto; }
+  .masthead .key { text-align: left; }
+  .archive-nav { margin: 0 0 24px; font-size: 12px; font-weight: 650; letter-spacing: .02em; }
+  h1, h3, .pane-title { font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; }
+  h1 { max-width: 760px; font-size: clamp(32px, 4vw, 43px); line-height: 1.1; letter-spacing: -.028em; font-weight: 700; margin: 0 0 14px; }
+  h2 { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); margin: 0 0 12px; }
+  h3 { font-size: 24px; line-height: 1.24; letter-spacing: -.014em; font-weight: 700; margin: 0; flex: 1; }
+  .meta { max-width: 820px; font-size: 12px; line-height: 1.5; color: var(--text-muted); margin: 0 0 4px; }
+  .attribution { font-size: 12px; color: var(--text-muted); font-style: italic; margin: 18px 0 22px; }
+  .key { font-size: 12px; color: var(--text-secondary); background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin: 0 0 16px; }
+  .note { font-size: 12px; color: var(--text-muted); margin: 0 0 28px; font-style: italic; }
+  .tap-hint { font-size: 11px; color: var(--text-muted); margin: 0 0 20px; }
+  .cycle-methods { text-align: left; }
+  .cycle-methods > summary { display: none; }
+  .cycle-methods > .cycle-methods-body { display: block !important; }
+  .cycle-methods-body .meta { margin-inline: auto; text-align: center; }
+  .cycle-methods-chevron { color: var(--accent); transition: transform .2s ease; }
+  .cycle-methods[open] .cycle-methods-chevron { transform: rotate(90deg); }
+  a { color: var(--link); font-weight: 650; text-decoration-line: underline; text-decoration-color: color-mix(in srgb, currentColor 72%, transparent); text-decoration-thickness: 1.5px; text-underline-offset: .19em; }
+  a:hover { text-decoration-color: currentColor; text-decoration-thickness: 2px; }
+  .evidence-figure > a { text-decoration: none; }
+  button:focus-visible, summary:focus-visible, [role="button"]:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .toc { position: sticky; top: 0; z-index: 20; display: flex; flex-wrap: wrap; gap: 7px; margin: 0 -40px 40px; padding: 11px 40px; background: color-mix(in srgb, var(--bg) 92%, transparent); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); backdrop-filter: blur(14px); }
+  .toc button { font: inherit; font-size: 11px; font-weight: 650; color: var(--link); background: var(--surface-1); border: 1px solid var(--border); border-radius: 999px; padding: 7px 12px; cursor: pointer; transition: background .16s ease, border-color .16s ease, transform .16s ease; }
+  .toc button:hover { background: var(--surface-2); border-color: var(--border-strong); transform: translateY(-1px); }
+  .toc .expand-toggle { margin-left: auto; color: var(--text-muted); font-weight: 500; background: transparent; border-color: transparent; text-decoration: underline; padding-inline: 6px; }
+  .mobile-reading-bar { display: none; }
+
+  .reading-layout { display: grid; grid-template-columns: minmax(380px, 2fr) minmax(0, 4fr); gap: clamp(28px, 3vw, 48px); align-items: start; }
+  .digest-content { grid-column: 2; grid-row: 1; min-width: 0; }
+  .cycle-highlights > summary { display: none; }
+  .cycle-highlights > .highlights { display: block !important; }
+  .highlights { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin: 0 0 48px; box-shadow: var(--shadow); }
+  .highlights ul { margin: 0; padding-left: 0; list-style: none; }
+  .highlights li { font-size: 14px; line-height: 1.58; color: var(--text-secondary); margin-bottom: 4px; padding: 8px 10px 8px 22px; border-radius: 6px; position: relative; }
+  .highlights li::before { content: "\2022"; position: absolute; left: 7px; color: var(--accent); }
+  .highlights li.linked { cursor: pointer; transition: background .14s ease, color .14s ease; }
+  .highlights li.linked:hover { background: var(--bg); color: var(--text-primary); }
+  .highlights li.linked .jump { color: var(--link); font-size: 11px; font-weight: 700; white-space: nowrap; margin-left: 4px; }
+  section { border-top: 1px solid var(--border-strong); padding: 48px 0; scroll-margin-top: 76px; }
+  section:first-of-type { border-top: none; padding-top: 0; }
+  .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px; }
+  .count-pill { flex-shrink: 0; font-size: 9px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); background: transparent; border: 1px solid var(--border); border-radius: 999px; padding: 4px 9px; white-space: nowrap; }
+  .badge-row { display: grid; grid-template-columns: max-content 1fr; align-items: start; gap: 16px; margin-bottom: 22px; }
+  .badge { flex-shrink: 0; font-size: 9px; line-height: 1.4; font-weight: 800; letter-spacing: .065em; text-transform: uppercase; padding: 5px 9px; border-radius: 4px; white-space: nowrap; margin-top: 3px; }
+  .badge.practice { background: var(--success-bg); color: var(--success-fg); }
+  .badge.hypo { background: var(--warning-bg); color: var(--warning-fg); }
+  .badge.bg { background: var(--surface-1); color: var(--text-secondary); }
+  .bottom-line { font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 17px; line-height: 1.55; font-weight: 600; color: var(--text-primary); margin: 0; }
+  p, li { font-size: 14px; color: var(--text-secondary); }
+  ul.body-list { padding-left: 0; margin: 0 0 8px; list-style: none; }
+  ul.body-list > li { margin-bottom: 10px; }
+
+  details.ref { border: 1px solid var(--border); border-radius: 9px; background: var(--bg); box-shadow: 0 1px 1px rgba(23,33,43,.025); overflow: hidden; transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease; }
+  details.ref:hover { border-color: var(--border-strong); box-shadow: var(--shadow); transform: translateY(-1px); }
+  details.ref.is-active { border-color: var(--accent); background: var(--accent-soft); box-shadow: 0 0 0 1px var(--accent), var(--shadow); }
+  details.ref summary { list-style: none; cursor: pointer; padding: 15px 16px; display: flex; align-items: flex-start; gap: 12px; min-height: 48px; }
+  details.ref summary::-webkit-details-marker { display: none; }
+  details.ref summary::marker { content: ""; }
+  details.ref summary:hover { background: var(--surface-1); }
+  details.ref .ref-text { flex: 1; }
+  details.ref .chevron { flex-shrink: 0; color: var(--accent); font-size: 11px; margin-top: 4px; transition: transform .2s ease; }
+  details.ref[open] .chevron { transform: rotate(90deg); }
+  details.ref[open] summary { border-bottom: 1px solid var(--border); background: var(--surface-1); }
+  .ref-detail { padding: 16px; animation: reveal .2s ease-out; }
+  .ref-detail p { margin: 0 0 12px; }
+  .ref-detail p:last-child { margin-bottom: 0; }
+  .ref-detail p:not(.ref-link) { padding-left: 12px; border-left: 2px solid var(--accent); }
+  .ref-detail .counterpoint-detail { border-left-color: var(--warning-fg); }
+  .ref-detail .tag { display: block; margin-bottom: 3px; font-size: 9px; font-weight: 800; letter-spacing: .075em; text-transform: uppercase; color: var(--accent); }
+  .ref-detail .tag.warn { color: var(--warning-fg); }
+  .ref-detail .ref-link a { font-weight: 700; }
+  @keyframes reveal { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+  .callout { border: 1px solid var(--border); border-left: 3px solid var(--counterpoint-line); background: var(--counterpoint-bg); border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 16px 0; }
+  .callout + .callout { border-left-color: var(--deeper-line); background: var(--deeper-bg); }
+  .callout .label { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--text-primary); margin: 0 0 5px; }
+  .callout p { margin: 0; }
+  .closing { border-top: 1px solid var(--border-strong); padding-top: 28px; margin-top: 8px; }
+  .closing h2 { margin-bottom: 10px; }
+
+  .evidence-pane { grid-column: 1; grid-row: 1; position: sticky; top: 24px; overflow-anchor: none; }
+  .pane-shell { display: flex; flex-direction: column; max-height: calc(100vh - 48px); border: 1px solid var(--border); border-radius: 12px; background: var(--surface-1); box-shadow: var(--shadow); overflow: hidden; }
+  .pane-kicker { margin: 0; padding: 14px 18px 0; font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  .pane-title { margin: 0; padding: 5px 18px 14px; font-size: 22px; line-height: 1.24; letter-spacing: -.012em; text-transform: none; color: var(--text-primary); }
+  .pane-status { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 9px 18px; font-size: 10px; color: var(--text-muted); }
+  .pane-clear { display: none; border: 0; padding: 0; color: var(--link); background: transparent; font: inherit; font-weight: 700; cursor: pointer; }
+  .pane-content { padding: 18px; }
+  .pane-content p { margin: 0 0 14px; }
+  .pane-content p:last-child { margin-bottom: 0; }
+  .pane-intro { font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 16px; line-height: 1.55; color: var(--text-secondary); }
+  .pane-guide { margin: 18px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--border); }
+  .pane-guide li { border-bottom: 1px solid var(--border); }
+  .pane-guide button { width: 100%; border: 0; padding: 11px 0; text-align: left; color: var(--text-secondary); background: transparent; font: inherit; font-size: 12px; cursor: pointer; }
+  .pane-guide button:hover { color: var(--link); }
+  .pane-summary { font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 16px; line-height: 1.55; font-weight: 600; color: var(--text-primary); }
+  .pane-detail { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); }
+  .pane-detail p:not(.ref-link) { padding-left: 12px; border-left: 2px solid var(--accent); }
+  .pane-detail .counterpoint-detail { border-left-color: var(--warning-fg); }
+  .pane-detail .tag { display: block; margin-bottom: 4px; font-size: 9px; font-weight: 800; letter-spacing: .075em; text-transform: uppercase; color: var(--accent); }
+  .pane-detail .tag.warn { color: var(--warning-fg); }
+  .pane-detail .ref-link { padding-top: 4px; }
+  .pane-detail .ref-link a { font-weight: 700; }
+
+  .desk-header { padding-bottom: 10px; }
+  .desk-header .pane-kicker { padding-top: 11px; }
+  .desk-header .pane-title { padding-top: 3px; padding-bottom: 6px; }
+  .desk-progress-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 18px 6px; }
+  .desk-progress-label { font-size: 10px; font-weight: 700; color: var(--text-secondary); }
+  .desk-next-unread { border: 0; padding: 0; color: var(--link); background: transparent; font: inherit; font-size: 10px; font-weight: 750; cursor: pointer; }
+  .desk-next-unread:disabled { color: var(--text-muted); cursor: default; }
+  .desk-progress-track { height: 3px; margin: 0 18px; border-radius: 999px; background: var(--border); overflow: hidden; }
+  .desk-progress-fill { display: block; width: 0; height: 100%; border-radius: inherit; background: var(--accent); transition: width .22s ease; }
+  .desk-tabs { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .desk-tab { border: 0; border-right: 1px solid var(--border); padding: 8px 14px; background: var(--surface-2); color: var(--text-muted); font: inherit; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+  .desk-tab:last-child { border-right: 0; }
+  .desk-tab[aria-selected="true"] { background: var(--bg); color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+  .desk-panel { min-height: 0; padding: 0; border-top: 0; overflow: auto; scrollbar-width: thin; background: var(--bg); }
+  .desk-panel[hidden] { display: none; }
+  #desk-evidence-panel:not([hidden]) { display: flex; flex-direction: column; overflow: hidden; }
+  .desk-outline-inner { padding: 16px 18px 18px; }
+  .desk-outline { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--border); }
+  .desk-outline-item { border-bottom: 1px solid var(--border); }
+  .desk-outline-button { width: 100%; border: 0; padding: 12px 0; text-align: left; background: transparent; color: var(--text-primary); font: inherit; cursor: pointer; }
+  .desk-outline-button:hover .desk-outline-title { color: var(--link); }
+  .desk-outline-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .desk-outline-title { font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 14px; line-height: 1.35; font-weight: 650; transition: color .14s ease; }
+  .desk-outline-count { flex-shrink: 0; margin-top: 2px; font-size: 9px; font-weight: 750; color: var(--text-muted); }
+  .desk-outline-bottom { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+  .desk-outline-mini-track { flex: 1; height: 2px; border-radius: 999px; background: var(--border); overflow: hidden; }
+  .desk-outline-mini-fill { display: block; height: 100%; background: var(--accent); }
+  .desk-outline-item.is-complete .desk-outline-title { color: var(--accent); }
+  .desk-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; }
+  .desk-foot-note { font-size: 9px; color: var(--text-muted); }
+  .desk-reset { border: 0; padding: 0; background: transparent; color: var(--text-muted); font: inherit; font-size: 9px; text-decoration: underline; cursor: pointer; }
+  .desk-evidence-head { border-bottom: 1px solid var(--border); }
+  .desk-evidence-head .pane-status { border: 0; border-bottom: 1px solid var(--border); }
+  .desk-evidence-head .pane-clear { display: inline-block; }
+  .desk-evidence-head .pane-status { padding-block: 7px; }
+  .desk-evidence-head .pane-title { padding-top: 10px; padding-bottom: 11px; font-size: 20px; }
+  #desk-evidence-panel .pane-content { flex: 1; min-height: 0; overflow: auto; scrollbar-width: thin; }
+  .pane-context { margin-top: 18px; padding: 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-1); }
+  .pane-context-label { margin: 0 0 5px !important; font-size: 9px !important; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted) !important; }
+  .pane-context-copy { margin: 0 !important; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 13px !important; line-height: 1.5; color: var(--text-secondary) !important; }
+  .evidence-controls { flex-shrink: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border-top: 1px solid var(--border); background: var(--border); }
+  .evidence-controls button { border: 0; padding: 10px 8px; background: var(--surface-1); color: var(--link); font: inherit; font-size: 10px; font-weight: 750; cursor: pointer; }
+  .evidence-controls button:hover { background: var(--surface-2); }
+  .evidence-controls button:disabled { color: var(--text-muted); cursor: default; opacity: .5; }
+  details.ref.is-reviewed:not(.is-active) { border-left-color: var(--deeper-line); }
+  details.ref summary[data-reviewed="true"]::after { content: "✓"; flex-shrink: 0; margin-top: 1px; color: var(--deeper-line); font-size: 11px; font-weight: 800; }
+
+  .navigator-home { padding: 10px 18px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface-2); }
+  .navigator-home-button { width: 100%; border: 0; padding: 0; text-align: left; color: var(--text-primary); background: transparent; font: inherit; cursor: pointer; }
+  .navigator-home-label { display: block; font-size: 9px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: var(--accent); }
+  .navigator-home-title { display: block; margin-top: 2px; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 15px; font-weight: 700; }
+  .navigator-home.is-active { background: var(--bg); box-shadow: inset 3px 0 0 var(--accent); }
+  #desk-outline-panel { flex: 1; }
+  .desk-outline-item.is-active > .desk-outline-button { color: var(--accent); }
+  .desk-outline-item.is-active > .desk-outline-button .desk-outline-title { color: var(--accent); }
+  .desk-outline-title::before { content: "▸"; display: inline-block; width: 13px; color: var(--accent); }
+  .desk-outline-button[aria-expanded="true"] .desk-outline-title::before { content: "▾"; }
+  .desk-finding-list { margin: 0 0 10px; padding: 0 0 0 11px; list-style: none; border-left: 1px solid var(--border); }
+  .desk-finding-item + .desk-finding-item { border-top: 1px solid color-mix(in srgb, var(--border) 72%, transparent); }
+  .desk-finding-button { width: 100%; border: 0; padding: 9px 4px 9px 10px; display: grid; grid-template-columns: 1fr auto; gap: 10px; text-align: left; color: var(--text-secondary); background: transparent; font: inherit; font-size: 11px; line-height: 1.42; cursor: pointer; }
+  .desk-finding-button:hover { color: var(--link); }
+  .desk-finding-button[aria-current="true"] { color: var(--text-primary); background: var(--accent-soft); box-shadow: inset 2px 0 0 var(--accent); }
+  .desk-finding-copy { display: -webkit-box; overflow: hidden; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .desk-finding-state { padding-top: 1px; color: var(--deeper-line); font-size: 10px; font-weight: 800; }
+
+  .digest-source { display: block; }
+  .reader-surface { display: none; min-width: 0; min-height: 620px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); box-shadow: var(--shadow); overflow: clip; overflow-anchor: none; }
+  .reader-actions { position: sticky; top: 0; z-index: 8; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 9px 12px; border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--surface-1) 94%, transparent); backdrop-filter: blur(14px); }
+  .reader-actions[hidden] { display: none; }
+  .reader-status { margin-right: auto; font-size: 10px; font-weight: 700; color: var(--text-muted); }
+  .reader-actions button { border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; color: var(--link); background: var(--bg); font: inherit; font-size: 10px; font-weight: 750; cursor: pointer; }
+  .reader-actions button:hover { border-color: var(--border-strong); background: var(--surface-2); }
+  .reader-actions button:disabled { color: var(--text-muted); cursor: default; opacity: .5; }
+  .reader-content { padding: clamp(24px, 3vw, 38px); }
+  .reader-view-header { margin-bottom: 26px; padding-bottom: 22px; border-bottom: 1px solid var(--border); }
+  .reader-kicker { margin: 0 0 7px; font-size: 9px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; color: var(--accent); }
+  .reader-title { margin: 0; max-width: 760px; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: clamp(28px, 3vw, 38px); line-height: 1.16; letter-spacing: -.022em; color: var(--text-primary); }
+  .reader-deck { max-width: 720px; margin: 10px 0 0; font-size: 14px; color: var(--text-secondary); }
+  .reader-overview .highlights { margin: 0 0 34px; }
+  .reader-overview .closing { margin-top: 0; }
+  .reader-section-copy { padding: 0; border: 0; }
+  .reader-section-copy .section-head h3 { font-size: clamp(27px, 2.6vw, 35px); }
+  .reader-section-copy details.ref { cursor: pointer; }
+  .reader-section-copy details.ref summary { min-height: 54px; }
+  .reader-finding .reader-title { max-width: 800px; font-size: clamp(24px, 2.3vw, 32px); line-height: 1.22; }
+  .reader-finding .reader-deck { margin-top: 12px; }
+  .reader-finding .pane-detail { margin-top: 0; padding-top: 24px; font-size: 15px; }
+  .reader-finding .pane-detail p { font-size: 15px; }
+  .reader-content .highlights li,
+  .reader-content .closing p,
+  .reader-content details.ref summary,
+  .reader-content .callout p,
+  .reader-content .pane-detail > p,
+  .reader-content .pane-context-copy { font-size: var(--reader-copy-size) !important; line-height: var(--reader-line-height); }
+  .reader-content .bottom-line { font-size: var(--reader-section-size); line-height: 1.55; }
+
+  .evidence-brief { margin: 20px 0 6px; border: 1px solid var(--border-strong); border-radius: 12px; background: var(--surface-1); overflow: hidden; }
+  .evidence-sourcebar { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 10px; padding: 10px 16px; border-bottom: 1px solid var(--border); color: var(--text-muted); background: var(--surface-2); font-size: 9px; font-weight: 700; letter-spacing: .045em; text-transform: uppercase; }
+  .evidence-source-badge { display: inline-flex; align-items: center; border: 1px solid var(--border-strong); border-radius: 999px; padding: 4px 8px; color: var(--accent); background: var(--bg); }
+  .evidence-brief-body { padding: 18px; }
+  .evidence-brief h4 { margin: 0 0 6px; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: var(--reader-section-size); line-height: 1.3; color: var(--text-primary); }
+  .ref-detail .evidence-brief p { padding-left: 0; border-left: 0; }
+  .evidence-brief .evidence-deck { margin: 0 0 16px; color: var(--text-secondary); font-size: var(--reader-copy-size) !important; line-height: var(--reader-line-height); }
+  .evidence-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(112px, 1fr)); gap: 8px; margin: 14px 0 18px; }
+  .evidence-metric { min-width: 0; border: 1px solid var(--border); border-radius: 8px; padding: 12px; background: var(--bg); }
+  .evidence-metric-value { display: block; margin-bottom: 3px; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 24px; line-height: 1; font-weight: 750; color: var(--text-primary); }
+  .evidence-metric-label { display: block; font-size: 9px; line-height: 1.35; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; color: var(--text-muted); }
+  .evidence-table-wrap { margin: 14px 0 18px; overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); }
+  .evidence-table { width: 100%; min-width: 540px; border-collapse: collapse; color: var(--text-secondary); font-size: clamp(11px, calc(var(--reader-copy-size) * .8), 15px); line-height: 1.45; }
+  .evidence-table caption { padding: 10px 12px; text-align: left; font-size: 9px; font-weight: 800; letter-spacing: .075em; text-transform: uppercase; color: var(--text-muted); }
+  .evidence-table th, .evidence-table td { padding: 10px 12px; border-top: 1px solid var(--border); text-align: left; vertical-align: top; }
+  .evidence-table thead th { color: var(--text-primary); background: var(--surface-2); font-size: 9px; letter-spacing: .04em; text-transform: uppercase; }
+  .evidence-table tbody th { color: var(--text-primary); font-weight: 750; }
+  .evidence-chart { margin: 16px 0 18px; border: 1px solid var(--border); border-radius: 8px; padding: 14px; background: var(--bg); }
+  .evidence-chart-title { margin: 0 0 12px; font-size: 9px; font-weight: 800; letter-spacing: .075em; text-transform: uppercase; color: var(--text-muted); }
+  .evidence-chart-row { display: grid; grid-template-columns: minmax(86px, 1fr) minmax(120px, 3fr) 42px; align-items: center; gap: 10px; margin-top: 9px; }
+  .evidence-chart-label { color: var(--text-secondary); font-size: 11px; font-weight: 700; }
+  .evidence-chart-track { height: 11px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .evidence-chart-fill { display: block; width: var(--value); height: 100%; border-radius: inherit; background: var(--accent); }
+  .evidence-chart-value { color: var(--text-primary); font-size: 11px; text-align: right; }
+  .evidence-chart-note { margin: 11px 0 0 !important; color: var(--text-muted); font-size: 9px !important; line-height: 1.45 !important; }
+  .evidence-insights { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin: 16px 0; }
+  .evidence-insight { border-left: 3px solid var(--deeper-line); border-radius: 0 7px 7px 0; padding: 12px 13px; background: var(--deeper-bg); }
+  .evidence-insight.caution { border-left-color: var(--counterpoint-line); background: var(--counterpoint-bg); }
+  .evidence-insight strong { display: block; margin-bottom: 5px; font-size: 9px; letter-spacing: .07em; text-transform: uppercase; color: var(--text-primary); }
+  .evidence-insight p { margin: 0; color: var(--text-secondary); font-size: var(--reader-copy-size) !important; line-height: var(--reader-line-height); }
+  .trial-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: stretch; gap: 7px; margin: 15px 0 18px; }
+  .trial-step { display: flex; flex-direction: column; justify-content: center; min-height: 76px; border: 1px solid var(--border); border-radius: 8px; padding: 10px; color: var(--text-secondary); background: var(--bg); font-size: clamp(11px, calc(var(--reader-copy-size) * .76), 14px); line-height: 1.4; }
+  .trial-step strong { margin-bottom: 3px; color: var(--text-primary); }
+  .trial-arrow { align-self: center; color: var(--accent); font-weight: 800; }
+  .eligibility-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 18px; padding: 0; list-style: none; }
+  .eligibility-list li { margin: 0; border: 1px solid var(--border); border-radius: 999px; padding: 5px 9px; color: var(--text-secondary); background: var(--bg); font-size: 10px; }
+  .evidence-figure { margin: 18px 0; border: 1px solid var(--border); border-radius: 9px; overflow: hidden; background: #fff; }
+  .evidence-figure a { display: block; }
+  .evidence-figure img { display: block; width: 100%; height: auto; }
+  .evidence-figure figcaption { padding: 11px 13px; border-top: 1px solid var(--border); color: var(--text-muted); background: var(--surface-1); font-size: 9px; line-height: 1.45; }
+  .evidence-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 16px 0 0; }
+  .evidence-links a { font-size: 11px; font-weight: 750; }
+  .desk-finding-button.is-rich .desk-finding-copy::after { content: " · Article digest"; color: var(--accent); font-size: 9px; font-weight: 800; letter-spacing: .035em; text-transform: uppercase; }
+
+  .reading-preferences { position: fixed; right: 18px; bottom: 18px; z-index: 100; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .reading-preferences-toggle { display: flex; align-items: baseline; gap: 7px; border: 1px solid var(--border-strong); border-radius: 999px; padding: 8px 12px; color: var(--text-primary); background: color-mix(in srgb, var(--surface-1) 94%, transparent); box-shadow: var(--shadow); backdrop-filter: blur(14px); font: inherit; cursor: pointer; }
+  .reading-preferences-toggle:hover { background: var(--surface-2); }
+  .reading-preferences-aa { font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 17px; font-weight: 750; letter-spacing: -.04em; }
+  .reading-preferences-label { font-size: 10px; font-weight: 750; }
+  .reading-preferences-panel { position: absolute; right: 0; bottom: calc(100% + 9px); width: 278px; border: 1px solid var(--border-strong); border-radius: 12px; padding: 16px; color: var(--text-primary); background: var(--surface-1); box-shadow: 0 16px 44px rgba(23,33,43,.18); }
+  .reading-preferences-panel[hidden] { display: none; }
+  .reading-preferences-title { margin: 0 0 14px; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; font-size: 18px; font-weight: 700; }
+  .reading-preferences-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+  .reading-preferences-row-label { font-size: 11px; font-weight: 750; color: var(--text-secondary); }
+  .reading-size-stepper { display: grid; grid-template-columns: 34px 48px 34px; align-items: center; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+  .reading-size-stepper button { height: 30px; border: 0; color: var(--link); background: var(--bg); font: inherit; font-weight: 800; cursor: pointer; }
+  .reading-size-stepper button:disabled { color: var(--text-muted); cursor: default; opacity: .45; }
+  .reading-size-value { text-align: center; font-size: 10px; font-weight: 750; color: var(--text-secondary); }
+  .reading-theme-label { margin: 14px 0 8px; font-size: 9px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: var(--text-muted); }
+  .reading-theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+  .reading-theme-button { display: flex; align-items: center; gap: 8px; border: 1px solid var(--border); border-radius: 8px; padding: 8px; color: var(--text-secondary); background: var(--bg); font: inherit; font-size: 10px; font-weight: 700; cursor: pointer; }
+  .reading-theme-button[aria-pressed="true"] { border-color: var(--accent); color: var(--text-primary); box-shadow: inset 0 0 0 1px var(--accent); }
+  .reading-theme-swatch { width: 17px; height: 17px; flex-shrink: 0; border: 1px solid rgba(23,33,43,.2); border-radius: 50%; }
+  .reading-theme-swatch.system { background: linear-gradient(135deg, #fcfcfb 0 49%, #151c21 51% 100%); }
+  .reading-theme-swatch.light { background: #fcfcfb; }
+  .reading-theme-swatch.sepia { background: #f0e6d2; }
+  .reading-theme-swatch.dark { background: #151c21; }
+  .reading-preferences-reset { width: 100%; border: 0; padding: 13px 0 0; color: var(--text-muted); background: transparent; font: inherit; font-size: 10px; text-decoration: underline; cursor: pointer; }
+
+  footer { border-top: 1px solid var(--border); margin-top: 56px; padding-top: 20px; font-size: 11px; letter-spacing: .02em; color: var(--text-muted); }
+
+  @media (min-width: 1320px) {
+    .toc { display: none; }
+    .reading-layout { margin-top: 48px; }
+    .pane-shell { height: calc(100vh - 48px); max-height: none; }
+    .reader-surface { position: sticky; top: 24px; display: flex; flex-direction: column; height: calc(100vh - 48px); min-height: 0; }
+    .reader-content { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+    .digest-source { display: none; }
+    body:not(.inline-expanded) details.ref .ref-detail { display: none; }
+    body:not(.inline-expanded) details.ref[open] summary { border-bottom: 0; }
+    body:not(.inline-expanded) details.ref[open] .chevron { transform: none; }
+  }
+  @media (max-width: 1319px) {
+    body { max-width: 880px; padding-inline: 32px; }
+    .reading-layout { display: block; }
+    .evidence-pane { display: none; }
+    .reader-surface { display: none !important; }
+    .digest-source { display: block !important; }
+    .masthead { max-width: none; }
+    .toc { margin-inline: -32px; padding-inline: 32px; }
+    .digest-source .highlights li,
+    .digest-source section p,
+    .digest-source section li,
+    .digest-source details.ref summary,
+    .digest-source .closing p { font-size: var(--reader-copy-size); line-height: var(--reader-line-height); }
+    .digest-source .bottom-line { font-size: var(--reader-section-size); }
+  }
+  @media (max-width: 640px) {
+    body { padding: 20px 16px 72px; line-height: 1.62; }
+    .masthead { text-align: left; }
+    .masthead h1, .masthead .meta { margin-inline: 0; }
+    .archive-nav { margin-bottom: 16px; }
+    h1 { max-width: none; margin-bottom: 10px; font-size: 29px; line-height: 1.06; }
+    h3 { font-size: 21px; }
+    .meta { font-size: 12px; }
+    .note { margin: 14px 0 12px; border-left: 3px solid var(--deeper-line); border-radius: 0 8px 8px 0; padding: 11px 12px; color: var(--text-secondary); background: var(--deeper-bg); font-size: 12px; line-height: 1.48; font-style: normal; }
+    .cycle-methods { margin: 0 0 18px; border: 1px solid var(--border); border-radius: 9px; background: var(--surface-1); overflow: hidden; }
+    .cycle-methods > summary { min-height: 44px; padding: 11px 13px; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--link); font-size: 12px; font-weight: 750; cursor: pointer; }
+    .cycle-methods:not([open]) > .cycle-methods-body { display: none !important; }
+    .cycle-methods[open] > .cycle-methods-body { display: block !important; padding: 0 13px 13px; border-top: 1px solid var(--border); }
+    .cycle-methods-body .meta { margin: 12px 0 8px; text-align: left; }
+    .cycle-methods-body .attribution { margin: 12px 0; font-size: 11px; }
+    .cycle-methods-body .key { margin-bottom: 12px; padding: 12px; }
+    .cycle-methods-body .tap-hint { margin-bottom: 0; }
+    .toc { position: sticky; top: 0; z-index: 30; flex-wrap: nowrap; gap: 8px; margin: 0 -16px 14px; padding: 9px 16px; overflow-x: auto; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(14px); scrollbar-width: none; scroll-snap-type: x proximity; }
+    .toc::-webkit-scrollbar { display: none; }
+    .toc button { flex: 0 0 auto; min-height: 40px; padding: 8px 12px; scroll-snap-align: start; }
+    .toc .expand-toggle { display: none; }
+    .mobile-reading-bar { display: block; margin: 0 0 24px; border: 1px solid var(--border); border-radius: 9px; padding: 11px 12px 12px; background: var(--surface-1); }
+    .mobile-reading-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .mobile-reading-label { color: var(--text-secondary); font-size: 11px; font-weight: 750; }
+    .mobile-next-unread { min-height: 40px; border: 1px solid var(--border-strong); border-radius: 999px; padding: 7px 12px; color: var(--link); background: var(--bg); font: inherit; font-size: 11px; font-weight: 800; }
+    .mobile-next-unread:disabled { color: var(--text-muted); opacity: .6; }
+    .mobile-reading-track { display: block; height: 4px; margin-top: 9px; border-radius: 999px; background: var(--border); overflow: hidden; }
+    .mobile-reading-fill { display: block; width: 0; height: 100%; border-radius: inherit; background: var(--accent); transition: width .2s ease; }
+    .cycle-highlights { margin: 0 0 28px; border: 1px solid var(--border-strong); border-radius: 11px; background: var(--surface-1); box-shadow: var(--shadow); overflow: hidden; }
+    .cycle-highlights > summary { min-height: 72px; padding: 13px 14px; display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 12px; cursor: pointer; }
+    .cycle-highlights-kicker { grid-column: 1; color: var(--accent); font-size: 9px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .cycle-highlights-title { grid-column: 1; font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; color: var(--text-primary); font-size: 20px; font-weight: 700; }
+    .cycle-highlights-hint { grid-column: 1; color: var(--text-muted); font-size: 10px; }
+    .cycle-highlights-chevron { grid-column: 2; grid-row: 1 / span 3; color: var(--accent); transition: transform .2s ease; }
+    .cycle-highlights[open] .cycle-highlights-chevron { transform: rotate(90deg); }
+    .cycle-highlights:not([open]) > .highlights { display: none !important; }
+    .cycle-highlights[open] > .highlights { display: block !important; }
+    .highlights { margin: 0; border: 0; border-top: 1px solid var(--border); border-radius: 0; padding: 10px 12px 14px; box-shadow: none; }
+    .highlights h2 { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .highlights li { padding: 10px 8px 10px 20px; }
+    section { padding: 30px 0; scroll-margin-top: 68px; }
+    .section-head { display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 10px; margin-bottom: 14px; }
+    .count-pill { display: inline-block; margin-top: 2px; padding: 4px 7px; }
+    .badge-row { display: block; margin-bottom: 16px; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 12px; background: var(--surface-1); }
+    .badge { display: inline-block; margin: 0 0 8px; }
+    .digest-source .bottom-line { font-size: 16px; line-height: 1.5; }
+    ul.body-list > li { margin-bottom: 8px; }
+    details.ref { scroll-margin-top: 68px; }
+    details.ref summary { min-height: 56px; padding: 14px; gap: 10px; }
+    .ref-detail { padding: 14px; }
+    .ref-detail p:not(.ref-link) { padding-left: 10px; }
+    .evidence-table-wrap { overscroll-behavior-inline: contain; scrollbar-width: thin; }
+    .evidence-table { min-width: 480px; }
+    .reading-preferences { right: 10px; bottom: 10px; }
+    .reading-preferences-label { display: none; }
+    .reading-preferences-toggle { min-width: 44px; min-height: 44px; justify-content: center; padding: 7px 11px; }
+    .reading-preferences-panel { width: min(278px, calc(100vw - 20px)); }
+    .evidence-brief-body { padding: 15px; }
+    .evidence-insights { grid-template-columns: 1fr; }
+    .trial-flow { grid-template-columns: 1fr; }
+    .trial-arrow { transform: rotate(90deg); justify-self: center; }
+    .evidence-chart-row { grid-template-columns: 78px minmax(90px, 1fr) 38px; gap: 7px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+  @media print {
+    html[data-reader-theme] {
+      color-scheme: light;
+      --text-primary: #17212b; --text-secondary: #4d5964; --text-muted: #7b858e;
+      --border: #dce1e5; --border-strong: #c8d0d7;
+      --surface-1: #f5f7f8; --surface-2: #edf2f5; --bg: #fcfcfb;
+      --accent: #174f78; --accent-soft: #e8f0f5; --link: #075f9a;
+      --success-bg: #e4eef4; --success-fg: #124b72;
+      --warning-bg: #f3eee4; --warning-fg: #755a2b;
+      --counterpoint-bg: #f8f4ed; --counterpoint-line: #b58a4b;
+      --deeper-bg: #eef4f6; --deeper-line: #47758a;
+      --shadow: none;
+    }
+    body { max-width: none; padding: 0; background: #fff; color: #111; }
+    .reading-layout { display: block; }
+    .reader-surface { display: none !important; }
+    .digest-source { display: block !important; }
+    .evidence-pane, .toc, .archive-nav, .tap-hint, .highlights li .jump, .reading-preferences, .mobile-reading-bar, .cycle-highlights > summary, .cycle-methods > summary { display: none !important; }
+    .cycle-highlights > .highlights, .cycle-methods > .cycle-methods-body { display: block !important; }
+    .evidence-figure img { display: none !important; }
+    details.ref .ref-detail { display: block !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+    details.ref .chevron { display: none; }
+    details.ref summary[data-reviewed="true"]::after { display: none; }
+    details.ref { box-shadow: none; }
+    a { color: var(--text-primary); text-decoration: underline; }
+    section { break-inside: avoid-page; }
+  }
+</style>
+</head>
+<body>
+
+
+<header class="masthead">
+<p class="archive-nav"><a href="index.html">&larr; All digests (archive)</a></p>
+<h1>Head &amp; Neck Oncology Digest — September 14, 2026</h1>
+<p class="meta">For the surgeon · Literature window: September 1–14, 2026</p>
+<p class="note"><b>17 new DOI/NCT records · 0 repeated sources.</b> Strict delta from August 31: 15 publications and two newly posted protocols.</p>
+<details class="cycle-methods">
+  <summary><span>Methods, sources &amp; how to read</span><span class="cycle-methods-chevron" aria-hidden="true">&#9656;</span></summary>
+  <div class="cycle-methods-body">
+    <p class="meta">Sources: PubMed-indexed primary literature, official journal pages, open full text where available, and ClinicalTrials.gov records</p>
+    <p class="attribution">All paper identifiers and numeric claims were checked against PubMed or the journal record; registry protocols were checked against the official ClinicalTrials.gov record on September 14, 2026.</p>
+    <p class="key">Each finding leads with the bottom line and opens to an article-specific evidence brief covering provenance, methods, exact results or protocol, surgical interpretation, limitations, and a do-not-overread boundary. Registry-only entries are clearly marked and contain no efficacy claims.</p>
+    <p class="tap-hint">Choose a section, then open one finding at a time. Source links open separately. Use <b>Aa</b> for theme and text size; print produces a fully expanded handout.</p>
+  </div>
+</details>
+</header>
+
+<nav class="toc" aria-label="Jump to section">
+  <button type="button" onclick="openSection('perioperative-io')">1&nbsp;· Response-adapted surgery</button>
+  <button type="button" onclick="openSection('ctdna-mrd')">2&nbsp;· ctDNA performance</button>
+  <button type="button" onclick="openSection('neck-dissection')">3&nbsp;· Surgery + reconstruction</button>
+  <button type="button" onclick="openSection('rt-deescalation')">4&nbsp;· Radiation + function</button>
+  <button type="button" onclick="openSection('cutaneous-scc')">5&nbsp;· Cutaneous SCC</button>
+  <button type="button" onclick="openSection('systemic-pipeline')">6&nbsp;· Systemic pipeline</button>
+  <button type="button" class="expand-toggle" id="expand-toggle-btn" onclick="toggleAll()">Expand all</button>
+</nav>
+
+<div class="mobile-reading-bar" id="mobile-reading-bar" aria-label="Mobile reading progress">
+  <div class="mobile-reading-row">
+    <span class="mobile-reading-label" id="mobile-reading-label">0 of 17 reviewed</span>
+    <button class="mobile-next-unread" id="mobile-next-unread" type="button">Next unread &rarr;</button>
+  </div>
+  <span class="mobile-reading-track" aria-hidden="true"><span class="mobile-reading-fill" id="mobile-reading-fill"></span></span>
+</div>
+
+<div class="reading-layout">
+<main class="digest-content" id="digest-content">
+<details class="cycle-highlights">
+  <summary><span class="cycle-highlights-kicker">Start here</span><span class="cycle-highlights-title">6 key takeaways</span><span class="cycle-highlights-hint">Two-minute overview</span><span class="cycle-highlights-chevron" aria-hidden="true">&#9656;</span></summary>
+  <div class="highlights">
+    <h2>Highlights — key takeaways</h2>
+    <ul>
+      <li class="linked" onclick="openSection('perioperative-io')" role="button" tabindex="0"><b>Response-adapted surgery gained prospective phase II evidence, not a new standard:</b> REMATCH reported 90% 2-year DFS and 100% laryngeal preservation among 42 deep responders selected for reduced-volume surgery, but it was single-arm and the five poor responders had markedly worse outcomes. <span class="jump">Jump to §1 &rarr;</span></li>
+      <li class="linked" onclick="openSection('ctdna-mrd')" role="button" tabindex="0"><b>ctDNA performance is impressive but setting-dependent:</b> tissue-informed surveillance reached 95.2% per-test sensitivity and 100% specificity in one cohort; serial ctHPV DNA reached 90.3%/97.9%, while pooled sensitivity was 80.3%. <span class="jump">Jump to §2 &rarr;</span></li>
+      <li class="linked" onclick="openSection('neck-dissection')" role="button" tabindex="0"><b>Reconstruction counseling should separate frailty from age:</b> frailty consistently predicted medical morbidity and slower recovery, whereas most age-group differences after glossectomy resolved by one to two years. <span class="jump">Jump to §3 &rarr;</span></li>
+      <li class="linked" onclick="openSection('rt-deescalation')" role="button" tabindex="0"><b>Protons reduced acute oral toxicity in randomized postoperative data:</b> grade ≥2 mucositis was 7.4% with protons versus 22.7% with IMRT; control and survival did not differ at available follow-up. <span class="jump">Jump to §4 &rarr;</span></li>
+      <li class="linked" onclick="openSection('cutaneous-scc')" role="button" tabindex="0"><b>Selective Level IA omission is plausible in lower-burden cSCC:</b> occult Level IA involvement was 0% in a 131-patient parotid-region cohort, but the 95% CI extended to 3.3%. <span class="jump">Jump to §5 &rarr;</span></li>
+      <li class="linked" onclick="openSection('systemic-pipeline')" role="button" tabindex="0"><b>Systemic pipeline signals remain early:</b> finotonlimab plus SCT200 produced a 56.7% ORR in 30 treatment-naïve patients, while the new ficerafusp study has no outcomes. <span class="jump">Jump to §6 &rarr;</span></li>
+    </ul>
+    <div class="callout"><p class="label">Quiet watchlist</p><p>The search found no new eligible September 1–14 report for KEYNOTE-689, NIVOPOST, petosemtamab, or perioperative/adjuvant head-and-neck cSCC. Those lanes remain on watch rather than being padded with lower-value material.</p></div>
+  </div>
+</details>
+
+<section id="perioperative-io">
+  <div class="section-head"><h3>1. Response-adapted surgery moves into prospective testing</h3><span class="count-pill">3 findings</span></div>
+  <div class="badge-row"><span class="badge hypo">Hypothesis-generating</span><p class="bottom-line">Three phase II studies deepen the perioperative signal, but only REMATCH prospectively changed the operation according to response. None establishes safe off-protocol resection reduction, surgery omission, or adjuvant de-intensification. This advances <a href="HN_Onc_Digest_2026-08-31.html#perioperative-io">the prior response-adapted-surgery question</a>.</p></div>
+  <ul class="body-list"><li><details class="ref"><summary><span class="ref-text">REMATCH prospectively assigned reduced-volume surgery after ≥50% primary-tumor regression following neoadjuvant immunochemotherapy.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Among 42 selected deep responders, 2-year DFS was 90%; laryngeal preservation was 100% in laryngeal/hypopharyngeal cancers.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Single-arm selection and only five poor responders prevent a noninferiority conclusion.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · prospective single-arm phase II</span></div><div class="evidence-brief-body"><h4>A real response rule, but no randomized surgical comparison</h4><p class="evidence-deck"><b>Methods/scope:</b> Fifty patients with resectable HPV-negative stage III–IVA HNSCC completed three cycles of penpulimab, nab-paclitaxel, and cisplatin. Imaging and laryngoscopy before cycle 3 assigned patients with ≥50% primary-tumor regression to reduced-volume surgery (RVS); lesser responders received standard-volume surgery. Everyone received risk-adapted postoperative RT.</p><div class="evidence-metrics"><div class="evidence-metric"><span class="evidence-metric-value">94%</span><span class="evidence-metric-label">ORR</span></div><div class="evidence-metric"><span class="evidence-metric-value">90%</span><span class="evidence-metric-label">2-year DFS in RVS</span></div><div class="evidence-metric"><span class="evidence-metric-value">42</span><span class="evidence-metric-label">RVS patients</span></div><div class="evidence-metric"><span class="evidence-metric-value">0</span><span class="evidence-metric-label">Grade 4–5 events</span></div></div><p><b>Results:</b> ORR was 94% (95% CI 84%–99%). At 34.0 months' median follow-up, per-protocol 2-year DFS was 83% (69%–91%). RVS patients (n=42) had 90% 2-year DFS and 100% laryngeal preservation; standard-volume patients (n=5) had 20% 2-year DFS. Grade 3 events occurred in 16% during neoadjuvant therapy and 15% around surgery, with no grade 4–5 events.</p><p><b>Surgical interpretation:</b> This is the most direct prospective evidence yet that a prespecified clinical-response rule can operationalize reduced-volume surgery while preserving near-term disease control in selected responders.</p><p><b>Limitations/do not overread:</b> Single center, no randomized surgical comparator, only five poor responders, post-treatment selection, and universal postoperative RT. Do not change the planned operation outside a protocol.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1158/1078-0432.CCR-26-1337">Read the paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">neoCHANCE-2 combined afatinib with tislelizumab and platinum/taxane before surgery.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Among 32 resected patients, pCR was 40.6%; no treatment-related surgical delay was reported.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Eight treated patients did not reach surgery, and the regimen has no comparator.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>PubMed/open journal record · single-arm phase II</span></div><div class="evidence-brief-body"><h4>Substantial pathologic clearance; afatinib contribution unknown</h4><p class="evidence-deck"><b>Methods/scope:</b> Forty patients received two cycles of tislelizumab plus nab-paclitaxel/cisplatin, with afatinib between cycles, before resection; 32 proceeded to surgery.</p><p><b>Results:</b> Resected-patient pCR was 40.6% (95% CI 23.7%–59.4%); ORR in the treated cohort was 82.5% (67.2%–92.7%). One-year OS was 97.3% (92.2%–100%). Grade 3–4 lymphopenia occurred in 5/40 (12.5%); no grade 5 event or treatment-related surgical delay was reported.</p><p><b>Surgical interpretation:</b> The regimen supports comparative development with prospective measurement of resection extent, morbidity, and function.</p><p><b>Limitations/do not overread:</b> The pCR denominator is 32, follow-up is short, and there is no control isolating afatinib. Do not infer survival benefit or improved operability.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1136/jitc-2025-014100">Read the paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">Chemotherapy-free camrelizumab plus apatinib produced MPR in 12/41 resectable HNSCC patients.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> All 41 patients reached R0 resection without delay; grade ≥3 treatment-related events occurred in 2.4%.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> The unequal one- versus two-cycle comparison was small and not statistically significant.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · exploratory phase II</span></div><div class="evidence-brief-body"><h4>Pathologic activity with a low reported severe-toxicity rate</h4><p class="evidence-deck"><b>Methods/scope:</b> Forty-one stage II–IVA patients received one cycle (n=26) or two cycles (n=15) of camrelizumab plus apatinib before surgery.</p><p><b>Results:</b> Overall MPR was 29.3% (12/41), numerically 40.0% after two cycles versus 23.1% after one (p=.300). Grade ≥3 treatment-related events occurred in 1/41. MPR was associated with PD-L1 CPS ≥20 (50.0% versus 13.0%; adjusted p=.023) and circulating-tumor-cell clearance (87.5% versus 36.8%; adjusted p=.033).</p><p><b>Surgical interpretation:</b> A non-cytotoxic regimen produced measurable pathologic activity with all patients reaching surgery; CPS and CTC observations can inform prospective response-stratification work.</p><p><b>Limitations/do not overread:</b> Small exploratory study, unequal exposures, no standard-treatment control, biomarker multiplicity, and no mature survival. MPR associations are not validated selection rules.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1158/1078-0432.CCR-26-0466">Read the paper &rarr;</a></p></div></details></li></ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>Response is now being linked to surgical scope prospectively, but baseline extent, imaging/laryngoscopy, pathology, postoperative treatment, and salvageability are inseparable parts of the observed outcome.</p></div>
+</section>
+
+<section id="ctdna-mrd">
+  <div class="section-head"><h3>2. ctDNA: high surveillance performance, unresolved decision impact</h3><span class="count-pill">3 findings</span></div>
+  <div class="badge-row"><span class="badge bg">Evidence boundary</span><p class="bottom-line">Two cohorts and a meta-analysis sharpen expected test performance. They do not show that replacing standard surveillance, accelerating salvage, or omitting therapy based on ctDNA improves outcomes. The decision-impact gap remains the same one highlighted in <a href="HN_Onc_Digest_2026-08-31.html#ctdna-mrd">the August 31 cycle</a>.</p></div>
+  <ul class="body-list"><li><details class="ref"><summary><span class="ref-text">A tissue-informed assay showed high surveillance performance across HPV-positive and HPV-negative HNSCC.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Per-test sensitivity was 95.2%, specificity 100%, PPV 100%, and NPV 99.4%.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Only 21 surveillance tests were recurrence-positive; pretreatment assay failure was 7.8%.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · retrospective tertiary-center cohort</span></div><div class="evidence-brief-body"><h4>Promising extension beyond virally driven disease</h4><p class="evidence-deck"><b>Methods/scope:</b> A commercial tumor-informed assay was evaluated in 77 pretreatment and 107 surveillance patients. A personalized assay was detected pretreatment in 71/77 (92.2%); median time since treatment in the surveillance cohort was 18 months.</p><div class="evidence-metrics"><div class="evidence-metric"><span class="evidence-metric-value">92.2%</span><span class="evidence-metric-label">Pretreatment detection</span></div><div class="evidence-metric"><span class="evidence-metric-value">95.2%</span><span class="evidence-metric-label">Per-test sensitivity</span></div><div class="evidence-metric"><span class="evidence-metric-value">100%</span><span class="evidence-metric-label">Observed specificity</span></div><div class="evidence-metric"><span class="evidence-metric-value">99.4%</span><span class="evidence-metric-label">Per-test NPV</span></div></div><p><b>Results:</b> Per-test sensitivity was 95.2% (20/21; 95% CI 83.3%–100%), specificity 100% (157/157), PPV 100% (20/20), and NPV 99.4% (157/158). Per-patient sensitivity was 94.4% (17/18), specificity 100% (89/89), and NPV 98.9% (89/90).</p><p><b>Surgical interpretation:</b> Patient-specific assays may support prospective salvage-timing and postoperative-risk studies outside HPV-driven disease.</p><p><b>Limitations/do not overread:</b> Retrospective ordering/follow-up, commercial-assay selection, few recurrences, and 7.8% pretreatment failure. Perfect observed specificity does not establish a treatment rule.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1001/jamaoto.2026.2469">Read the paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">Serial ctHPV DNA surveillance included 2,192 post-treatment tests in 232 baseline-positive patients.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Reappearance had 90.3% sensitivity and 97.9% specificity and preceded clinical recurrence in 58.1% of recurrent cases.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Only baseline-detectable patients were eligible; management benefit was not tested.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · prospective serial surveillance cohort</span></div><div class="evidence-brief-body"><h4>One-month timing appears more informative than immediate testing</h4><p class="evidence-deck"><b>Methods/scope:</b> Investigators performed 2,928 assessments in 232 HPV-associated OPSCC/unknown-primary patients. Among 220 patients with radiologic and molecular response, 2,192 tests were performed in surveillance.</p><p><b>Results:</b> Reappearance showed 90.3% sensitivity, 97.9% specificity, 87.5% PPV, and 98.4% NPV. It preceded clinical recurrence in 58.1% of recurrent cases. Positivity one month after RT was associated with worse OS (HR 19.1; 95% CI 7.5–48.8) and DFS (HR 15.4; 6.7–35.4); the immediate post-treatment value was less informative.</p><p><b>Surgical interpretation:</b> A one-month value may be more useful than an immediate post-RT sample; persistent or returning signal should prompt protocolized evaluation, not automatic surgery.</p><p><b>Limitations/do not overread:</b> Baseline-positive selection, one-institution qPCR, no randomized management effect, and possible lead-time bias. High NPV partly reflects recurrence prevalence.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1016/j.oraloncology.2026.108126">Read the paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">A 20-study meta-analysis produced more conservative ctHPV DNA accuracy than several single-center cohorts.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Across 3,505 tests, pooled sensitivity was 80.3% and specificity 95.5%.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Predictive values were modeled at 9.70% recurrence prevalence and will shift across practices.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · PRISMA systematic review/meta-analysis</span></div><div class="evidence-brief-body"><h4>A useful calibration against best-case cohort estimates</h4><p class="evidence-deck"><b>Methods/scope:</b> Twenty studies met prespecified criteria, contributing 3,505 clinically correlated tests after curative treatment for HPV-positive OPSCC.</p><p><b>Results:</b> Pooled sensitivity was 80.3% (95% CI 70.9%–87.2%) and specificity 95.5% (90.9%–97.8%). At 9.70% recurrence prevalence, modeled NPV was 97.7% and PPV 66.0%. A positive test carried 130-fold higher odds of recurrence, with a wide 95% CI (56.6–298.7).</p><p><b>Surgical interpretation:</b> The pooled estimate reinforces confirmatory testing and imaging/pathologic correlation before salvage decisions.</p><p><b>Limitations/do not overread:</b> Heterogeneous assays, intervals, thresholds, and reference standards. Predictive values are prevalence-sensitive and do not prove outcome benefit.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1002/ohn.70426">Read the paper &rarr;</a></p></div></details></li></ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>Accuracy is not utility. A negative result can lower short-term recurrence probability, but a positive result still needs confirmation and neither result has a validated surgery-omission rule.</p></div>
+</section>
+
+<section id="neck-dissection">
+  <div class="section-head"><h3>3. Surgery and reconstruction: measure function, not age alone</h3><span class="count-pill">3 findings</span></div>
+  <div class="badge-row"><span class="badge hypo">Practice-relevant</span><p class="bottom-line">This cycle adds a technical warning for optical margins and useful counseling evidence for free-flap and glossectomy recovery. None supports denying reconstruction or curative surgery on age or a single frailty score.</p></div>
+  <ul class="body-list"><li><details class="ref"><summary><span class="ref-text">Surgical resection altered fluorescence-lifetime signatures differently in oral tongue, base of tongue, and tonsil.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Cancer/noncancer separability improved ex vivo at base of tongue but worsened after excision at oral tongue and tonsil.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> This measured optical separation, not positive-margin or recurrence reduction.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Open full text · prospective intraoperative optical study</span></div><div class="evidence-brief-body"><h4>In-vivo and ex-vivo algorithms are not interchangeable</h4><p class="evidence-deck"><b>Methods/scope:</b> A fiber-based fluorescence lifetime imaging system measured in-vivo and ex-vivo oral tongue, base-of-tongue, and tonsil tissue in 75 surgical patients.</p><p><b>Results:</b> Separability improved ex vivo at base of tongue (index 0.43 versus 0.15 in vivo) but fell after excision in oral tongue (0.18 versus 0.27) and tonsil (0.28 versus 0.46).</p><p><b>Surgical interpretation:</b> Margin algorithms require subsite- and workflow-specific validation for in-vivo guidance versus ex-vivo specimen assessment.</p><p><b>Limitations/do not overread:</b> Diagnostic-separability study, not a randomized margin trial; no evidence yet for fewer positive margins, re-resections, recurrences, or shorter operations.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1117/1.JBO.31.9.096002">Read the open paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">A systematic review linked frailty with recovery burden after head-and-neck free-flap reconstruction.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Frailty consistently predicted medical morbidity, longer stay, non-home discharge, and worse swallowing recovery.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Associations with surgical complications and short-term mortality were inconsistent.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · PRISMA systematic review</span></div><div class="evidence-brief-body"><h4>Frailty is a planning signal, not a reconstruction veto</h4><p class="evidence-deck"><b>Methods/scope:</b> Eleven studies using validated frailty measures were included; eight were rated good quality by Newcastle–Ottawa criteria.</p><p><b>Results:</b> Frailty was consistently associated with medical complications, longer hospitalization, non-home discharge, impaired swallowing recovery, and longer enteral-nutrition dependence. Tools incorporating nutrition or sarcopenia outperformed frailty indices alone for postoperative complications.</p><p><b>Surgical interpretation:</b> Frailty screening can guide prehabilitation, discharge planning, and expectation setting before microvascular reconstruction.</p><p><b>Limitations/do not overread:</b> Heterogeneous instruments and outcomes, observational source studies, and no pooled effect magnitudes in the abstract. A positive screen should trigger fuller assessment, not automatic de-escalation.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1002/ohn.70414">Read the paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">A 206-patient glossectomy cohort found slower early recovery with advanced age but few durable group differences.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Most age-group functional differences resolved by one to two years; tube and tracheostomy dependence did not differ.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Comparable outcomes may partly reflect selection of fitter older adults.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · retrospective cohort</span></div><div class="evidence-brief-body"><h4>Age changes the trajectory more than the destination</h4><p class="evidence-deck"><b>Methods/scope:</b> Patients treated for oral-tongue cancer from 2016–2024 were grouped as younger than 60 (n=92), 60–70 (n=61), or older than 70 (n=53); 109 (53%) had free-flap reconstruction.</p><p><b>Results:</b> Older patients had more moderate-to-severe labial range-of-motion and strength deficits at one month. Most differences resolved by one to two years, though labial deficits persisted at two years (p=.048). Gastrostomy/tracheostomy dependence, stay, readmission, reoperation, revision, and FACE-Q scores did not differ.</p><p><b>Surgical interpretation:</b> Counsel older patients about a potentially slower early trajectory without assuming age predicts feeding-tube or tracheostomy dependence.</p><p><b>Limitations/do not overread:</b> Retrospective selection, single-center rehabilitation, multiple comparisons, and limited defect/reconstruction matching. Age alone should not determine candidacy.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1002/jso.70355">Read the paper &rarr;</a></p></div></details></li></ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>Frailty and age are related but not interchangeable. Use a positive frailty screen to plan optimization, rehabilitation, and discharge support—not as an automatic exclusion from reconstruction.</p></div>
+</section>
+
+<section id="rt-deescalation">
+  <div class="section-head"><h3>4. Radiation: less toxicity is plausible; omission still needs trials</h3><span class="count-pill">4 findings</span></div>
+  <div class="badge-row"><span class="badge practice">Randomized toxicity signal</span><p class="bottom-line">Randomized postoperative data favor protons for acute oral toxicity in unilateral fields. RT avoidance after induction therapy and low-neck omission remain promising single-arm or retrospective strategies; a new phase III asks whether hyperfractionation can replace cisplatin.</p></div>
+  <ul class="body-list"><li><details class="ref"><summary><span class="ref-text">Neoadjuvant TPF followed by transoral surgery allowed 91% of selected HPV-associated OPSCC patients to avoid postoperative RT/CRT.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Centrally reviewed pCR was 65.6%, but the study missed its primary endpoint.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Thirty-two eligible patients, no comparator, and no mature recurrence estimates.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Open full text · multicenter prospective phase II</span></div><div class="evidence-brief-body"><h4>High pCR and RT avoidance, without practice-defining control data</h4><p class="evidence-deck"><b>Methods/scope:</b> Thirty-two eligible patients received three cycles of docetaxel/cisplatin/5-FU followed by transoral surgery. The abstract says 30 underwent transoral surgery but reports R0 resection in 31, an unresolved internal denominator inconsistency.</p><p><b>Results:</b> Centrally reviewed pCR was 65.6%, virologic complete response 64.5%, and 91% avoided postoperative RT/chemoradiation. QOL returned to baseline or improved within one year; 23 patients had undetectable ctHPV DNA after chemotherapy.</p><p><b>Surgical interpretation:</b> A preplanned induction-plus-surgery pathway can spare most selected patients postoperative radiation, making mature control and swallowing data decisive.</p><p><b>Limitations/do not overread:</b> Primary endpoint not met, small cohort, no control arm, conflicting surgery/R0 denominators, and no mature survival/recurrence counts. Do not adopt TPF-driven RT omission outside a trial.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1038/s41416-026-03610-y">Read the open paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">Randomized phase II data compared protons with IMRT for unilateral postoperative head-and-neck treatment.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Grade ≥2 mucositis was 7.4% versus 22.7%; grade ≥2 dysgeusia was 9.3% versus 31.8%.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> The study was not powered to prove equivalent disease control.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · multicenter randomized phase II</span></div><div class="evidence-brief-body"><h4>Less acute oral toxicity in a selected unilateral setting</h4><p class="evidence-deck"><b>Methods/scope:</b> Ninety-eight analyzable patients with resected, well-lateralized cancers received unilateral adjuvant proton therapy (n=54) or IMRT (n=44), 60 Gy/30 fractions with 54 Gy elective treatment.</p><div class="evidence-metrics"><div class="evidence-metric"><span class="evidence-metric-value">7.4%</span><span class="evidence-metric-label">Mucositis with protons</span></div><div class="evidence-metric"><span class="evidence-metric-value">22.7%</span><span class="evidence-metric-label">Mucositis with IMRT</span></div><div class="evidence-metric"><span class="evidence-metric-value">9.3%</span><span class="evidence-metric-label">Dysgeusia with protons</span></div><div class="evidence-metric"><span class="evidence-metric-value">31.8%</span><span class="evidence-metric-label">Dysgeusia with IMRT</span></div></div><p><b>Results:</b> Acute grade ≥2 mucositis was 7.4% versus 22.7% (p=.03); grade ≥2 dysgeusia 9.3% versus 31.8% (p=.005). Grade ≥3 dermatitis and grade ≥2 dysphagia were similar. At 27.2 months, no late grade 3 events occurred and three-year local control, PFS, and OS did not differ.</p><p><b>Surgical interpretation:</b> For unilateral postoperative fields, protons can reduce specific acute oral toxicities; weigh benefit against access, plan quality, travel, and cost.</p><p><b>Limitations/do not overread:</b> Phase II sample, unequal analyzable groups, wide patient-reported-outcome CIs, and limited power for disease-control equivalence.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1093/jnci/djag257">Read the paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">Contralateral low-neck sparing was associated with lower esophageal-inlet dose and less feeding-tube placement.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Feeding-tube placement was 22% with upper-neck-only versus 57% with whole-neck treatment.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Retrospective cohort of 52 patients with few oncologic events.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · single-institution retrospective cohort</span></div><div class="evidence-brief-body"><h4>Dose–function association needs prospective validation</h4><p class="evidence-deck"><b>Methods/scope:</b> Fifty-two p16-positive OPSCC patients with pre/post-treatment swallow studies received contralateral elective upper-neck irradiation (n=28) or whole-neck irradiation (n=24).</p><p><b>Results:</b> Esophageal-inlet muscle dose was 29.8 versus 36.1 Gy (p=.011). Feeding-tube placement during/after chemoradiation was 22% versus 57% (p=.006); adjusted one-year HR was 0.25 (p=.006). Pneumonia, dilation, and recurrence did not differ, and no relapse occurred in the omitted contralateral low neck.</p><p><b>Surgical interpretation:</b> The anatomic dose–function link merits prospective validation and planning discussion in carefully selected lateralized disease.</p><p><b>Limitations/do not overread:</b> Retrospective allocation, 52 patients, few failures, and no HR confidence interval in the abstract. No observed omitted-neck relapse does not prove safety.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1002/ohn.70429">Read the paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">HYTC will test radiation alone at 81.6 Gy in twice-daily fractions against standard-dose RT plus high-dose cisplatin.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> The international randomized noninferiority trial plans 604 patients and seven-year OS follow-up.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Recruiting registry with no efficacy or safety results.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>ClinicalTrials.gov · first posted Sep 3 · no results</span></div><div class="evidence-brief-body"><h4>A phase III cisplatin-substitution question</h4><p class="evidence-deck"><b>Methods/scope:</b> The open-label trial compares 70 Gy/35 fractions over seven weeks plus high-dose cisplatin with 81.6 Gy/68 twice-daily fractions over seven weeks.</p><p><b>Results:</b> The primary endpoint is seven-year OS. Locoregional failure, DFS, distant metastasis, clinician- and patient-reported toxicity, hearing, swallowing-related QOL, and speech recognition are secondary.</p><p><b>Surgical interpretation:</b> If completed, HYTC could answer whether intensified fractionation preserves survival while avoiding cisplatin morbidity in locally advanced disease.</p><p><b>Limitations/do not overread:</b> No outcomes, long completion horizon, open-label design, and limited registry detail for generalizing eligibility. Do not substitute hyperfractionation based on registration alone.</p></div></div>
+      <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07801235">View the registry record &rarr;</a></p></div></details></li></ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>The only randomized completed evidence here concerns modality and acute toxicity—not omission. The avoidance, volume-sparing, and hyperfractionation strategies should remain protocol-bound.</p></div>
+</section>
+
+<section id="cutaneous-scc">
+  <div class="section-head"><h3>5. Cutaneous SCC: selective Level IA surgery and late PD-1 toxicity</h3><span class="count-pill">2 findings</span></div>
+  <div class="badge-row"><span class="badge hypo">Selective application</span><p class="bottom-line">Level IA metastasis was uncommon in a parotid-region cSCC cohort, supporting selective rather than routine inclusion in a clinically negative neck. Longer cemiplimab follow-up found late toxicity uncommon, but the cohort was not head-and-neck-specific.</p></div>
+  <ul class="body-list"><li><details class="ref"><summary><span class="ref-text">Level IA involvement was uncommon among 131 patients undergoing parotidectomy and neck dissection for advanced cSCC.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Four patients had Level IA disease (3.6%); the occult rate was 0% (95% CI 0%–3.3%).</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Only four events occurred across a 25-year retrospective cohort.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · retrospective surgical cohort</span></div><div class="evidence-brief-body"><h4>Selective omission appears plausible in a clinically negative neck</h4><p class="evidence-deck"><b>Methods/scope:</b> The cohort included 110 patients with parotid metastases and 21 with preauricular cSCC treated from 2000–2025.</p><p><b>Results:</b> Level IA disease occurred in 4/131 (3.6%; 95% CI 1%–9%); occult involvement was 0% (95% CI 0%–3.3%). Involvement tracked with pathologic nodal status, nodal burden, and extent of dissection.</p><p><b>Surgical interpretation:</b> Consider Level IA omission in a clinically negative, lower-burden neck; the findings also support the oncologic plausibility of a submental-island flap in selected patients.</p><p><b>Limitations/do not overread:</b> Retrospective network cohort, only four events, dissection-selection bias, and wide CIs. High nodal burden should temper omission; flap strategies were not compared.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1002/hed.70464">Read the paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">Longer follow-up of 134 cemiplimab-treated advanced cSCC patients focused on toxicities beginning after six months.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> Late treatment-related events occurred in 11.2%; all resolved after discontinuation and none became chronic.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> The abstract provides no head-and-neck-specific subgroup.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Structured abstract · Italian expanded-access cohort</span></div><div class="evidence-brief-body"><h4>Late immune toxicity was uncommon but not absent</h4><p class="evidence-deck"><b>Methods/scope:</b> Late toxicities were defined as treatment-related events beginning at least six months after cemiplimab initiation in 134 advanced cSCC patients.</p><p><b>Results:</b> ORR was 58.9%, disease-control rate 72.4%, median PFS nine months, and median OS 21 months. Fifteen patients (11.2%) had a late event; median onset was 12 months (range 6–23), two stopped therapy, all events resolved, and none became chronic.</p><p><b>Surgical interpretation:</b> Delayed toxicity remains relevant during prolonged response and when timing salvage or reconstruction; surveillance should extend beyond the early treatment window.</p><p><b>Limitations/do not overread:</b> Nonrandomized expanded-access population, no head-and-neck subgroup, incomplete toxicity granularity, and possible undercapture. Response is not comparative efficacy.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1111/ddg.70440">Read the paper &rarr;</a></p></div></details></li></ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>The surgical result is anatomy- and burden-dependent, while the systemic result lacks a head-and-neck subset. Neither should be generalized beyond its observed population.</p></div>
+</section>
+
+<section id="systemic-pipeline">
+  <div class="section-head"><h3>6. Systemic pipeline: PD-1/EGFR activity and a ficerafusp dosing trial</h3><span class="count-pill">2 findings</span></div>
+  <div class="badge-row"><span class="badge bg">Pipeline</span><p class="bottom-line">Dual PD-1/EGFR blockade produced encouraging response in a small phase Ib cohort. FORTIFI-FLEX is not a registrational efficacy comparison; it randomizes only nonprogressors after shared loading. It extends <a href="HN_Onc_Digest_2026-08-03.html#systemic-pipeline">the baseline ficerafusp watch</a>.</p></div>
+  <ul class="body-list"><li><details class="ref"><summary><span class="ref-text">Finotonlimab plus the EGFR antibody SCT200 showed activity in 41 recurrent/metastatic HNSCC patients.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> ORR was 56.7% in 30 systemic-therapy-naïve patients and 27.3% in 11 previously treated patients.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> Small, uncontrolled phase Ib cohorts cannot support cross-trial efficacy comparisons.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>Open full text · prospective multicenter phase Ib</span></div><div class="evidence-brief-body"><h4>Encouraging PD-1/EGFR signal with familiar EGFR toxicity</h4><p class="evidence-deck"><b>Methods/scope:</b> Patients received finotonlimab 200 mg every three weeks plus SCT200 weekly for 12 weeks, then every two weeks.</p><p><b>Results:</b> In 11 patients previously treated with platinum and checkpoint inhibition, ORR was 27.3%, median PFS 5.8 months, and OS 10.6 months. In 30 systemic-therapy-naïve patients, ORR was 56.7%, median PFS 9.6 months, and estimated median OS 13.6 months. Common treatment-related events were hypomagnesemia (63.4%), rash (41.5%), and acneiform dermatitis (36.6%).</p><p><b>Surgical interpretation:</b> The signal may matter for unresectable recurrence or conversion-to-local-therapy research, but needs a randomized comparator and defined post-response local management.</p><p><b>Limitations/do not overread:</b> Phase Ib, small heterogeneous cohorts, no control, limited CIs, and immature survival. Do not compare directly with pembrolizumab/cetuximab trials.</p></div></div>
+      <p class="ref-link"><a href="https://doi.org/10.1002/cam4.72272">Read the open paper &rarr;</a></p></div></details></li>
+    <li><details class="ref"><summary><span class="ref-text">FORTIFI-FLEX will compare less-frequent with continuous-weekly ficerafusp maintenance after shared combination loading.</span><span class="chevron">&#9656;</span></summary><div class="ref-detail">
+      <p><span class="tag">Key conclusion —</span> All 160 planned patients first receive 12 weeks of ficerafusp plus pembrolizumab; only nonprogressors randomize.</p><p class="counterpoint-detail"><span class="tag warn">Counterpoint —</span> No pembrolizumab-alone control and no posted outcomes.</p>
+      <div class="evidence-brief"><div class="evidence-sourcebar"><span class="evidence-source-badge">Evidence brief</span><span>ClinicalTrials.gov · first posted Sep 8 · no results</span></div><div class="evidence-brief-body"><h4>A maintenance-frequency study, not an efficacy comparison</h4><p class="evidence-deck"><b>Methods/scope:</b> First-line PD-L1 CPS ≥1 recurrent/metastatic HNSCC receives ficerafusp 1,500 mg weekly plus pembrolizumab 200 mg every three weeks for 12 weeks. Nonprogressors then randomize 2:1 to ficerafusp 2,250 mg every three weeks or continued 1,500 mg weekly, both with pembrolizumab.</p><p><b>Results:</b> The primary outcome is the proportion alive and progression-free about nine months into maintenance. ORR, PFS, OS, safety, exposure, and response depth are secondary.</p><p><b>Surgical interpretation:</b> The study may clarify whether the EGFR/TGF-β bifunctional agent can be delivered less frequently after initial control, reducing prolonged treatment burden.</p><p><b>Limitations/do not overread:</b> Shared loading, responder enrichment, and no pembrolizumab-alone arm mean the design cannot establish incremental combination efficacy.</p></div></div>
+      <p class="ref-link"><a href="https://clinicaltrials.gov/study/NCT07807163">View the registry record &rarr;</a></p></div></details></li></ul>
+  <div class="callout"><p class="label">Section counterpoint</p><p>Both signals require design-aware reading: the completed study is uncontrolled, while the new protocol cannot isolate the combination's incremental efficacy.</p></div>
+</section>
+
+<div class="closing"><h2>Bottom line for tumor board</h2><p>This cycle strengthens three conversations without changing standard surgery: prospectively defined response-adapted resection, assay- and time-specific ctDNA surveillance, and treatment planning that measures functional burden. REMATCH is the most surgically provocative result, but its single-arm selection and universal risk-adapted postoperative RT make off-trial resection reduction premature. The most immediately actionable randomized signal is reduced acute mucositis and dysgeusia with protons in unilateral postoperative fields; access and cost still matter. Capture baseline surgical intent before neoadjuvant treatment, document why operative scope changes, measure swallowing and discharge risk rather than using age alone, and treat every registry entry here as a trial opportunity—not evidence of efficacy.</p></div>
+</main>
+
+<aside class="evidence-pane" aria-label="Reading workspace">
+  <div class="pane-shell">
+    <header class="desk-header">
+      <p class="pane-kicker">Reading workspace</p>
+      <h2 class="pane-title">Study desk</h2>
+      <div class="desk-progress-row">
+        <span class="desk-progress-label" id="desk-progress-label">0 findings reviewed</span>
+        <button class="desk-next-unread" id="desk-next-unread" type="button">Next unread &rarr;</button>
+      </div>
+      <div class="desk-progress-track" aria-hidden="true"><span class="desk-progress-fill" id="desk-progress-fill"></span></div>
+    </header>
+
+    <div class="desk-tabs" role="tablist" aria-label="Study desk views">
+      <button class="desk-tab" id="desk-tab-outline" type="button" role="tab" aria-selected="true" aria-controls="desk-outline-panel">Cycle outline</button>
+      <button class="desk-tab" id="desk-tab-evidence" type="button" role="tab" aria-selected="false" aria-controls="desk-evidence-panel">Evidence</button>
+    </div>
+
+    <section class="desk-panel" id="desk-outline-panel" role="tabpanel" aria-labelledby="desk-tab-outline">
+      <div class="desk-outline-inner">
+        <ol class="desk-outline" id="desk-outline"></ol>
+        <div class="desk-foot">
+          <span class="desk-foot-note">Review progress is saved on this device.</span>
+          <button class="desk-reset" id="desk-reset" type="button">Reset progress</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="desk-panel" id="desk-evidence-panel" role="tabpanel" aria-labelledby="desk-tab-evidence" hidden>
+      <div class="desk-evidence-head">
+        <div class="pane-status"><span id="pane-status">No finding selected</span><button class="pane-clear" id="pane-clear" type="button">Back to outline</button></div>
+        <h2 class="pane-title" id="pane-title">Choose a finding</h2>
+      </div>
+      <div class="pane-content" id="pane-content" aria-live="polite">
+        <p class="pane-intro">Select a finding in the digest or use Next unread to begin a focused review.</p>
+      </div>
+      <div class="evidence-controls" aria-label="Evidence navigation">
+        <button id="desk-previous" type="button">&larr; Previous</button>
+        <button id="desk-next" type="button">Next &rarr;</button>
+        <button id="desk-toggle-reviewed" type="button">Mark reviewed</button>
+        <button id="desk-copy" type="button">Copy finding</button>
+      </div>
+    </section>
+  </div>
+</aside>
+</div>
+
+<footer>New digests are generated every two weeks, with off-cycle updates for genuinely practice-changing developments. Sources: PubMed and ClinicalTrials.gov; DOI links provided per PubMed attribution requirements. Tap any reference (▸) for its article-specific digest.</footer>
+
+<script>
+  var _wideLayout = window.matchMedia('(min-width: 1320px)');
+  var _refs = Array.prototype.slice.call(document.querySelectorAll('details.ref'));
+  var _sections = Array.prototype.slice.call(document.querySelectorAll('.digest-content section'));
+  var _activeRef = null;
+  var _reviewed = new Set();
+  var _storageKey = 'hn-digest-reviewed:' + document.title;
+
+  var _tabOutline = document.getElementById('desk-tab-outline');
+  var _tabEvidence = document.getElementById('desk-tab-evidence');
+  var _outlinePanel = document.getElementById('desk-outline-panel');
+  var _evidencePanel = document.getElementById('desk-evidence-panel');
+  var _outline = document.getElementById('desk-outline');
+  var _progressLabel = document.getElementById('desk-progress-label');
+  var _progressFill = document.getElementById('desk-progress-fill');
+  var _nextUnread = document.getElementById('desk-next-unread');
+  var _resetProgress = document.getElementById('desk-reset');
+  var _paneTitle = document.getElementById('pane-title');
+  var _paneStatus = document.getElementById('pane-status');
+  var _paneContent = document.getElementById('pane-content');
+  var _paneClear = document.getElementById('pane-clear');
+  var _previousButton = document.getElementById('desk-previous');
+  var _nextButton = document.getElementById('desk-next');
+  var _toggleReviewed = document.getElementById('desk-toggle-reviewed');
+  var _copyButton = document.getElementById('desk-copy');
+  var _mobileReadingLabel = document.getElementById('mobile-reading-label');
+  var _mobileReadingFill = document.getElementById('mobile-reading-fill');
+  var _mobileNextUnread = document.getElementById('mobile-next-unread');
+
+  _sections.forEach(function(section) {
+    var sectionRefs = Array.prototype.slice.call(section.querySelectorAll('details.ref'));
+    sectionRefs.forEach(function(ref, index) {
+      ref.dataset.refId = section.id + '-' + (index + 1);
+    });
+  });
+
+  try {
+    var stored = JSON.parse(localStorage.getItem(_storageKey) || '[]');
+    if (Array.isArray(stored)) {
+      stored.forEach(function(id) { _reviewed.add(id); });
+    }
+  } catch (error) {
+    _reviewed = new Set();
+  }
+
+  function saveProgress() {
+    try {
+      localStorage.setItem(_storageKey, JSON.stringify(Array.from(_reviewed)));
+    } catch (error) {
+      // Progress remains available for this session when storage is unavailable.
+    }
+  }
+
+  function openSection(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var mobileHighlights = document.querySelector('.cycle-highlights');
+    if (!_wideLayout.matches && mobileHighlights) mobileHighlights.open = false;
+    el.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+
+  function activateDeskTab(name) {
+    var showOutline = name === 'outline';
+    _tabOutline.setAttribute('aria-selected', showOutline ? 'true' : 'false');
+    _tabEvidence.setAttribute('aria-selected', showOutline ? 'false' : 'true');
+    _outlinePanel.hidden = !showOutline;
+    _evidencePanel.hidden = showOutline;
+  }
+
+  function updateReferenceState(ref) {
+    var reviewed = _reviewed.has(ref.dataset.refId);
+    ref.classList.toggle('is-reviewed', reviewed);
+    ref.querySelector('summary').dataset.reviewed = reviewed ? 'true' : 'false';
+  }
+
+  function setReviewed(ref, reviewed) {
+    if (!ref) return;
+    if (reviewed) _reviewed.add(ref.dataset.refId);
+    else _reviewed.delete(ref.dataset.refId);
+    updateReferenceState(ref);
+    saveProgress();
+    updateProgress();
+    renderOutline();
+    updateEvidenceControls();
+  }
+
+  function updateProgress() {
+    var reviewedCount = _refs.filter(function(ref) { return _reviewed.has(ref.dataset.refId); }).length;
+    var percentage = _refs.length ? (reviewedCount / _refs.length) * 100 : 0;
+    _progressLabel.textContent = reviewedCount + ' of ' + _refs.length + ' findings reviewed';
+    _progressFill.style.width = percentage + '%';
+    _nextUnread.disabled = reviewedCount === _refs.length;
+    _nextUnread.textContent = reviewedCount === _refs.length ? 'Cycle complete ✓' : 'Next unread →';
+    if (_mobileReadingLabel) _mobileReadingLabel.textContent = reviewedCount + ' of ' + _refs.length + ' reviewed';
+    if (_mobileReadingFill) _mobileReadingFill.style.width = percentage + '%';
+    if (_mobileNextUnread) {
+      _mobileNextUnread.disabled = reviewedCount === _refs.length;
+      _mobileNextUnread.textContent = reviewedCount === _refs.length ? 'Cycle complete ✓' : 'Next unread →';
+    }
+  }
+
+  function renderOutline() {
+    _outline.replaceChildren();
+
+    _sections.forEach(function(section) {
+      var refs = Array.prototype.slice.call(section.querySelectorAll('details.ref'));
+      var reviewedCount = refs.filter(function(ref) { return _reviewed.has(ref.dataset.refId); }).length;
+      var item = document.createElement('li');
+      item.className = 'desk-outline-item' + (reviewedCount === refs.length && refs.length ? ' is-complete' : '');
+
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'desk-outline-button';
+      button.addEventListener('click', function() { openSection(section.id); });
+
+      var top = document.createElement('span');
+      top.className = 'desk-outline-top';
+      var title = document.createElement('span');
+      title.className = 'desk-outline-title';
+      title.textContent = section.querySelector('h3').textContent;
+      var count = document.createElement('span');
+      count.className = 'desk-outline-count';
+      count.textContent = reviewedCount + '/' + refs.length;
+      top.append(title, count);
+
+      var bottom = document.createElement('span');
+      bottom.className = 'desk-outline-bottom';
+      var track = document.createElement('span');
+      track.className = 'desk-outline-mini-track';
+      var fill = document.createElement('span');
+      fill.className = 'desk-outline-mini-fill';
+      fill.style.width = (refs.length ? (reviewedCount / refs.length) * 100 : 0) + '%';
+      track.appendChild(fill);
+      bottom.appendChild(track);
+
+      button.append(top, bottom);
+      item.appendChild(button);
+      _outline.appendChild(item);
+    });
+  }
+
+  function updateEvidenceControls() {
+    var index = _activeRef ? _refs.indexOf(_activeRef) : -1;
+    _previousButton.disabled = index <= 0;
+    _nextButton.disabled = index < 0 || index >= _refs.length - 1;
+    _toggleReviewed.disabled = !_activeRef;
+    _copyButton.disabled = !_activeRef;
+    _toggleReviewed.textContent = _activeRef && _reviewed.has(_activeRef.dataset.refId) ? 'Mark unread' : 'Mark reviewed';
+  }
+
+  function clearStudyDesk() {
+    document.querySelectorAll('details.ref.is-active').forEach(function(ref) {
+      ref.classList.remove('is-active');
+      ref.querySelector('summary').removeAttribute('aria-current');
+    });
+    _activeRef = null;
+    _paneTitle.textContent = 'Choose a finding';
+    _paneStatus.textContent = 'No finding selected';
+    _paneContent.innerHTML = '<p class="pane-intro">Select a finding in the digest or use Next unread to begin a focused review.</p>';
+    updateEvidenceControls();
+    activateDeskTab('outline');
+  }
+
+  function selectReference(ref, options) {
+    options = options || {};
+    document.querySelectorAll('details.ref.is-active').forEach(function(activeRef) {
+      activeRef.classList.remove('is-active');
+      activeRef.querySelector('summary').removeAttribute('aria-current');
+    });
+
+    _activeRef = ref;
+    ref.classList.add('is-active');
+    ref.querySelector('summary').setAttribute('aria-current', 'true');
+    setReviewed(ref, true);
+
+    var section = ref.closest('section');
+    var heading = section ? section.querySelector('h3') : null;
+    var summary = ref.querySelector('.ref-text');
+    var detail = ref.querySelector('.ref-detail');
+    var summaryCopy = document.createElement('p');
+    summaryCopy.className = 'pane-summary';
+    summaryCopy.innerHTML = summary.innerHTML;
+    var detailCopy = detail.cloneNode(true);
+    detailCopy.className = 'pane-detail';
+
+    var context = document.createElement('div');
+    context.className = 'pane-context';
+    var contextLabel = document.createElement('p');
+    contextLabel.className = 'pane-context-label';
+    contextLabel.textContent = 'Section bottom line';
+    var contextCopy = document.createElement('p');
+    contextCopy.className = 'pane-context-copy';
+    var bottomLine = section ? section.querySelector('.bottom-line') : null;
+    contextCopy.innerHTML = bottomLine ? bottomLine.innerHTML : '';
+    context.append(contextLabel, contextCopy);
+
+    var index = _refs.indexOf(ref);
+    _paneTitle.textContent = heading ? heading.textContent : 'Evidence detail';
+    _paneStatus.textContent = 'Finding ' + (index + 1) + ' of ' + _refs.length;
+    _paneContent.replaceChildren(summaryCopy, detailCopy, context);
+    activateDeskTab('evidence');
+    updateEvidenceControls();
+    _evidencePanel.scrollTop = 0;
+
+    if (options.scroll) {
+      ref.scrollIntoView({behavior: 'smooth', block: 'center'});
+      try { ref.querySelector('summary').focus({preventScroll: true}); }
+      catch (error) { ref.querySelector('summary').focus(); }
+    }
+  }
+
+  function goRelative(direction) {
+    if (!_activeRef) return;
+    var index = _refs.indexOf(_activeRef) + direction;
+    if (index >= 0 && index < _refs.length) selectReference(_refs[index], {scroll: true});
+  }
+
+  function goToNextUnread() {
+    var unread = _refs.filter(function(ref) {
+      return !_reviewed.has(ref.dataset.refId);
+    });
+    if (!unread.length) {
+      activateDeskTab('outline');
+      return;
+    }
+
+    var currentIndex = _activeRef ? _refs.indexOf(_activeRef) : -1;
+    var next = unread.find(function(ref) { return _refs.indexOf(ref) > currentIndex; }) || unread[0];
+    if (!_wideLayout.matches) {
+      _refs.forEach(function(ref) { if (ref !== next) ref.open = false; });
+      next.open = true;
+      setReviewed(next, true);
+      next.scrollIntoView({behavior: 'smooth', block: 'start'});
+      try { next.querySelector('summary').focus({preventScroll: true}); }
+      catch (error) { next.querySelector('summary').focus(); }
+      return;
+    }
+    selectReference(next, {scroll: true});
+  }
+
+  function copyActiveFinding() {
+    if (!_activeRef) return;
+    var section = _activeRef.closest('section');
+    var heading = section.querySelector('h3').textContent;
+    var summary = _activeRef.querySelector('.ref-text').innerText;
+    var detail = _activeRef.querySelector('.ref-detail').innerText;
+    var links = Array.prototype.map.call(_activeRef.querySelectorAll('a'), function(link) { return link.href; });
+    var text = [heading, summary, detail, links.join('\n')].filter(Boolean).join('\n\n');
+
+    if (!navigator.clipboard || !navigator.clipboard.writeText) {
+      _paneStatus.textContent = 'Copy is unavailable in this browser';
+      return;
+    }
+
+    navigator.clipboard.writeText(text).then(function() {
+      _paneStatus.textContent = 'Finding copied';
+      setTimeout(function() {
+        if (_activeRef) _paneStatus.textContent = 'Finding ' + (_refs.indexOf(_activeRef) + 1) + ' of ' + _refs.length;
+      }, 1400);
+    }).catch(function() {
+      _paneStatus.textContent = 'Copy is unavailable in this context';
+    });
+  }
+
+  function toggleAll() {
+    var btn = document.getElementById('expand-toggle-btn');
+    var anyClosed = _refs.some(function(ref) { return !ref.open; });
+    document.body.classList.toggle('inline-expanded', anyClosed && _wideLayout.matches);
+    if (anyClosed) clearStudyDesk();
+    _refs.forEach(function(ref) { ref.open = anyClosed; });
+    btn.textContent = anyClosed ? 'Collapse all' : 'Expand all';
+    if (!anyClosed) document.body.classList.remove('inline-expanded');
+  }
+
+  _refs.forEach(function(ref) {
+    var summary = ref.querySelector('summary');
+    var warnParagraph = ref.querySelector('.tag.warn');
+    if (warnParagraph) warnParagraph.closest('p').classList.add('counterpoint-detail');
+    updateReferenceState(ref);
+
+    summary.addEventListener('click', function(event) {
+      if (!_wideLayout.matches || document.body.classList.contains('inline-expanded')) {
+        if (!_wideLayout.matches && !ref.open) {
+          _refs.forEach(function(otherRef) { if (otherRef !== ref) otherRef.open = false; });
+        }
+        setReviewed(ref, true);
+        return;
+      }
+      event.preventDefault();
+      selectReference(ref);
+    });
+  });
+
+  _tabOutline.addEventListener('click', function() { activateDeskTab('outline'); });
+  _tabEvidence.addEventListener('click', function() { activateDeskTab('evidence'); });
+  _paneClear.addEventListener('click', clearStudyDesk);
+  _previousButton.addEventListener('click', function() { goRelative(-1); });
+  _nextButton.addEventListener('click', function() { goRelative(1); });
+  _toggleReviewed.addEventListener('click', function() {
+    if (_activeRef) setReviewed(_activeRef, !_reviewed.has(_activeRef.dataset.refId));
+  });
+  _copyButton.addEventListener('click', copyActiveFinding);
+  _nextUnread.addEventListener('click', goToNextUnread);
+  if (_mobileNextUnread) _mobileNextUnread.addEventListener('click', goToNextUnread);
+  _resetProgress.addEventListener('click', function() {
+    _reviewed.clear();
+    _refs.forEach(updateReferenceState);
+    saveProgress();
+    updateProgress();
+    renderOutline();
+    updateEvidenceControls();
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && _wideLayout.matches) {
+      clearStudyDesk();
+    }
+  });
+
+  _wideLayout.addEventListener('change', function(event) {
+    if (!event.matches) {
+      document.body.classList.remove('inline-expanded');
+      clearStudyDesk();
+    } else if (_refs.some(function(ref) { return ref.open; })) {
+      document.body.classList.add('inline-expanded');
+    }
+  });
+
+  updateProgress();
+  renderOutline();
+  updateEvidenceControls();
+
+  // Force every reference open for printing, then restore prior state.
+  var _preprintState = null;
+  var _preprintInlineState = false;
+  window.addEventListener('beforeprint', function() {
+    _preprintState = _refs.map(function(ref) { return ref.open; });
+    _preprintInlineState = document.body.classList.contains('inline-expanded');
+    document.body.classList.add('inline-expanded');
+    _refs.forEach(function(ref) { ref.open = true; });
+  });
+  window.addEventListener('afterprint', function() {
+    if (!_preprintState) return;
+    _refs.forEach(function(ref, index) { ref.open = _preprintState[index]; });
+    document.body.classList.toggle('inline-expanded', _preprintInlineState);
+    _preprintState = null;
+  });
+</script>
+
+<script>
+(function() {
+  var digest = document.getElementById('digest-content');
+  var layout = document.querySelector('.reading-layout');
+  var navigatorPane = document.querySelector('.evidence-pane');
+  if (!digest || !layout || !navigatorPane || document.querySelector('.reader-surface')) return;
+
+  function prepareOutboundLinks(root) {
+    root.querySelectorAll('a[href]').forEach(function(link) {
+      var href = link.getAttribute('href') || '';
+      if (/^https?:\/\//i.test(href) || /^HN_Onc_Digest_/i.test(href)) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+    });
+  }
+
+  prepareOutboundLinks(document);
+
+  var digestSource = document.createElement('div');
+  digestSource.className = 'digest-source';
+  digestSource.id = 'digest-source';
+  while (digest.firstChild) digestSource.appendChild(digest.firstChild);
+
+  var reader = document.createElement('article');
+  reader.className = 'reader-surface';
+  reader.id = 'reader-surface';
+  reader.setAttribute('aria-label', 'Digest reader');
+  reader.innerHTML = '<div class="reader-actions" id="reader-actions" hidden>' +
+    '<button id="reader-back" type="button">&larr; Section</button>' +
+    '<span class="reader-status" id="reader-status"></span>' +
+    '<button id="reader-previous" type="button">&larr; Previous</button>' +
+    '<button id="reader-next" type="button">Next &rarr;</button>' +
+    '<button id="reader-toggle-reviewed" type="button">Mark reviewed</button>' +
+    '<button id="reader-copy" type="button">Copy finding</button>' +
+    '</div><div class="reader-content" id="reader-content" aria-live="polite"></div>';
+  digest.append(reader, digestSource);
+  layout.insertBefore(navigatorPane, digest);
+
+  var readerActions = document.getElementById('reader-actions');
+  var readerContent = document.getElementById('reader-content');
+  var readerStatus = document.getElementById('reader-status');
+  var readerBack = document.getElementById('reader-back');
+  var readerPrevious = document.getElementById('reader-previous');
+  var readerNext = document.getElementById('reader-next');
+  var readerToggleReviewed = document.getElementById('reader-toggle-reviewed');
+  var readerCopy = document.getElementById('reader-copy');
+  var navigatorHeader = navigatorPane.querySelector('.desk-header .pane-title');
+  var oldTabs = navigatorPane.querySelector('.desk-tabs');
+  var readerMode = 'overview';
+  var activeSection = null;
+  var expandedSectionId = '';
+
+  navigatorPane.setAttribute('aria-label', 'September 14 digest navigator');
+  navigatorHeader.textContent = 'September 14 evidence map';
+
+  var navigatorHome = document.createElement('div');
+  navigatorHome.className = 'navigator-home is-active';
+  navigatorHome.innerHTML = '<button class="navigator-home-button" id="navigator-home-button" type="button">' +
+    '<span class="navigator-home-label">Start here</span>' +
+    '<span class="navigator-home-title">September 14 overview &amp; tumor-board bottom line</span>' +
+    '</button>';
+  oldTabs.replaceWith(navigatorHome);
+  _evidencePanel.remove();
+  _outlinePanel.hidden = false;
+  var navigatorHomeButton = document.getElementById('navigator-home-button');
+
+  function createViewHeader(kicker, title, deck) {
+    var header = document.createElement('header');
+    header.className = 'reader-view-header';
+    var kickerNode = document.createElement('p');
+    kickerNode.className = 'reader-kicker';
+    kickerNode.textContent = kicker;
+    var titleNode = document.createElement('h2');
+    titleNode.className = 'reader-title';
+    titleNode.tabIndex = -1;
+    titleNode.textContent = title;
+    header.append(kickerNode, titleNode);
+    if (deck) {
+      var deckNode = document.createElement('p');
+      deckNode.className = 'reader-deck';
+      deckNode.textContent = deck;
+      header.appendChild(deckNode);
+    }
+    return header;
+  }
+
+  function revealReader() {
+    if (!_wideLayout.matches) return;
+    var bounds = reader.getBoundingClientRect();
+    if (bounds.bottom < 80 || bounds.top > window.innerHeight * 0.72) {
+      reader.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+  }
+
+  function resetReaderScroll() {
+    readerContent.scrollTop = 0;
+  }
+
+  function clearSourceSelection() {
+    _refs.forEach(function(ref) {
+      ref.classList.remove('is-active');
+      ref.querySelector('summary').removeAttribute('aria-current');
+    });
+  }
+
+  function sectionNumber(section) {
+    return _sections.indexOf(section) + 1;
+  }
+
+  function renderOverview(options) {
+    options = options || {};
+    readerMode = 'overview';
+    activeSection = null;
+    expandedSectionId = '';
+    _activeRef = null;
+    clearSourceSelection();
+    readerActions.hidden = true;
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'reader-overview';
+    wrapper.appendChild(createViewHeader('September 14 overview', 'What changed in this cycle', 'Begin with the new signals, then use the navigator to open a section or individual finding.'));
+    var highlights = digestSource.querySelector(':scope > .cycle-highlights .highlights');
+    var closing = digestSource.querySelector(':scope > .closing');
+    if (highlights) wrapper.appendChild(highlights.cloneNode(true));
+    if (closing) wrapper.appendChild(closing.cloneNode(true));
+    prepareOutboundLinks(wrapper);
+    readerContent.replaceChildren(wrapper);
+    resetReaderScroll();
+    navigatorHome.classList.add('is-active');
+    renderOutline();
+    updateEvidenceControls();
+    if (options.reveal) revealReader();
+  }
+
+  function renderSection(section, options) {
+    options = options || {};
+    if (!section) return;
+    if (!_wideLayout.matches) {
+      section.scrollIntoView({behavior: 'smooth', block: 'start'});
+      return;
+    }
+
+    readerMode = 'section';
+    activeSection = section;
+    expandedSectionId = section.id;
+    _activeRef = null;
+    clearSourceSelection();
+    readerActions.hidden = true;
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'reader-section';
+    wrapper.appendChild(createViewHeader('Section ' + sectionNumber(section) + ' of ' + _sections.length, section.querySelector('h3').textContent, 'Choose any finding here or in the navigator to open its article-specific digest.'));
+
+    var copy = section.cloneNode(true);
+    copy.hidden = false;
+    copy.removeAttribute('id');
+    copy.className = 'reader-section-copy';
+    var repeatedHead = copy.querySelector('.section-head');
+    if (repeatedHead) repeatedHead.remove();
+    var sourceRefs = Array.prototype.slice.call(section.querySelectorAll('details.ref'));
+    Array.prototype.forEach.call(copy.querySelectorAll('details.ref'), function(copyRef, index) {
+      copyRef.open = false;
+      copyRef.classList.remove('is-active');
+      var sourceRef = sourceRefs[index];
+      var summary = copyRef.querySelector('summary');
+      summary.removeAttribute('aria-current');
+      summary.dataset.reviewed = _reviewed.has(sourceRef.dataset.refId) ? 'true' : 'false';
+      summary.addEventListener('click', function(event) {
+        event.preventDefault();
+        selectReference(sourceRef, {scroll: true});
+      });
+    });
+    prepareOutboundLinks(copy);
+    wrapper.appendChild(copy);
+    readerContent.replaceChildren(wrapper);
+    resetReaderScroll();
+    navigatorHome.classList.remove('is-active');
+    renderOutline();
+    updateEvidenceControls();
+    if (options.reveal !== false) revealReader();
+  }
+
+  activateDeskTab = function() {
+    _outlinePanel.hidden = false;
+  };
+
+  openSection = function(id) {
+    var section = document.getElementById(id);
+    if (!section) return;
+    if (!_wideLayout.matches) {
+      var mobileHighlights = document.querySelector('.cycle-highlights');
+      if (mobileHighlights) mobileHighlights.open = false;
+    }
+    renderSection(section, {reveal: true});
+  };
+
+  renderOutline = function() {
+    _outline.replaceChildren();
+
+    _sections.forEach(function(section) {
+      var refs = Array.prototype.slice.call(section.querySelectorAll('details.ref'));
+      var reviewedCount = refs.filter(function(ref) { return _reviewed.has(ref.dataset.refId); }).length;
+      var sectionActive = activeSection === section;
+      var expanded = expandedSectionId === section.id;
+      var item = document.createElement('li');
+      item.className = 'desk-outline-item' + (reviewedCount === refs.length && refs.length ? ' is-complete' : '') + (sectionActive ? ' is-active' : '');
+
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'desk-outline-button';
+      button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      if (readerMode === 'section' && sectionActive) button.setAttribute('aria-current', 'true');
+      button.addEventListener('click', function() { renderSection(section, {reveal: true}); });
+
+      var top = document.createElement('span');
+      top.className = 'desk-outline-top';
+      var title = document.createElement('span');
+      title.className = 'desk-outline-title';
+      title.textContent = section.querySelector('h3').textContent;
+      var count = document.createElement('span');
+      count.className = 'desk-outline-count';
+      count.textContent = reviewedCount + '/' + refs.length;
+      top.append(title, count);
+
+      var bottom = document.createElement('span');
+      bottom.className = 'desk-outline-bottom';
+      var track = document.createElement('span');
+      track.className = 'desk-outline-mini-track';
+      var fill = document.createElement('span');
+      fill.className = 'desk-outline-mini-fill';
+      fill.style.width = (refs.length ? (reviewedCount / refs.length) * 100 : 0) + '%';
+      track.appendChild(fill);
+      bottom.appendChild(track);
+      button.append(top, bottom);
+      item.appendChild(button);
+
+      if (expanded) {
+        var findings = document.createElement('ul');
+        findings.className = 'desk-finding-list';
+        refs.forEach(function(ref) {
+          var findingItem = document.createElement('li');
+          findingItem.className = 'desk-finding-item';
+          var findingButton = document.createElement('button');
+          findingButton.type = 'button';
+          findingButton.className = 'desk-finding-button';
+          if (ref.querySelector('.evidence-brief')) findingButton.classList.add('is-rich');
+          findingButton.setAttribute('aria-current', _activeRef === ref ? 'true' : 'false');
+          var findingCopy = document.createElement('span');
+          findingCopy.className = 'desk-finding-copy';
+          findingCopy.textContent = ref.querySelector('.ref-text').innerText;
+          var findingState = document.createElement('span');
+          findingState.className = 'desk-finding-state';
+          findingState.textContent = _reviewed.has(ref.dataset.refId) ? '✓' : '';
+          findingButton.append(findingCopy, findingState);
+          findingButton.addEventListener('click', function() { selectReference(ref, {scroll: true}); });
+          findingItem.appendChild(findingButton);
+          findings.appendChild(findingItem);
+        });
+        item.appendChild(findings);
+      }
+
+      _outline.appendChild(item);
+    });
+  };
+
+  updateEvidenceControls = function() {
+    var index = _activeRef ? _refs.indexOf(_activeRef) : -1;
+    readerPrevious.disabled = index <= 0;
+    readerNext.disabled = index < 0 || index >= _refs.length - 1;
+    readerToggleReviewed.disabled = !_activeRef;
+    readerCopy.disabled = !_activeRef;
+    readerToggleReviewed.textContent = _activeRef && _reviewed.has(_activeRef.dataset.refId) ? 'Mark unread' : 'Mark reviewed';
+  };
+
+  selectReference = function(ref, options) {
+    options = options || {};
+    if (!ref) return;
+    clearSourceSelection();
+    _activeRef = ref;
+    activeSection = ref.closest('section');
+    expandedSectionId = activeSection.id;
+    readerMode = 'finding';
+    ref.classList.add('is-active');
+    ref.querySelector('summary').setAttribute('aria-current', 'true');
+    setReviewed(ref, true);
+
+    var index = _refs.indexOf(ref);
+    var wrapper = document.createElement('div');
+    wrapper.className = 'reader-finding';
+    var sectionTitle = activeSection.querySelector('h3').textContent;
+    var findingTitle = ref.querySelector('.ref-text').innerText;
+    var readerDeck = 'Finding ' + (index + 1) + ' of ' + _refs.length + ' · Scope, evidence, interpretation, limitations, and source.';
+    wrapper.appendChild(createViewHeader('Section ' + sectionNumber(activeSection) + ' · ' + sectionTitle, findingTitle, readerDeck));
+
+    var detailCopy = ref.querySelector('.ref-detail').cloneNode(true);
+    detailCopy.className = 'pane-detail';
+    wrapper.appendChild(detailCopy);
+
+    prepareOutboundLinks(wrapper);
+    readerContent.replaceChildren(wrapper);
+    resetReaderScroll();
+    readerActions.hidden = false;
+    readerStatus.textContent = 'Finding ' + (index + 1) + ' of ' + _refs.length;
+    navigatorHome.classList.remove('is-active');
+    renderOutline();
+    updateEvidenceControls();
+    if (options.scroll !== false) revealReader();
+  };
+
+  clearStudyDesk = function() {
+    renderOverview({reveal: true});
+  };
+
+  copyActiveFinding = function() {
+    if (!_activeRef) return;
+    var section = _activeRef.closest('section');
+    var heading = section.querySelector('h3').textContent;
+    var summary = _activeRef.querySelector('.ref-text').innerText;
+    var detail = _activeRef.querySelector('.ref-detail').innerText;
+    var links = Array.prototype.map.call(_activeRef.querySelectorAll('a'), function(link) { return link.href; });
+    var text = [heading, summary, detail, links.join('\n')].filter(Boolean).join('\n\n');
+    if (!navigator.clipboard || !navigator.clipboard.writeText) {
+      readerStatus.textContent = 'Copy unavailable';
+      return;
+    }
+    navigator.clipboard.writeText(text).then(function() {
+      readerStatus.textContent = 'Finding copied';
+      setTimeout(function() {
+        if (_activeRef) readerStatus.textContent = 'Finding ' + (_refs.indexOf(_activeRef) + 1) + ' of ' + _refs.length;
+      }, 1400);
+    }).catch(function() { readerStatus.textContent = 'Copy unavailable'; });
+  };
+
+  navigatorHomeButton.addEventListener('click', function() { renderOverview({reveal: true}); });
+  readerBack.addEventListener('click', function() { renderSection(activeSection, {reveal: true}); });
+  readerPrevious.addEventListener('click', function() { goRelative(-1); });
+  readerNext.addEventListener('click', function() { goRelative(1); });
+  readerToggleReviewed.addEventListener('click', function() {
+    if (_activeRef) setReviewed(_activeRef, !_reviewed.has(_activeRef.dataset.refId));
+  });
+  readerCopy.addEventListener('click', copyActiveFinding);
+
+  var initialSection = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+  if (_wideLayout.matches && initialSection && _sections.indexOf(initialSection) !== -1) {
+    renderSection(initialSection, {reveal: false});
+  } else {
+    renderOverview({reveal: false});
+  }
+})();
+</script>
+
+<script>
+(function() {
+  if (document.getElementById('reading-preferences')) return;
+
+  var storageKey = 'hn-digest-reader-preferences:v1';
+  var sizes = ['small', 'medium', 'large', 'xlarge'];
+  var sizeLabels = ['87%', '100%', '113%', '127%'];
+  var validThemes = ['system', 'light', 'sepia', 'dark'];
+  var preferences = {theme: 'system', size: 1};
+
+  try {
+    var saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    if (validThemes.indexOf(saved.theme) !== -1) preferences.theme = saved.theme;
+    if (typeof saved.size === 'number' && saved.size >= 0 && saved.size < sizes.length) preferences.size = saved.size;
+  } catch (error) {}
+
+  var control = document.createElement('div');
+  control.className = 'reading-preferences';
+  control.id = 'reading-preferences';
+  control.innerHTML =
+    '<button class="reading-preferences-toggle" id="reading-preferences-toggle" type="button" aria-expanded="false" aria-controls="reading-preferences-panel">' +
+      '<span class="reading-preferences-aa" aria-hidden="true">Aa</span>' +
+      '<span class="reading-preferences-label">Appearance</span>' +
+    '</button>' +
+    '<div class="reading-preferences-panel" id="reading-preferences-panel" hidden>' +
+      '<h2 class="reading-preferences-title">Reading appearance</h2>' +
+      '<div class="reading-preferences-row">' +
+        '<span class="reading-preferences-row-label">Text size</span>' +
+        '<div class="reading-size-stepper">' +
+          '<button id="reading-size-down" type="button" aria-label="Decrease text size">A−</button>' +
+          '<span class="reading-size-value" id="reading-size-value" aria-live="polite">100%</span>' +
+          '<button id="reading-size-up" type="button" aria-label="Increase text size">A+</button>' +
+        '</div>' +
+      '</div>' +
+      '<p class="reading-theme-label">Theme</p>' +
+      '<div class="reading-theme-grid" role="group" aria-label="Reading theme">' +
+        '<button class="reading-theme-button" type="button" data-reader-theme-choice="system" aria-pressed="false"><span class="reading-theme-swatch system" aria-hidden="true"></span><span>System</span></button>' +
+        '<button class="reading-theme-button" type="button" data-reader-theme-choice="light" aria-pressed="false"><span class="reading-theme-swatch light" aria-hidden="true"></span><span>Light</span></button>' +
+        '<button class="reading-theme-button" type="button" data-reader-theme-choice="sepia" aria-pressed="false"><span class="reading-theme-swatch sepia" aria-hidden="true"></span><span>Sepia</span></button>' +
+        '<button class="reading-theme-button" type="button" data-reader-theme-choice="dark" aria-pressed="false"><span class="reading-theme-swatch dark" aria-hidden="true"></span><span>Dark</span></button>' +
+      '</div>' +
+      '<button class="reading-preferences-reset" id="reading-preferences-reset" type="button">Use system defaults</button>' +
+    '</div>';
+  document.body.appendChild(control);
+
+  var toggle = document.getElementById('reading-preferences-toggle');
+  var panel = document.getElementById('reading-preferences-panel');
+  var sizeDown = document.getElementById('reading-size-down');
+  var sizeUp = document.getElementById('reading-size-up');
+  var sizeValue = document.getElementById('reading-size-value');
+  var reset = document.getElementById('reading-preferences-reset');
+  var themeButtons = Array.prototype.slice.call(control.querySelectorAll('[data-reader-theme-choice]'));
+
+  function savePreferences() {
+    try { localStorage.setItem(storageKey, JSON.stringify(preferences)); } catch (error) {}
+  }
+
+  function applyPreferences(shouldSave) {
+    document.documentElement.dataset.readerTheme = preferences.theme;
+    document.documentElement.dataset.readerSize = sizes[preferences.size];
+    sizeValue.textContent = sizeLabels[preferences.size];
+    sizeDown.disabled = preferences.size === 0;
+    sizeUp.disabled = preferences.size === sizes.length - 1;
+    themeButtons.forEach(function(button) {
+      button.setAttribute('aria-pressed', button.dataset.readerThemeChoice === preferences.theme ? 'true' : 'false');
+    });
+    toggle.setAttribute('aria-label', 'Reading appearance: ' + preferences.theme + ' theme, ' + sizeLabels[preferences.size] + ' text');
+    if (shouldSave) savePreferences();
+  }
+
+  function setPanelOpen(open) {
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  toggle.addEventListener('click', function() {
+    setPanelOpen(panel.hidden);
+  });
+  sizeDown.addEventListener('click', function() {
+    if (preferences.size > 0) {
+      preferences.size -= 1;
+      applyPreferences(true);
+    }
+  });
+  sizeUp.addEventListener('click', function() {
+    if (preferences.size < sizes.length - 1) {
+      preferences.size += 1;
+      applyPreferences(true);
+    }
+  });
+  themeButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      preferences.theme = button.dataset.readerThemeChoice;
+      applyPreferences(true);
+    });
+  });
+  reset.addEventListener('click', function() {
+    preferences = {theme: 'system', size: 1};
+    applyPreferences(true);
+  });
+  document.addEventListener('click', function(event) {
+    if (!panel.hidden && !control.contains(event.target)) setPanelOpen(false);
+  });
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && !panel.hidden) {
+      event.stopImmediatePropagation();
+      setPanelOpen(false);
+      toggle.focus();
+    }
+  }, true);
+
+  applyPreferences(false);
+})();
+</script>
+
+</body>
+</html>
