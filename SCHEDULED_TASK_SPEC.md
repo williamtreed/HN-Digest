@@ -59,7 +59,7 @@ The subject matter is necessarily recurrent; the content must still demonstrate 
 5. Do not force equal representation or all six topic lanes into every published cycle. Quiet areas may be omitted or compressed into one honest sentence. If the strongest evidence clusters in one area, say so plainly.
 6. Variation must come from the evidence signal: different surgical decisions, subsites, methods, and evidence types where the interval supports them. Do not manufacture novelty by stretching tangential papers, promoting secondary commentary over primary data, or turning minor registry edits into findings.
 7. Reader-facing titles are **cycle-specific claims**, not recurring category names. The page headline and navigator identify the cycle date; visible section titles state the actual delta (for example, “Weekly cisplatin clears phase III; RT omission remains investigational”). Stable canonical topic-slug IDs remain underneath solely for links and continuity.
-8. The header and archive card state the cycle identity: number of new sources, number of material updates, and whether any previously covered sources reappear. Highlights answer “what changed since the last digest?” before summarizing the field.
+8. The header states the cycle identity: number of new sources, number of material updates, and whether any previously covered sources reappear. The archive card must lead with the strongest practice-relevant clinical takeaway in plain language; source counts, deduplication, and registry provenance belong at the end and must never occupy the bold opening sentence. Highlights answer “what changed since the last digest?” before summarizing the field.
 
 ## Voice and audience
 
@@ -125,7 +125,7 @@ Give each section a stable topic-slug id (see canonical list in README.md). When
 
 ## Archive
 
-Every digest HTML file's `<body>` starts with: `<p class="archive-nav"><a href="index.html">← All digests (archive)</a></p>`. Maintain `index.html` as a running archive — read it first, prepend a new `.entry` card at the top (date, 2-4 sentence summary, links to the new `.html`/`.md`), leave prior entries untouched, match existing CSS exactly.
+Every digest HTML file's `<body>` starts with: `<p class="archive-nav"><a href="index.html">← All digests (archive)</a></p>`. Maintain `index.html` as a running archive — read it first, prepend a new `.entry` card at the top (date, 2-4 sentence summary, links to the new `.html`/`.md`), leave prior entries untouched, match existing CSS exactly. The summary's bold first sentence is for the reader's main clinical decision signal—not DOI/NCT counts, dedup status, methods, or publishing metadata. Put those trust signals last.
 
 ## Output — up to three files per run
 
